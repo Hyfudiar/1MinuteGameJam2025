@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://142nqsm2n2h1"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_krjr6"]
+[ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://icon.svg" id="2_kb5gl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4spbq"]
+radius = 65.7343
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_krjr6")
+
+[node name="Rotating" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Rotating"]
+rotation = 1.5708
+texture = ExtResource("2_kb5gl")
+
+[node name="Flashlight" type="Node2D" parent="Rotating"]
+
+[node name="PointLight2D" type="PointLight2D" parent="Rotating/Flashlight"]
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rotating/Flashlight"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4spbq")
