@@ -18,12 +18,13 @@ texture = ExtResource("1_a10pd")
 [node name="Stock_Room2" parent="." instance=ExtResource("3_k6m6x")]
 position = Vector2(777, 12)
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-color = Color(0.277528, 0.277528, 0.277528, 1)
-energy = 2.01
-
 [node name="SceneLoader" parent="." instance=ExtResource("5_kvsfs")]
 position = Vector2(1367, 388)
 
 [node name="Player" parent="." instance=ExtResource("4_10fds")]
 position = Vector2(181, 322)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.277528, 0.277528, 0.277528, 1)
+energy = 3.11
+blend_mode = 1
