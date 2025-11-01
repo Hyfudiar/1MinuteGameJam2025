@@ -10,7 +10,7 @@ polygon = PackedVector2Array(16, -15, 37, -30, 62, -38, 85, -37, 66, -28, 48, -2
 [sub_resource type="CircleShape2D" id="CircleShape2D_4spbq"]
 radius = 12.0416
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_kn50c")
 
 [node name="Rotating" type="Node2D" parent="."]
