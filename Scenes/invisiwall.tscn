@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://vumva14ljw76"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6slr1"]
+size = Vector2(130, 4)
+
+[node name="invisiwall" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6slr1")

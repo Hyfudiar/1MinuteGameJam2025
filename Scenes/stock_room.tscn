@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlc31iuuggen4"]
+
+[ext_resource type="Script" path="res://room_script.gd" id="1_0b7p2"]
+[ext_resource type="Texture2D" uid="uid://dcm1yksqbbdim" path="res://Assets/Textures/t2.png" id="2_xo7t8"]
+[ext_resource type="PackedScene" uid="uid://vumva14ljw76" path="res://Scenes/invisiwall.tscn" id="3_u1c3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
+size = Vector2(762, 579)
+
+[node name="Stock_Room" type="Node2D"]
+position = Vector2(-5, 9)
+script = ExtResource("1_0b7p2")
+
+[node name="T2" type="Sprite2D" parent="."]
+position = Vector2(401, 308)
+texture = ExtResource("2_xo7t8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(396, 288.5)
+shape = SubResource("RectangleShape2D_vrjuv")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="invisiwall" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(218, 219)
+
+[node name="invisiwall2" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(416, 219)
+
+[node name="invisiwall3" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(547, 219)
+
+[node name="invisiwall4" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(618, 221)
+
+[node name="invisiwall5" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(176, 220)
+
+[node name="invisiwall6" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(164, 463)
+
+[node name="invisiwall7" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(323, 462)
+
+[node name="invisiwall8" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(233, 463)
+
+[node name="invisiwall9" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(546, 463)
+
+[node name="invisiwall10" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(654, 463)
+
+[node name="invisiwall11" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(685, 216)
+rotation = 1.5708
+
+[node name="invisiwall12" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(704, 394)
+rotation = 1.44339
+scale = Vector2(1, 1)
+
+[node name="invisiwall13" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(117, 286)
+rotation = 1.69646
+
+[node name="invisiwall14" parent="Walls" instance=ExtResource("3_u1c3s")]
+position = Vector2(105, 401)
+rotation = 1.69646
