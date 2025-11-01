@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://df1qtuc26kfaq"]
+
+[ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_cvwys"]
+[ext_resource type="Texture2D" uid="uid://cvucklprkbxj8" path="res://Assets/Textures/t4.png" id="2_0k2pd"]
+
+[node name="Stock_Room" instance=ExtResource("1_cvwys")]
+room_ident = "Q17"
+
+[node name="Walls" parent="." index="1"]
+visible = false
+
+[node name="T4" type="Sprite2D" parent="." index="4"]
+position = Vector2(397, 296)
+texture = ExtResource("2_0k2pd")
