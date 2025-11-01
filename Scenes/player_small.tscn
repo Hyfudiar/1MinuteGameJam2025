@@ -24,6 +24,7 @@ texture = ExtResource("2_jx10u")
 
 [node name="PointLight2D" type="PointLight2D" parent="Rotating/Flashlight"]
 position = Vector2(26, 0)
+color = Color(1, 0.402714, 0.447621, 1)
 energy = 1.45
 shadow_enabled = true
 texture = ExtResource("3_o5aky")
