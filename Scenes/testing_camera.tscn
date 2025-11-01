@@ -187,7 +187,7 @@ position = Vector2(396, 316)
 texture = ExtResource("2_r0q8j")
 
 [node name="T4" type="Sprite2D" parent="."]
-position = Vector2(1170, 245)
+position = Vector2(1170, 246)
 texture = ExtResource("3_hru85")
 
 [node name="Area1" type="Area2D" parent="."]
