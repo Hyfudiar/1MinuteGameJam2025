@@ -1,0 +1,217 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo15e6s7t2mat"]
+
+[ext_resource type="Script" path="res://Scenes/testing_camera.gd" id="1_6yt4t"]
+[ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="1_ctsbo"]
+[ext_resource type="Texture2D" uid="uid://dcm1yksqbbdim" path="res://Assets/Textures/t2.png" id="2_r0q8j"]
+[ext_resource type="Texture2D" uid="uid://cvucklprkbxj8" path="res://Assets/Textures/t4.png" id="3_hru85"]
+[ext_resource type="PackedScene" uid="uid://8vy1ak8avkka" path="res://Scenes/basic_wall.tscn" id="4_wnkjk"]
+[ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="5_5gbqo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrslw"]
+size = Vector2(784, 586)
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_6yt4t")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="RigidBody2D" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(472, 213)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D2" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(550, 212)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D3" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(603, 479)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D4" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(254, 478)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D5" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(192, 479)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D6" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(152, 213)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D7" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(793, 244)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D8" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(804, 357)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D9" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1002, 151)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D10" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1332, 156)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D11" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1376, 423)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D12" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1027, 421)
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D13" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(877, 100)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D14" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1471, 284)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D15" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1222, 11)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D16" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1114, 8)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D17" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1265, 567)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D18" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(1138, 562)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D19" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(363, 71)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D20" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(261, 69)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D21" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(879, 495)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D22" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(97, 338)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D23" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(494, 619)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="RigidBody2D24" parent="Node2D" instance=ExtResource("4_wnkjk")]
+position = Vector2(363, 621)
+rotation = 1.5708
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="Blackbackground" type="Sprite2D" parent="."]
+position = Vector2(484, 339)
+texture = ExtResource("1_ctsbo")
+
+[node name="Blackbackground2" type="Sprite2D" parent="."]
+position = Vector2(1389, 243)
+texture = ExtResource("1_ctsbo")
+
+[node name="T2" type="Sprite2D" parent="."]
+position = Vector2(396, 316)
+texture = ExtResource("2_r0q8j")
+
+[node name="T4" type="Sprite2D" parent="."]
+position = Vector2(1170, 245)
+texture = ExtResource("3_hru85")
+
+[node name="Area1" type="Area2D" parent="."]
+position = Vector2(387, 302)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1"]
+shape = SubResource("RectangleShape2D_xrslw")
+
+[node name="Area2" type="Area2D" parent="."]
+position = Vector2(1173, 240)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2"]
+shape = SubResource("RectangleShape2D_xrslw")
+
+[node name="Camera1" type="Camera2D" parent="."]
+position = Vector2(387, 302)
+
+[node name="Camera2" type="Camera2D" parent="."]
+position = Vector2(1167, 237)
+
+[node name="Player" parent="." instance=ExtResource("5_5gbqo")]
+position = Vector2(392, 339)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.201527, 0.201527, 0.201527, 1)
+energy = 4.89
+blend_mode = 1
+
+[connection signal="body_entered" from="Area1" to="." method="_on_area_1_body_entered"]
+[connection signal="body_entered" from="Area2" to="." method="_on_area_2_body_entered"]

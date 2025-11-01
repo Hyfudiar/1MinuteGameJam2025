@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://4fgsqno7u63g"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_kn50c"]
+[ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="2_jx10u"]
+[ext_resource type="Texture2D" uid="uid://dlxekrm3acxtw" path="res://Assets/Textures/2d_lights_and_shadows_neutral_point_light.webp" id="3_o5aky"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c8q4j"]
+polygon = PackedVector2Array(16, -15, 37, -30, 62, -38, 85, -37, 66, -28, 48, -22, 29, -12, 18, -6, 13, 0, 17, 7, 29, 15, 47, 25, 63, 32, 81, 36, 58, 42, 33, 29, 8, 16, 3, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4spbq"]
+radius = 12.0416
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kn50c")
+
+[node name="Rotating" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Rotating"]
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_jx10u")
+
+[node name="Flashlight" type="Node2D" parent="Rotating"]
+
+[node name="PointLight2D" type="PointLight2D" parent="Rotating/Flashlight"]
+position = Vector2(26, 0)
+energy = 1.45
+shadow_enabled = true
+texture = ExtResource("3_o5aky")
+texture_scale = 1.61
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Rotating/Flashlight"]
+visible = false
+occluder = SubResource("OccluderPolygon2D_c8q4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_4spbq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
