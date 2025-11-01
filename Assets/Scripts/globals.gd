@@ -1,7 +1,6 @@
 extends Node
 
-var room_light_1: bool = false
-var room_light_2: bool = false
+var room_lights = [0, 0]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

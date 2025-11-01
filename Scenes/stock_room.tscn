@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlc31iuuggen4"]
+[gd_scene load_steps=8 format=3 uid="uid://dlc31iuuggen4"]
 
 [ext_resource type="Script" path="res://room_script.gd" id="1_0b7p2"]
+[ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_0terf"]
 [ext_resource type="Texture2D" uid="uid://dcm1yksqbbdim" path="res://Assets/Textures/t2.png" id="2_xo7t8"]
 [ext_resource type="PackedScene" uid="uid://vumva14ljw76" path="res://Scenes/invisiwall.tscn" id="3_u1c3s"]
+[ext_resource type="PackedScene" uid="uid://da3adiol0ym0t" path="res://Scenes/torch.tscn" id="4_ktgbg"]
+[ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="5_the6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
 size = Vector2(762, 579)
@@ -10,6 +13,10 @@ size = Vector2(762, 579)
 [node name="Stock_Room" type="Node2D"]
 position = Vector2(-5, 9)
 script = ExtResource("1_0b7p2")
+
+[node name="Blackbackground" type="Sprite2D" parent="."]
+position = Vector2(353, 328)
+texture = ExtResource("2_0terf")
 
 [node name="T2" type="Sprite2D" parent="."]
 position = Vector2(401, 308)
@@ -60,7 +67,6 @@ rotation = 1.5708
 [node name="invisiwall12" parent="Walls" instance=ExtResource("3_u1c3s")]
 position = Vector2(704, 394)
 rotation = 1.44339
-scale = Vector2(1, 1)
 
 [node name="invisiwall13" parent="Walls" instance=ExtResource("3_u1c3s")]
 position = Vector2(117, 286)
@@ -72,5 +78,16 @@ rotation = 1.69646
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(390, 289)
+
+[node name="Torch" parent="." instance=ExtResource("4_ktgbg")]
+position = Vector2(612, 158)
+
+[node name="Player" parent="." instance=ExtResource("5_the6h")]
+position = Vector2(181.772, 409.316)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.201527, 0.201527, 0.201527, 1)
+energy = 4.46
+blend_mode = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

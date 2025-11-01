@@ -179,6 +179,9 @@ texture = ExtResource("1_ctsbo")
 position = Vector2(1389, 243)
 texture = ExtResource("1_ctsbo")
 
+[node name="Player" parent="." instance=ExtResource("5_5gbqo")]
+position = Vector2(392, 339)
+
 [node name="T2" type="Sprite2D" parent="."]
 position = Vector2(396, 316)
 texture = ExtResource("2_r0q8j")
@@ -204,9 +207,6 @@ position = Vector2(387, 302)
 
 [node name="Camera2" type="Camera2D" parent="."]
 position = Vector2(1167, 237)
-
-[node name="Player" parent="." instance=ExtResource("5_5gbqo")]
-position = Vector2(392, 339)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.201527, 0.201527, 0.201527, 1)

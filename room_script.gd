@@ -1,10 +1,10 @@
 extends Node2D
 
-@export var room_ident
+@export var room_ident: int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Globals.room_ident
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
