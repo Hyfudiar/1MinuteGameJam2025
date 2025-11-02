@@ -14,6 +14,7 @@ size = Vector2(235, 213.5)
 [node name="Stock_Room" instance=ExtResource("1_ngr2d")]
 script = ExtResource("2_ipqp1")
 unlock_color = 0
+chasm_ident = ""
 
 [node name="HBg_010" type="Sprite2D" parent="." index="2"]
 position = Vector2(392.25, 288.5)

@@ -191,6 +191,15 @@ var room_lights = {
 	"X28": false,
 }
 
+var chasms = {
+	"L21": false,
+	"O22": false,
+	"Q18": false,
+	"R20": false,
+	"T13": false,
+	"U27": false,
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

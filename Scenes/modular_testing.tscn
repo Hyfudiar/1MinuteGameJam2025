@@ -23,6 +23,7 @@ position = Vector2(777, 12)
 
 [node name="Stock_Room3" parent="." instance=ExtResource("7_30o86")]
 position = Vector2(1552, 16)
+chasm_ident = "L21"
 room_ident = "N21"
 
 [node name="SceneLoader" parent="." instance=ExtResource("5_kvsfs")]
