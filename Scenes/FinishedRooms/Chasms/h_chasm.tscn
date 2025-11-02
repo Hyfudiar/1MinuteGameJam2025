@@ -1,23 +1,94 @@
-[gd_scene load_steps=3 format=3 uid="uid://xglafck6pcjr"]
+[gd_scene load_steps=9 format=3 uid="uid://xglafck6pcjr"]
 
-[ext_resource type="PackedScene" uid="uid://cd5een3tc5l8b" path="res://Scenes/chasm_testing.tscn" id="1_wu2xh"]
+[ext_resource type="Script" path="res://chasm_room.gd" id="1_bltul"]
 [ext_resource type="Texture2D" uid="uid://c35db8hn31i7v" path="res://Assets/Textures/ROOMS_BG/C.002.png" id="2_0qscd"]
+[ext_resource type="PackedScene" uid="uid://da3adiol0ym0t" path="res://Scenes/torch.tscn" id="2_205ni"]
+[ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="3_swiqc"]
+[ext_resource type="Texture2D" uid="uid://c8i1s74j4ufa6" path="res://Assets/Textures/ROOMS_BG/ref.001.png" id="5_r7m75"]
 
-[node name="H_Chasm" instance=ExtResource("1_wu2xh")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
+size = Vector2(986, 733)
 
-[node name="Sprite2D" parent="." index="6"]
-texture = ExtResource("2_0qscd")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdhox"]
+size = Vector2(792, 296.5)
 
-[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(-1, 329, 135, 389, 151, 266, 390, 268, 391, 299, 629, 296, 633, 272, 860, 273, 867, 324, 1027, 336, 664, 72, 284, 76)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_riv8q"]
+size = Vector2(270, 226)
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="." index="8"]
+[node name="H_Chasm" type="Node2D"]
+position = Vector2(-5, 9)
+script = ExtResource("1_bltul")
+
+[node name="Area2D" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(512, 384)
+shape = SubResource("RectangleShape2D_vrjuv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(512, 384)
+metadata/_edit_lock_ = true
+
+[node name="Torch" parent="." instance=ExtResource("2_205ni")]
+position = Vector2(612, 158)
+metadata/_edit_lock_ = true
+
+[node name="Node" type="Node" parent="Torch"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(509, 405.5)
+scale = Vector2(1.96875, 1.74219)
+texture = ExtResource("3_swiqc")
+
+[node name="InternalArea" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InternalArea"]
+position = Vector2(504, 397.25)
+shape = SubResource("RectangleShape2D_mdhox")
+
+[node name="Chasm" type="RigidBody2D" parent="."]
+position = Vector2(386, 288)
 gravity_scale = 0.0
 lock_rotation = true
 freeze = true
+metadata/_edit_lock_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chasm"]
+position = Vector2(123, 119)
+shape = SubResource("RectangleShape2D_riv8q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
+texture = ExtResource("2_0qscd")
+metadata/_edit_lock_ = true
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D"]
+polygon = PackedVector2Array(-1, 329, 135, 389, 151, 266, 390, 268, 391, 299, 629, 296, 633, 272, 860, 273, 867, 324, 1027, 336, 664, 72, 284, 76)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2"]
 polygon = PackedVector2Array(3, 438, 130, 466, 124, 544, 374, 542, 379, 520, 636, 518, 639, 545, 888, 542, 871, 405, 1023, 435, 907, 661, 234, 717)
 
-[node name="Sprite2D2" parent="." index="9"]
+[node name="Sprite2D2" type="Sprite2D" parent="."]
 visible = false
+texture = ExtResource("5_r7m75")
+centered = false
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="light_on" from="Torch" to="." method="_on_torch_light_on"]
+[connection signal="body_entered" from="InternalArea" to="." method="_on_internal_area_body_entered"]

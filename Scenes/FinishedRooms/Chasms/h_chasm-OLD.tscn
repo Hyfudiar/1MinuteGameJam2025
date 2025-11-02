@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://xglafck6pcjr"]
+
+[ext_resource type="PackedScene" uid="uid://cd5een3tc5l8b" path="res://Scenes/chasm_testing.tscn" id="1_wu2xh"]
+[ext_resource type="Texture2D" uid="uid://c35db8hn31i7v" path="res://Assets/Textures/ROOMS_BG/C.002.png" id="2_0qscd"]
+
+[node name="H_Chasm" instance=ExtResource("1_wu2xh")]
+
+[node name="Sprite2D" parent="." index="6"]
+texture = ExtResource("2_0qscd")
+
+[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(-1, 329, 135, 389, 151, 266, 390, 268, 391, 299, 629, 296, 633, 272, 860, 273, 867, 324, 1027, 336, 664, 72, 284, 76)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="8"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
+polygon = PackedVector2Array(3, 438, 130, 466, 124, 544, 374, 542, 379, 520, 636, 518, 639, 545, 888, 542, 871, 405, 1023, 435, 907, 661, 234, 717)
+
+[node name="Sprite2D2" parent="." index="9"]
+visible = false

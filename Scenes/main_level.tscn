@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=18 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://0tv4o3y0ghwx" path="res://Scenes/FinishedRooms/zp.tscn" id="6_ewfln"]
 [ext_resource type="PackedScene" uid="uid://cu4nxgbs4hr54" path="res://Scenes/FinishedRooms/zk.tscn" id="7_hgr6m"]
 [ext_resource type="PackedScene" uid="uid://8go33u8mlhhu" path="res://Scenes/FinishedRooms/zc.tscn" id="8_bn4h5"]
+[ext_resource type="PackedScene" uid="uid://caiwtcf4rydlv" path="res://Scenes/FinishedRooms/zs.tscn" id="9_g1p3w"]
 [ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/zl.tscn" id="9_s3tgo"]
 [ext_resource type="PackedScene" uid="uid://ctqg8qppbx0gl" path="res://Scenes/FinishedRooms/zr.tscn" id="10_01stl"]
 [ext_resource type="PackedScene" uid="uid://tv64shpg4j1p" path="res://Scenes/FinishedRooms/zo.tscn" id="11_yvak1"]
@@ -32,6 +33,347 @@ position = Vector2(623, 473)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="Row10" type="Node2D" parent="."]
+
+[node name="ES_Elbow2" parent="Row10" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, -8448)
+
+[node name="Row11" type="Node2D" parent="."]
+
+[node name="ES_Elbow" parent="Row11" instance=ExtResource("9_s3tgo")]
+position = Vector2(13312, -7680)
+room_ident = "T11"
+
+[node name="WN_Elbow" parent="Row11" instance=ExtResource("14_t3yop")]
+position = Vector2(14336, -7680)
+room_ident = "U11"
+
+[node name="Row12" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row12" instance=ExtResource("12_60lsl")]
+position = Vector2(12288, -6912)
+room_ident = "S12"
+
+[node name="WNE_T2" parent="Row12" instance=ExtResource("6_ewfln")]
+position = Vector2(13312, -6912)
+room_ident = "T12"
+
+[node name="WS_Elbow3" parent="Row12" instance=ExtResource("7_hgr6m")]
+position = Vector2(14336, -6912)
+room_ident = "U12"
+
+[node name="Row13" type="Node2D" parent="."]
+
+[node name="ES_Elbow3" parent="Row13" instance=ExtResource("9_s3tgo")]
+position = Vector2(12288, -6144)
+room_ident = "S13"
+
+[node name="WNE_T" parent="Row13" instance=ExtResource("6_ewfln")]
+position = Vector2(14336, -6144)
+room_ident = "U13"
+
+[node name="WSE_t" parent="Row13" instance=ExtResource("5_42wpr")]
+position = Vector2(15360, -6144)
+room_ident = "V13"
+
+[node name="WS_Elbow2" parent="Row13" instance=ExtResource("7_hgr6m")]
+position = Vector2(16384, -6144)
+room_ident = "W13"
+
+[node name="Row14" type="Node2D" parent="."]
+
+[node name="S_deadend" parent="Row14" instance=ExtResource("9_g1p3w")]
+position = Vector2(9216, -5376)
+room_ident = "P14"
+
+[node name="ES_Elbow" parent="Row14" instance=ExtResource("9_s3tgo")]
+position = Vector2(11264, -5376)
+room_ident = "R14"
+
+[node name="WNS_t" parent="Row14" instance=ExtResource("13_d50kt")]
+position = Vector2(12288, -5376)
+room_ident = "S14"
+
+[node name="ES_Elbow2" parent="Row14" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, -5376)
+room_ident = "U14"
+
+[node name="WN_Elbow" parent="Row14" instance=ExtResource("14_t3yop")]
+position = Vector2(15360, -5376)
+room_ident = "V14"
+
+[node name="NE_Elbow" parent="Row14" instance=ExtResource("15_0cqm8")]
+position = Vector2(16384, -5376)
+room_ident = "W14"
+
+[node name="WS_Elbow" parent="Row14" instance=ExtResource("7_hgr6m")]
+position = Vector2(17408, -5376)
+room_ident = "X14"
+
+[node name="Row15" type="Node2D" parent="."]
+
+[node name="ES_Elbow" parent="Row15" instance=ExtResource("9_s3tgo")]
+position = Vector2(8192, -4608)
+room_ident = "O15"
+
+[node name="WNE_T" parent="Row15" instance=ExtResource("6_ewfln")]
+position = Vector2(9216, -4608)
+room_ident = "P15"
+
+[node name="WSE_t" parent="Row15" instance=ExtResource("5_42wpr")]
+position = Vector2(10240, -4608)
+room_ident = "Q15"
+
+[node name="WNS_t" parent="Row15" instance=ExtResource("13_d50kt")]
+position = Vector2(11264, -4608)
+room_ident = "R15"
+
+[node name="NE_Elbow" parent="Row15" instance=ExtResource("15_0cqm8")]
+position = Vector2(12288, -4608)
+room_ident = "S15"
+
+[node name="WS_Elbow" parent="Row15" instance=ExtResource("7_hgr6m")]
+position = Vector2(13312, -4608)
+room_ident = "T15"
+
+[node name="V_Room" parent="Row15" instance=ExtResource("8_bn4h5")]
+position = Vector2(14336, -4608)
+room_ident = "U15"
+
+[node name="ES_Elbow2" parent="Row15" instance=ExtResource("9_s3tgo")]
+position = Vector2(16384, -4608)
+room_ident = "W15"
+
+[node name="WN_Elbow" parent="Row15" instance=ExtResource("14_t3yop")]
+position = Vector2(17408, -4608)
+room_ident = "X15"
+
+[node name="Row16" type="Node2D" parent="."]
+
+[node name="WNE_T" parent="Row16" instance=ExtResource("6_ewfln")]
+position = Vector2(8192, -3840)
+room_ident = "O16"
+
+[node name="WS_Elbow" parent="Row16" instance=ExtResource("7_hgr6m")]
+position = Vector2(9216, -3840)
+room_ident = "P16"
+
+[node name="V_Room" parent="Row16" instance=ExtResource("8_bn4h5")]
+position = Vector2(10240, -3840)
+room_ident = "Q16"
+
+[node name="NE_Elbow" parent="Row16" instance=ExtResource("15_0cqm8")]
+position = Vector2(11264, -3840)
+room_ident = "R16"
+
+[node name="NES_T" parent="Row16" instance=ExtResource("11_yvak1")]
+position = Vector2(13312, -3840)
+room_ident = "T16"
+
+[node name="WS_Elbow2" parent="Row16" instance=ExtResource("7_hgr6m")]
+position = Vector2(12288, -3840)
+room_ident = "S16"
+
+[node name="WN_Elbow" parent="Row16" instance=ExtResource("14_t3yop")]
+position = Vector2(14336, -3840)
+room_ident = "U16"
+
+[node name="ES_Elbow" parent="Row16" instance=ExtResource("9_s3tgo")]
+position = Vector2(15360, -3840)
+room_ident = "V16"
+
+[node name="WN_Elbow2" parent="Row16" instance=ExtResource("14_t3yop")]
+position = Vector2(16384, -3840)
+room_ident = "W16"
+
+[node name="Row17" type="Node2D" parent="."]
+
+[node name="ES_Elbow" parent="Row17" instance=ExtResource("9_s3tgo")]
+position = Vector2(6144, -3072)
+room_ident = "M17"
+
+[node name="H_Room" parent="Row17" instance=ExtResource("4_hjxqu")]
+position = Vector2(7168, -3072)
+room_ident = "N17"
+
+[node name="H_Room2" parent="Row17" instance=ExtResource("4_hjxqu")]
+position = Vector2(8192, -3072)
+room_ident = "O17"
+
+[node name="WNE_T" parent="Row17" instance=ExtResource("6_ewfln")]
+position = Vector2(9216, -3072)
+room_ident = "P17"
+
+[node name="WNS_t" parent="Row17" instance=ExtResource("13_d50kt")]
+position = Vector2(10240, -3072)
+room_ident = "Q17"
+
+[node name="ES_Elbow2" parent="Row17" instance=ExtResource("9_s3tgo")]
+position = Vector2(11264, -3072)
+room_ident = "R17"
+
+[node name="WN_Elbow" parent="Row17" instance=ExtResource("14_t3yop")]
+position = Vector2(12288, -3072)
+room_ident = "S17"
+
+[node name="N_deadend" parent="Row17" instance=ExtResource("10_01stl")]
+position = Vector2(13312, -3072)
+room_ident = "T17"
+
+[node name="ES_Elbow3" parent="Row17" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, -3072)
+room_ident = "U17"
+
+[node name="WNE_T2" parent="Row17" instance=ExtResource("6_ewfln")]
+position = Vector2(15360, -3072)
+room_ident = "V17"
+
+[node name="WS_Elbow" parent="Row17" instance=ExtResource("7_hgr6m")]
+position = Vector2(16384, -3072)
+room_ident = "W17"
+
+[node name="Row18" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row18" instance=ExtResource("12_60lsl")]
+position = Vector2(5120, -2304)
+room_ident = "L18"
+
+[node name="WNE_T" parent="Row18" instance=ExtResource("6_ewfln")]
+position = Vector2(6144, -2304)
+room_ident = "M18"
+
+[node name="WSE_t" parent="Row18" instance=ExtResource("5_42wpr")]
+position = Vector2(7168, -2304)
+room_ident = "N18"
+
+[node name="WSE_t2" parent="Row18" instance=ExtResource("5_42wpr")]
+position = Vector2(8192, -2304)
+room_ident = "O18"
+
+[node name="WS_Elbow" parent="Row18" instance=ExtResource("7_hgr6m")]
+position = Vector2(9216, -2304)
+room_ident = "P18"
+
+[node name="N_deadend" parent="Row18" instance=ExtResource("10_01stl")]
+position = Vector2(11264, -2304)
+room_ident = "R18"
+
+[node name="ES_Elbow" parent="Row18" instance=ExtResource("9_s3tgo")]
+position = Vector2(13312, -2304)
+room_ident = "T18"
+
+[node name="WNE_T2" parent="Row18" instance=ExtResource("6_ewfln")]
+position = Vector2(14336, -2304)
+room_ident = "U18"
+
+[node name="WS_Elbow2" parent="Row18" instance=ExtResource("7_hgr6m")]
+position = Vector2(15360, -2304)
+room_ident = "V18"
+
+[node name="N_deadend2" parent="Row18" instance=ExtResource("10_01stl")]
+position = Vector2(16384, -2304)
+room_ident = "W18"
+
+[node name="Row19" type="Node2D" parent="."]
+
+[node name="ES_Elbow" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(4096, -1536)
+room_ident = "K19"
+
+[node name="WSE_t" parent="Row19" instance=ExtResource("5_42wpr")]
+position = Vector2(5120, -1536)
+room_ident = "L19"
+
+[node name="H_Room" parent="Row19" instance=ExtResource("4_hjxqu")]
+position = Vector2(6144, -1536)
+room_ident = "M19"
+
+[node name="WNS_t" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(7168, -1536)
+room_ident = "N19"
+
+[node name="NE_Elbow" parent="Row19" instance=ExtResource("15_0cqm8")]
+position = Vector2(8192, -1536)
+room_ident = "O19"
+
+[node name="WNS_t2" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(9216, -1536)
+room_ident = "P19"
+
+[node name="V_Room" parent="Row19" instance=ExtResource("8_bn4h5")]
+position = Vector2(10240, -1536)
+room_ident = "Q19"
+
+[node name="ES_Elbow2" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(11264, -1536)
+room_ident = "R19"
+
+[node name="WSE_t2" parent="Row19" instance=ExtResource("5_42wpr")]
+position = Vector2(12288, -1536)
+room_ident = "S19"
+
+[node name="WNS_t3" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(13312, -1536)
+room_ident = "T19"
+
+[node name="ES_Elbow3" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, -1536)
+room_ident = "U19"
+
+[node name="WNE_T" parent="Row19" instance=ExtResource("6_ewfln")]
+position = Vector2(15360, -1536)
+room_ident = "V19"
+
+[node name="W_deadend" parent="Row19" instance=ExtResource("16_tg8em")]
+position = Vector2(16384, -1536)
+room_ident = "W19"
+
+[node name="Row20" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row20" instance=ExtResource("12_60lsl")]
+position = Vector2(3072, -768)
+room_ident = "J20"
+
+[node name="WNS_t" parent="Row20" instance=ExtResource("13_d50kt")]
+position = Vector2(4096, -768)
+room_ident = "K20"
+
+[node name="N_deadend" parent="Row20" instance=ExtResource("10_01stl")]
+position = Vector2(5120, -768)
+room_ident = "L20"
+
+[node name="ES_Elbow" parent="Row20" instance=ExtResource("9_s3tgo")]
+position = Vector2(6144, -768)
+room_ident = "M20"
+
+[node name="WNE_T" parent="Row20" instance=ExtResource("6_ewfln")]
+position = Vector2(7168, -768)
+room_ident = "N20"
+
+[node name="WSE_t" parent="Row20" instance=ExtResource("5_42wpr")]
+position = Vector2(8192, -768)
+room_ident = "O20"
+
+[node name="WNE_T2" parent="Row20" instance=ExtResource("6_ewfln")]
+position = Vector2(9216, -768)
+room_ident = "P20"
+
+[node name="WN_Elbow" parent="Row20" instance=ExtResource("14_t3yop")]
+position = Vector2(10240, -768)
+room_ident = "Q20"
+
+[node name="V_Room" parent="Row20" instance=ExtResource("8_bn4h5")]
+position = Vector2(12288, -768)
+room_ident = "S20"
+
+[node name="V_Room2" parent="Row20" instance=ExtResource("8_bn4h5")]
+position = Vector2(13312, -768)
+room_ident = "T20"
+
+[node name="NE_Elbow" parent="Row20" instance=ExtResource("15_0cqm8")]
+position = Vector2(14336, -768)
+room_ident = "U20"
 
 [node name="Row21" type="Node2D" parent="."]
 
@@ -91,105 +433,360 @@ room_ident = "U21"
 position = Vector2(15360, 0)
 room_ident = "V21"
 
-[node name="Row20" type="Node2D" parent="."]
+[node name="Row22" type="Node2D" parent="."]
 
-[node name="E_Deadend" parent="Row20" instance=ExtResource("12_60lsl")]
-position = Vector2(3072, -768)
-room_ident = "J20"
+[node name="N_deadend" parent="Row22" instance=ExtResource("10_01stl")]
+position = Vector2(3072, 768)
+room_ident = "J22"
 
-[node name="WNS_t" parent="Row20" instance=ExtResource("13_d50kt")]
-position = Vector2(4096, -768)
-room_ident = "K20"
+[node name="ES_Elbow" parent="Row22" instance=ExtResource("9_s3tgo")]
+position = Vector2(4096, 768)
+room_ident = "K22"
 
-[node name="N_deadend" parent="Row20" instance=ExtResource("10_01stl")]
-position = Vector2(5120, -768)
-room_ident = "L20"
+[node name="WSE_t" parent="Row22" instance=ExtResource("5_42wpr")]
+position = Vector2(5120, 768)
+room_ident = "L22"
 
-[node name="ES_Elbow" parent="Row20" instance=ExtResource("9_s3tgo")]
-position = Vector2(6144, -768)
-room_ident = "M20"
+[node name="H_Room" parent="Row22" instance=ExtResource("4_hjxqu")]
+position = Vector2(6144, 768)
+room_ident = "M22"
 
-[node name="WNE_T" parent="Row20" instance=ExtResource("6_ewfln")]
-position = Vector2(7168, -768)
-room_ident = "N20"
+[node name="WNS_t" parent="Row22" instance=ExtResource("13_d50kt")]
+position = Vector2(7168, 768)
+room_ident = "N22"
 
-[node name="WSE_t" parent="Row20" instance=ExtResource("5_42wpr")]
-position = Vector2(8192, -768)
-room_ident = "O20"
+[node name="N_deadend2" parent="Row22" instance=ExtResource("10_01stl")]
+position = Vector2(9216, 768)
+room_ident = "P22"
 
-[node name="WNE_T2" parent="Row20" instance=ExtResource("6_ewfln")]
-position = Vector2(9216, -768)
-room_ident = "P20"
+[node name="NE_Elbow" parent="Row22" instance=ExtResource("15_0cqm8")]
+position = Vector2(10240, 768)
+room_ident = "Q22"
 
-[node name="WN_Elbow" parent="Row20" instance=ExtResource("14_t3yop")]
-position = Vector2(10240, -768)
-room_ident = "Q20"
+[node name="WNS_t2" parent="Row22" instance=ExtResource("13_d50kt")]
+position = Vector2(11264, 768)
+room_ident = "R22"
 
-[node name="V_Room" parent="Row20" instance=ExtResource("8_bn4h5")]
-position = Vector2(12288, -768)
-room_ident = "S20"
+[node name="ES_Elbow2" parent="Row22" instance=ExtResource("9_s3tgo")]
+position = Vector2(12288, 768)
+room_ident = "S22"
 
-[node name="V_Room2" parent="Row20" instance=ExtResource("8_bn4h5")]
-position = Vector2(13312, -768)
-room_ident = "T20"
+[node name="WNE_T" parent="Row22" instance=ExtResource("6_ewfln")]
+position = Vector2(13312, 768)
+room_ident = "T22"
 
-[node name="NE_Elbow" parent="Row20" instance=ExtResource("15_0cqm8")]
-position = Vector2(14336, -768)
-room_ident = "U20"
+[node name="WS_Elbow" parent="Row22" instance=ExtResource("7_hgr6m")]
+position = Vector2(14336, 768)
+room_ident = "U22"
 
-[node name="Row19" type="Node2D" parent="."]
+[node name="V_Room" parent="Row22" instance=ExtResource("8_bn4h5")]
+position = Vector2(15360, 768)
+room_ident = "V22"
 
-[node name="ES_Elbow" parent="Row19" instance=ExtResource("9_s3tgo")]
-position = Vector2(4096, -1536)
-room_ident = "K19"
+[node name="Row23" type="Node2D" parent="."]
 
-[node name="WSE_t" parent="Row19" instance=ExtResource("5_42wpr")]
-position = Vector2(5120, -1536)
-room_ident = "L19"
+[node name="N_deadend" parent="Row23" instance=ExtResource("10_01stl")]
+position = Vector2(4096, 1536)
+room_ident = "K23"
 
-[node name="H_Room" parent="Row19" instance=ExtResource("4_hjxqu")]
-position = Vector2(6144, -1536)
-room_ident = "M19"
+[node name="NE_Elbow" parent="Row23" instance=ExtResource("15_0cqm8")]
+position = Vector2(5120, 1536)
+room_ident = "L23"
 
-[node name="WNS_t" parent="Row19" instance=ExtResource("13_d50kt")]
-position = Vector2(7168, -1536)
-room_ident = "N19"
+[node name="WS_Elbow" parent="Row23" instance=ExtResource("7_hgr6m")]
+position = Vector2(6144, 1536)
+room_ident = "M23"
 
-[node name="NE_Elbow" parent="Row19" instance=ExtResource("15_0cqm8")]
-position = Vector2(8192, -1536)
-room_ident = "O19"
+[node name="NE_Elbow2" parent="Row23" instance=ExtResource("15_0cqm8")]
+position = Vector2(7168, 1536)
+room_ident = "N23"
 
-[node name="WNS_t2" parent="Row19" instance=ExtResource("13_d50kt")]
-position = Vector2(9216, -1536)
-room_ident = "P19"
+[node name="WNE_T" parent="Row23" instance=ExtResource("6_ewfln")]
+position = Vector2(8192, 1536)
+room_ident = "O23"
 
-[node name="V_Room" parent="Row19" instance=ExtResource("8_bn4h5")]
-position = Vector2(10240, -1536)
-room_ident = "Q19"
+[node name="H_Room" parent="Row23" instance=ExtResource("4_hjxqu")]
+position = Vector2(9216, 1536)
+room_ident = "P23"
 
-[node name="ES_Elbow2" parent="Row19" instance=ExtResource("9_s3tgo")]
-position = Vector2(11264, -1536)
-room_ident = "R19"
+[node name="WSE_t" parent="Row23" instance=ExtResource("5_42wpr")]
+position = Vector2(10240, 1536)
+room_ident = "Q23"
 
-[node name="WSE_t2" parent="Row19" instance=ExtResource("5_42wpr")]
-position = Vector2(12288, -1536)
-room_ident = "S19"
+[node name="WNE_T2" parent="Row23" instance=ExtResource("6_ewfln")]
+position = Vector2(11264, 1536)
+room_ident = "R23"
 
-[node name="WNS_t3" parent="Row19" instance=ExtResource("13_d50kt")]
-position = Vector2(13312, -1536)
-room_ident = "T19"
+[node name="WNS_t" parent="Row23" instance=ExtResource("13_d50kt")]
+position = Vector2(12288, 1536)
+room_ident = "S23"
 
-[node name="ES_Elbow3" parent="Row19" instance=ExtResource("9_s3tgo")]
-position = Vector2(14336, -1536)
-room_ident = "U19"
+[node name="S_deadend" parent="Row23" instance=ExtResource("9_g1p3w")]
+position = Vector2(13312, 1536)
+room_ident = "T23"
 
-[node name="WNE_T" parent="Row19" instance=ExtResource("6_ewfln")]
-position = Vector2(15360, -1536)
-room_ident = "V19"
+[node name="V_Room" parent="Row23" instance=ExtResource("8_bn4h5")]
+position = Vector2(14336, 1536)
+room_ident = "U23"
 
-[node name="W_deadend" parent="Row19" instance=ExtResource("16_tg8em")]
-position = Vector2(16384, -1536)
-room_ident = "W19"
+[node name="NE_Elbow3" parent="Row23" instance=ExtResource("15_0cqm8")]
+position = Vector2(15360, 1536)
+room_ident = "V23"
+
+[node name="H_Room2" parent="Row23" instance=ExtResource("4_hjxqu")]
+position = Vector2(16384, 1536)
+room_ident = "W23"
+
+[node name="WS_Elbow2" parent="Row23" instance=ExtResource("7_hgr6m")]
+position = Vector2(17408, 1536)
+room_ident = "X23"
+
+[node name="Row24" type="Node2D" parent="."]
+
+[node name="NES_T" parent="Row24" instance=ExtResource("11_yvak1")]
+position = Vector2(6144, 2304)
+room_ident = "M24"
+
+[node name="H_Room3" parent="Row24" instance=ExtResource("4_hjxqu")]
+position = Vector2(7168, 2304)
+room_ident = "N24"
+
+[node name="WSE_t2" parent="Row24" instance=ExtResource("5_42wpr")]
+position = Vector2(8192, 2304)
+room_ident = "O24"
+
+[node name="W_deadend" parent="Row24" instance=ExtResource("16_tg8em")]
+position = Vector2(9216, 2304)
+room_ident = "P24"
+
+[node name="V_Room2" parent="Row24" instance=ExtResource("8_bn4h5")]
+position = Vector2(10240, 2304)
+room_ident = "Q24"
+
+[node name="E_Deadend" parent="Row24" instance=ExtResource("12_60lsl")]
+position = Vector2(11264, 2304)
+room_ident = "R24"
+
+[node name="WN_Elbow" parent="Row24" instance=ExtResource("14_t3yop")]
+position = Vector2(12288, 2304)
+room_ident = "S24"
+
+[node name="NE_Elbow4" parent="Row24" instance=ExtResource("15_0cqm8")]
+position = Vector2(13312, 2304)
+room_ident = "T24"
+
+[node name="WN_Elbow2" parent="Row24" instance=ExtResource("14_t3yop")]
+position = Vector2(14336, 2304)
+room_ident = "U24"
+
+[node name="E_Deadend2" parent="Row24" instance=ExtResource("12_60lsl")]
+position = Vector2(15360, 2304)
+room_ident = "V24"
+
+[node name="WSE_t3" parent="Row24" instance=ExtResource("5_42wpr")]
+position = Vector2(16384, 2304)
+room_ident = "W24"
+
+[node name="WN_Elbow3" parent="Row24" instance=ExtResource("14_t3yop")]
+position = Vector2(17408, 2304)
+room_ident = "X24"
+
+[node name="Row25" type="Node2D" parent="."]
+
+[node name="N_deadend" parent="Row25" instance=ExtResource("10_01stl")]
+position = Vector2(6144, 3072)
+room_ident = "M25"
+
+[node name="ES_Elbow" parent="Row25" instance=ExtResource("9_s3tgo")]
+position = Vector2(7168, 3072)
+room_ident = "N25"
+
+[node name="WN_Elbow" parent="Row25" instance=ExtResource("14_t3yop")]
+position = Vector2(8192, 3072)
+room_ident = "O25"
+
+[node name="ES_Elbow2" parent="Row25" instance=ExtResource("9_s3tgo")]
+position = Vector2(9216, 3072)
+room_ident = "P25"
+
+[node name="WNE_T" parent="Row25" instance=ExtResource("6_ewfln")]
+position = Vector2(10240, 3072)
+room_ident = "Q25"
+
+[node name="WS_Elbow" parent="Row25" instance=ExtResource("7_hgr6m")]
+position = Vector2(11264, 3072)
+room_ident = "R25"
+
+[node name="V_Room" parent="Row25" instance=ExtResource("8_bn4h5")]
+position = Vector2(16384, 3072)
+room_ident = "W25"
+
+[node name="Row26" type="Node2D" parent="."]
+
+[node name="NE_Elbow" parent="Row26" instance=ExtResource("15_0cqm8")]
+position = Vector2(7168, 3840)
+room_ident = "N26"
+
+[node name="H_Room" parent="Row26" instance=ExtResource("4_hjxqu")]
+position = Vector2(8192, 3840)
+room_ident = "O26"
+
+[node name="WNE_T2" parent="Row26" instance=ExtResource("6_ewfln")]
+position = Vector2(9216, 3840)
+room_ident = "P26"
+
+[node name="WS_Elbow2" parent="Row26" instance=ExtResource("7_hgr6m")]
+position = Vector2(10240, 3840)
+room_ident = "Q26"
+
+[node name="NES_T" parent="Row26" instance=ExtResource("11_yvak1")]
+position = Vector2(11264, 3840)
+room_ident = "R26"
+
+[node name="H_Room2" parent="Row26" instance=ExtResource("4_hjxqu")]
+position = Vector2(12288, 3840)
+room_ident = "S26"
+
+[node name="WSE_t" parent="Row26" instance=ExtResource("5_42wpr")]
+position = Vector2(13312, 3840)
+room_ident = "T26"
+
+[node name="H_Room3" parent="Row26" instance=ExtResource("4_hjxqu")]
+position = Vector2(14336, 3840)
+room_ident = "U26"
+
+[node name="W_deadend" parent="Row26" instance=ExtResource("16_tg8em")]
+position = Vector2(15360, 3840)
+room_ident = "V26"
+
+[node name="NE_Elbow2" parent="Row26" instance=ExtResource("15_0cqm8")]
+position = Vector2(16384, 3840)
+room_ident = "W26"
+
+[node name="WS_Elbow3" parent="Row26" instance=ExtResource("7_hgr6m")]
+position = Vector2(17408, 3840)
+room_ident = "X26"
+
+[node name="Row27" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row27" instance=ExtResource("12_60lsl")]
+position = Vector2(8192, 4608)
+room_ident = "O27"
+
+[node name="H_Room" parent="Row27" instance=ExtResource("4_hjxqu")]
+position = Vector2(9216, 4608)
+room_ident = "P27"
+
+[node name="WNE_T" parent="Row27" instance=ExtResource("6_ewfln")]
+position = Vector2(10240, 4608)
+room_ident = "Q27"
+
+[node name="WN_Elbow" parent="Row27" instance=ExtResource("14_t3yop")]
+position = Vector2(11264, 4608)
+room_ident = "R27"
+
+[node name="ES_Elbow" parent="Row27" instance=ExtResource("9_s3tgo")]
+position = Vector2(12288, 4608)
+room_ident = "S27"
+
+[node name="WNE_T2" parent="Row27" instance=ExtResource("6_ewfln")]
+position = Vector2(13312, 4608)
+room_ident = "T27"
+
+[node name="WSE_t" parent="Row27" instance=ExtResource("5_42wpr")]
+position = Vector2(15360, 4608)
+room_ident = "V27"
+
+[node name="W_deadend" parent="Row27" instance=ExtResource("16_tg8em")]
+position = Vector2(16384, 4608)
+room_ident = "W27"
+
+[node name="V_Room" parent="Row27" instance=ExtResource("8_bn4h5")]
+position = Vector2(17408, 4608)
+room_ident = "X27"
+
+[node name="Row28" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row28" instance=ExtResource("12_60lsl")]
+position = Vector2(9216, 5376)
+room_ident = "P28"
+
+[node name="WSE_t" parent="Row28" instance=ExtResource("5_42wpr")]
+position = Vector2(10240, 5376)
+room_ident = "Q28"
+
+[node name="H_Room" parent="Row28" instance=ExtResource("4_hjxqu")]
+position = Vector2(11264, 5376)
+room_ident = "R28"
+
+[node name="WNE_T" parent="Row28" instance=ExtResource("6_ewfln")]
+position = Vector2(12288, 5376)
+room_ident = "S28"
+
+[node name="W_deadend" parent="Row28" instance=ExtResource("16_tg8em")]
+position = Vector2(13312, 5376)
+room_ident = "T28"
+
+[node name="ES_Elbow" parent="Row28" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, 5376)
+room_ident = "U28"
+
+[node name="WNE_T2" parent="Row28" instance=ExtResource("6_ewfln")]
+position = Vector2(15360, 5376)
+room_ident = "V28"
+
+[node name="H_Room2" parent="Row28" instance=ExtResource("4_hjxqu")]
+position = Vector2(16384, 5376)
+room_ident = "W28"
+
+[node name="WN_Elbow" parent="Row28" instance=ExtResource("14_t3yop")]
+position = Vector2(17408, 5376)
+room_ident = "X28"
+
+[node name="Row29" type="Node2D" parent="."]
+
+[node name="NE_Elbow" parent="Row29" instance=ExtResource("15_0cqm8")]
+position = Vector2(10240, 6144)
+room_ident = "Q29"
+
+[node name="H_Room" parent="Row29" instance=ExtResource("4_hjxqu")]
+position = Vector2(11264, 6144)
+room_ident = "R29"
+
+[node name="WSE_t" parent="Row29" instance=ExtResource("5_42wpr")]
+position = Vector2(12288, 6144)
+room_ident = "S29"
+
+[node name="H_Room2" parent="Row29" instance=ExtResource("4_hjxqu")]
+position = Vector2(13312, 6144)
+room_ident = "T29"
+
+[node name="WNS_t" parent="Row29" instance=ExtResource("13_d50kt")]
+position = Vector2(14336, 6144)
+room_ident = "U29"
+
+[node name="Row30" type="Node2D" parent="."]
+
+[node name="NE_Elbow2" parent="Row30" instance=ExtResource("15_0cqm8")]
+position = Vector2(12288, 6912)
+room_ident = "S30"
+
+[node name="WSE_t" parent="Row30" instance=ExtResource("5_42wpr")]
+position = Vector2(13312, 6912)
+room_ident = "T30"
+
+[node name="WN_Elbow" parent="Row30" instance=ExtResource("14_t3yop")]
+position = Vector2(14336, 6912)
+room_ident = "U30"
+
+[node name="NE_Elbow" parent="." instance=ExtResource("15_0cqm8")]
+position = Vector2(13312, 7680)
+
+[node name="WS_Elbow" parent="." instance=ExtResource("7_hgr6m")]
+position = Vector2(14336, 7680)
+
+[node name="NE_Elbow2" parent="." instance=ExtResource("15_0cqm8")]
+position = Vector2(14336, 8448)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
