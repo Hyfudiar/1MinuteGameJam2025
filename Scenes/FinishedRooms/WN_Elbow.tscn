@@ -2,74 +2,24 @@
 
 [ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_apekw"]
 [ext_resource type="Texture2D" uid="uid://c08001v73hvaw" path="res://Assets/Textures/ROOMS_BG/E_BG.005.png" id="2_1atre"]
-[ext_resource type="PackedScene" uid="uid://vumva14ljw76" path="res://Scenes/invisiwall.tscn" id="3_alhg2"]
+[ext_resource type="Texture2D" uid="uid://c8i1s74j4ufa6" path="res://Assets/Textures/ROOMS_BG/ref.001.png" id="3_xfsqx"]
 
 [node name="WN_Elbow" instance=ExtResource("1_apekw")]
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_1atre")
 
-[node name="invisiwall" parent="." index="4" instance=ExtResource("3_alhg2")]
-position = Vector2(208, 294)
+[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(141, 324, 78, 329, 0, 332, 162, 86, 358, 65, 454, 4, 483, 282, 141, 285)
 
-[node name="invisiwall2" parent="." index="5" instance=ExtResource("3_alhg2")]
-position = Vector2(337, 294)
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
 
-[node name="invisiwall3" parent="." index="6" instance=ExtResource("3_alhg2")]
-position = Vector2(423, 293)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
+polygon = PackedVector2Array(111, 540, -1, 433, 51, 667, 283, 702, 463, 672, 634, 603, 825, 460, 821, 241, 669, 157, 564, 19, 593, 285, 625, 278, 668, 302, 656, 322, 665, 363, 640, 430, 552, 435, 529, 478, 501, 478, 484, 527, 457, 536, 400, 544, 392, 571, 237, 575, 208, 604, 126, 610, 99, 589)
 
-[node name="invisiwall4" parent="." index="7" instance=ExtResource("3_alhg2")]
-position = Vector2(173, 607)
-
-[node name="invisiwall5" parent="." index="8" instance=ExtResource("3_alhg2")]
-position = Vector2(286, 575)
-
-[node name="invisiwall14" parent="." index="9" instance=ExtResource("3_alhg2")]
-position = Vector2(480, 531)
-rotation = 1.90066
-
-[node name="invisiwall15" parent="." index="10" instance=ExtResource("3_alhg2")]
-position = Vector2(533, 490)
-rotation = 1.90066
-
-[node name="invisiwall17" parent="." index="11" instance=ExtResource("3_alhg2")]
-position = Vector2(651, 372)
-rotation = 1.90066
-
-[node name="invisiwall18" parent="." index="12" instance=ExtResource("3_alhg2")]
-position = Vector2(661, 273)
-rotation = 1.90066
-
-[node name="invisiwall19" parent="." index="13" instance=ExtResource("3_alhg2")]
-position = Vector2(705, 332)
-
-[node name="invisiwall16" parent="." index="14" instance=ExtResource("3_alhg2")]
-position = Vector2(564, 470)
-
-[node name="invisiwall13" parent="." index="15" instance=ExtResource("3_alhg2")]
-position = Vector2(338, 573)
-
-[node name="invisiwall6" parent="." index="16" instance=ExtResource("3_alhg2")]
-position = Vector2(464, 538)
-
-[node name="invisiwall7" parent="." index="17" instance=ExtResource("3_alhg2")]
-position = Vector2(617, 432)
-
-[node name="invisiwall8" parent="." index="18" instance=ExtResource("3_alhg2")]
-position = Vector2(646, 301)
-
-[node name="invisiwall9" parent="." index="19" instance=ExtResource("3_alhg2")]
-position = Vector2(136, 361)
-rotation = 1.68948
-
-[node name="invisiwall10" parent="." index="20" instance=ExtResource("3_alhg2")]
-position = Vector2(116, 599)
-rotation = 1.5708
-
-[node name="invisiwall11" parent="." index="21" instance=ExtResource("3_alhg2")]
-position = Vector2(220, 640)
-rotation = 1.5708
-
-[node name="invisiwall12" parent="." index="22" instance=ExtResource("3_alhg2")]
-position = Vector2(397, 601)
-rotation = 1.5708
+[node name="Ref_001" type="Sprite2D" parent="." index="6"]
+position = Vector2(510, 383)
+texture = ExtResource("3_xfsqx")
