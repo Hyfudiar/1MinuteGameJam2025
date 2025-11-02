@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://cyivadi8lxjsn"]
+
+[ext_resource type="Script" path="res://Scenes/end_screen.gd" id="1_jgbjp"]
+
+[node name="End screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jgbjp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 326.0
+offset_bottom = 281.0
+text = "Some text
+
+
+end screen"
+
+[node name="restart" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -30.0
+offset_right = 99.5
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return again"
+
+[node name="quit" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -202.5
+offset_top = -93.0
+offset_right = 203.5
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exit game"
+
+[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]

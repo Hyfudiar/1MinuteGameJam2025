@@ -1,6 +1,5 @@
 extends Node2D
 
-enum COLORS {R, B, Y}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,11 +11,11 @@ func _process(delta):
 	pass
 
 
+func _on_player_start_hg():
+	$Timer.start()
+	
+
+
 func _on_timer_timeout():
 	print("end of time")
 	get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
-
-
-func _on_player_start_hg():
-	print("received signal")
-	$Timer.start()
