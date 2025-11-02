@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvwff3vwpe73o"]
+
+[ext_resource type="PackedScene" uid="uid://bjqxt8ej3nyaa" path="res://Scenes/FinishedRooms/Chasms/h_chasm.tscn" id="1_hjgf0"]
+
+[node name="Blue2_Chasm" instance=ExtResource("1_hjgf0")]
+unlock_color = 1
+chasm_ident = "T13"
+room_ident = "T13"

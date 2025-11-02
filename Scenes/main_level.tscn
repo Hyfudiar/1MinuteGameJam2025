@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=24 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -12,11 +12,17 @@
 [ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/zl.tscn" id="9_s3tgo"]
 [ext_resource type="PackedScene" uid="uid://ctqg8qppbx0gl" path="res://Scenes/FinishedRooms/zr.tscn" id="10_01stl"]
 [ext_resource type="PackedScene" uid="uid://tv64shpg4j1p" path="res://Scenes/FinishedRooms/zo.tscn" id="11_yvak1"]
-[ext_resource type="PackedScene" uid="uid://bg7hnvt0s4hnh" path="res://Scenes/FinishedRooms/zt.tscn" id="12_60lsl"]
+[ext_resource type="PackedScene" uid="uid://bg7hnvt0s4hnh" path="res://Scenes/E_deadend.tscn" id="12_60lsl"]
 [ext_resource type="PackedScene" uid="uid://cqpythkcfph4c" path="res://Scenes/FinishedRooms/zn.tscn" id="13_d50kt"]
 [ext_resource type="PackedScene" uid="uid://bxet3vpnnkmmy" path="res://Scenes/FinishedRooms/zm.tscn" id="14_t3yop"]
 [ext_resource type="PackedScene" uid="uid://bd31p8ia170un" path="res://Scenes/FinishedRooms/zj.tscn" id="15_0cqm8"]
 [ext_resource type="PackedScene" uid="uid://cc734k34e8w8v" path="res://Scenes/FinishedRooms/zu.tscn" id="16_tg8em"]
+[ext_resource type="PackedScene" uid="uid://bcx2lks8le24i" path="res://Scenes/FinishedRooms/Chasms/red_1_chasm.tscn" id="18_rsqko"]
+[ext_resource type="PackedScene" uid="uid://gfkf6qavg1uo" path="res://Scenes/FinishedRooms/Chasms/blue_1_chasm.tscn" id="18_ubtwk"]
+[ext_resource type="PackedScene" uid="uid://cs1uav7x1oqta" path="res://Scenes/FinishedRooms/Chasms/red_2_chasm.tscn" id="20_bxpr7"]
+[ext_resource type="PackedScene" uid="uid://bvwff3vwpe73o" path="res://Scenes/FinishedRooms/Chasms/blue_2_chasm.tscn" id="21_6h55p"]
+[ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
+[ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
@@ -38,6 +44,7 @@ one_shot = true
 
 [node name="ES_Elbow2" parent="Row10" instance=ExtResource("9_s3tgo")]
 position = Vector2(14336, -8448)
+room_ident = "U10"
 
 [node name="Row11" type="Node2D" parent="."]
 
@@ -779,14 +786,41 @@ room_ident = "T30"
 position = Vector2(14336, 6912)
 room_ident = "U30"
 
-[node name="NE_Elbow" parent="." instance=ExtResource("15_0cqm8")]
+[node name="Row31" type="Node2D" parent="."]
+
+[node name="NE_Elbow" parent="Row31" instance=ExtResource("15_0cqm8")]
 position = Vector2(13312, 7680)
+room_ident = "T31"
 
-[node name="WS_Elbow" parent="." instance=ExtResource("7_hgr6m")]
+[node name="WS_Elbow" parent="Row31" instance=ExtResource("7_hgr6m")]
 position = Vector2(14336, 7680)
+room_ident = "U31"
 
-[node name="NE_Elbow2" parent="." instance=ExtResource("15_0cqm8")]
+[node name="Row32" type="Node2D" parent="."]
+
+[node name="NE_Elbow2" parent="Row32" instance=ExtResource("15_0cqm8")]
 position = Vector2(14336, 8448)
+room_ident = "U32"
+
+[node name="CHASMS" type="Node2D" parent="."]
+
+[node name="Red1_Chasm" parent="CHASMS" instance=ExtResource("18_rsqko")]
+position = Vector2(5120, 0)
+
+[node name="Blue1_Chasm" parent="CHASMS" instance=ExtResource("18_ubtwk")]
+position = Vector2(8192, 768)
+
+[node name="Red2_chasm" parent="CHASMS" instance=ExtResource("20_bxpr7")]
+position = Vector2(11264, -768)
+
+[node name="Blue2_Chasm" parent="CHASMS" instance=ExtResource("21_6h55p")]
+position = Vector2(13312, -6144)
+
+[node name="Yellow2_Chasm" parent="CHASMS" instance=ExtResource("22_of0xw")]
+position = Vector2(14336, 4608)
+
+[node name="Yellow1_Chasm" parent="CHASMS" instance=ExtResource("23_daywc")]
+position = Vector2(10240, -2304)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl8yg1nrb6oo6"]
+
+[ext_resource type="PackedScene" uid="uid://xglafck6pcjr" path="res://Scenes/FinishedRooms/Chasms/h_chasm-OLD.tscn" id="1_bdis7"]
+[ext_resource type="Texture2D" uid="uid://brqm6m7c06qet" path="res://Assets/Textures/ROOMS_BG/b_y2.046.png" id="2_jqoxe"]
+
+[node name="Yellow2_Chasm" instance=ExtResource("1_bdis7")]
+unlock_color = 2
+chasm_ident = "U27"
+room_ident = "U27"
+
+[node name="Icon" parent="." index="3"]
+texture = ExtResource("2_jqoxe")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cs1uav7x1oqta"]
+
+[ext_resource type="PackedScene" uid="uid://ivhl423xrqe7" path="res://Scenes/FinishedRooms/Chasms/v_chasm.tscn" id="1_4opkl"]
+
+[node name="Red2_chasm" instance=ExtResource("1_4opkl")]
+chasm_ident = "R20"
+room_ident = "R20"

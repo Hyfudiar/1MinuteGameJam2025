@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://xglafck6pcjr"]
+[gd_scene load_steps=9 format=3 uid="uid://bjqxt8ej3nyaa"]
 
 [ext_resource type="Script" path="res://chasm_room.gd" id="1_bltul"]
 [ext_resource type="Texture2D" uid="uid://c35db8hn31i7v" path="res://Assets/Textures/ROOMS_BG/C.002.png" id="2_0qscd"]
 [ext_resource type="PackedScene" uid="uid://da3adiol0ym0t" path="res://Scenes/torch.tscn" id="2_205ni"]
-[ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="3_swiqc"]
+[ext_resource type="Texture2D" uid="uid://c48xoup4s51nf" path="res://Assets/Textures/ROOMS_BG/b_b2.042.png" id="3_0hmrs"]
 [ext_resource type="Texture2D" uid="uid://c8i1s74j4ufa6" path="res://Assets/Textures/ROOMS_BG/ref.001.png" id="5_r7m75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
@@ -40,7 +40,7 @@ metadata/_edit_lock_ = true
 modulate = Color(1, 1, 1, 0)
 position = Vector2(509, 405.5)
 scale = Vector2(1.96875, 1.74219)
-texture = ExtResource("3_swiqc")
+texture = ExtResource("3_0hmrs")
 
 [node name="InternalArea" type="Area2D" parent="."]
 metadata/_edit_lock_ = true
