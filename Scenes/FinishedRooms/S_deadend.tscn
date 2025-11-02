@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://caiwtcf4rydlv"]
+
+[ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_ptpow"]
+[ext_resource type="Texture2D" uid="uid://24v336fifljk" path="res://Assets/Textures/ROOMS_BG/DS.005.png" id="2_t8075"]
+
+[node name="S_deadend" instance=ExtResource("1_ptpow")]
+
+[node name="Sprite2D" parent="." index="3"]
+texture = ExtResource("2_t8075")
+
+[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(464, 774, 418, 554, 400, 525, 403, 503, 382, 459, 471, 411, 501, 351, 527, 330, 567, 327, 581, 290, 593, 306, 746, 296, 777, 328, 748, 415, 689, 444, 682, 514, 587, 554, 526, 553, 560, 773, 912, 287, 379, 252, 239, 567)
