@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dniuuoqg4lj2b"]
+[gd_scene load_steps=8 format=3 uid="uid://dniuuoqg4lj2b"]
 
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="1_a10pd"]
 [ext_resource type="PackedScene" uid="uid://c8p7o2rvq25as" path="res://Scenes/modular_testroom_0.tscn" id="2_a3bv7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="4_10fds"]
 [ext_resource type="PackedScene" uid="uid://7v47nn6jqs3j" path="res://Scenes/scene_loader.tscn" id="5_kvsfs"]
 [ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="5_wofi2"]
+[ext_resource type="PackedScene" uid="uid://cd5een3tc5l8b" path="res://Scenes/chasm_testing.tscn" id="7_30o86"]
 
 [node name="modular_testing" type="Node2D"]
 
@@ -15,9 +16,14 @@ scale = Vector2(134.736, 3.99136)
 texture = ExtResource("1_a10pd")
 
 [node name="Stock_Room" parent="." instance=ExtResource("2_a3bv7")]
+room_ident = "S24"
 
 [node name="Stock_Room2" parent="." instance=ExtResource("3_k6m6x")]
 position = Vector2(777, 12)
+
+[node name="Stock_Room3" parent="." instance=ExtResource("7_30o86")]
+position = Vector2(1552, 16)
+room_ident = "N21"
 
 [node name="SceneLoader" parent="." instance=ExtResource("5_kvsfs")]
 position = Vector2(1367, 388)

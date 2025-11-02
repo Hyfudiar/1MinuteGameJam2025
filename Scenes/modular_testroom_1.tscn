@@ -6,9 +6,6 @@
 [node name="Stock_Room" instance=ExtResource("1_cvwys")]
 room_ident = "Q17"
 
-[node name="Walls" parent="." index="1"]
-visible = false
-
-[node name="T4" type="Sprite2D" parent="." index="4"]
+[node name="T4" type="Sprite2D" parent="." index="3"]
 position = Vector2(397, 296)
 texture = ExtResource("2_0k2pd")

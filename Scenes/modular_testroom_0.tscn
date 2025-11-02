@@ -7,9 +7,6 @@
 position = Vector2(3, 12)
 room_ident = "F3"
 
-[node name="Walls" parent="." index="1"]
-visible = false
-
-[node name="T2" type="Sprite2D" parent="." index="4"]
+[node name="T2" type="Sprite2D" parent="." index="3"]
 position = Vector2(397, 313)
 texture = ExtResource("2_fp1s6")
