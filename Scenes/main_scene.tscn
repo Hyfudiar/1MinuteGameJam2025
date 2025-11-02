@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://8m12jx6ijq56"]
+
+[ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_uy56k"]
+
+[node name="Main scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uy56k")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 98.0
+offset_right = 428.0
+offset_bottom = 453.0
+text = "space for text etc etc
+
+
+lorem ipsum
+
+
+
+
+goes down here
+
+
+
+and
+a bit further"
+
+[node name="Start" type="Button" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = -32.0
+offset_bottom = 60.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Start game"
+
+[node name="Quit" type="Button" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -92.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "Quit game"
+
+[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
