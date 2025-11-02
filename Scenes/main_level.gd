@@ -14,3 +14,8 @@ func _process(delta):
 
 func _on_timer_timeout():
 	print("end of time")
+
+
+func _on_player_start_hg():
+	print("received signal")
+	$Timer.start()

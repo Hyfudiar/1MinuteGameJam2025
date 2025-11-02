@@ -8,6 +8,12 @@ enum COLORS {R, B, Y}
 
 @onready var rotating = $Rotating
 
+var hg_brightness = 1.61
+
+var hg_active = false
+
+signal start_hg
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -15,7 +21,14 @@ func _ready():
 	pass
 
 func _process(delta):
-	pass
+	if hg_active:
+		print("hg is active")
+		hg_brightness -= (1.61/(60.0 * (1/delta)))
+		print("subtracted from brightness")
+		clamp(hg_brightness, 0, 1.61)
+		print("clamped brightness")
+		$Rotating/Flashlight/PointLight2D.energy = hg_brightness
+		print("set new brightness")
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
@@ -40,7 +53,11 @@ func _input(event):
 
 func hg_pickup(col):
 	current_hg_color = col
-	$Rotating/Flashlight/PointLight2D.energy = 1.45
+	$Rotating/Flashlight/PointLight2D.enabled = true
+	start_hg.emit()
+	hg_active = true
+	print("hg light setup done")
+	#$Rotating/Flashlight/PointLight2D.energy = 1.45pass
 	if current_hg_color == COLORS.R:
 		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
 	if current_hg_color == COLORS.B:

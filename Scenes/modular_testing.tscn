@@ -46,5 +46,5 @@ current_hg_color = 2
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.277528, 0.277528, 0.277528, 1)
-energy = 3.11
+energy = 3.72
 blend_mode = 1

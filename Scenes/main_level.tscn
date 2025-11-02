@@ -12,4 +12,5 @@ script = ExtResource("1_qrekd")
 wait_time = 60.0
 one_shot = true
 
+[connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
