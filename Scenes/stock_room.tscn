@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlc31iuuggen4"]
+[gd_scene load_steps=4 format=3 uid="uid://dlc31iuuggen4"]
 
 [ext_resource type="Script" path="res://room_script.gd" id="1_0b7p2"]
-[ext_resource type="PackedScene" uid="uid://vumva14ljw76" path="res://Scenes/invisiwall.tscn" id="3_u1c3s"]
 [ext_resource type="PackedScene" uid="uid://da3adiol0ym0t" path="res://Scenes/torch.tscn" id="4_ktgbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
@@ -16,54 +15,6 @@ script = ExtResource("1_0b7p2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(396, 288.5)
 shape = SubResource("RectangleShape2D_vrjuv")
-
-[node name="Walls" type="Node2D" parent="."]
-
-[node name="invisiwall" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(218, 219)
-
-[node name="invisiwall2" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(416, 219)
-
-[node name="invisiwall3" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(547, 219)
-
-[node name="invisiwall4" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(618, 221)
-
-[node name="invisiwall5" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(176, 220)
-
-[node name="invisiwall6" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(164, 463)
-
-[node name="invisiwall7" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(323, 462)
-
-[node name="invisiwall8" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(233, 463)
-
-[node name="invisiwall9" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(546, 463)
-
-[node name="invisiwall10" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(654, 463)
-
-[node name="invisiwall11" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(685, 216)
-rotation = 1.5708
-
-[node name="invisiwall12" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(704, 394)
-rotation = 1.44339
-
-[node name="invisiwall13" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(117, 286)
-rotation = 1.69646
-
-[node name="invisiwall14" parent="Walls" instance=ExtResource("3_u1c3s")]
-position = Vector2(105, 401)
-rotation = 1.69646
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(390, 289)
