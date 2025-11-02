@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://livrftisrui4"]
+[gd_scene load_steps=5 format=3 uid="uid://livrftisrui4"]
 
 [ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="1_2ecn2"]
 [ext_resource type="Script" path="res://Scenes/hourglass.gd" id="1_eums6"]
+[ext_resource type="Texture2D" uid="uid://dlxekrm3acxtw" path="res://Assets/Textures/2d_lights_and_shadows_neutral_point_light.webp" id="3_nb3hx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n4su3"]
 size = Vector2(38, 38)
 
-[node name="Hourglass" type="Area2D"]
+[node name="Hourglass" type="Area2D" groups=["hourglass"]]
 script = ExtResource("1_eums6")
+item_color = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(19, 19)
@@ -17,3 +19,8 @@ texture = ExtResource("1_2ecn2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(19, 19)
 shape = SubResource("RectangleShape2D_n4su3")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("3_nb3hx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

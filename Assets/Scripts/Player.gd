@@ -12,12 +12,7 @@ enum COLORS {R, B, Y}
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _ready():
-	if current_hg_color == COLORS.R:
-		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
-	if current_hg_color == COLORS.B:
-		$Rotating/Flashlight/PointLight2D.color = Color.hex(0x54a3ffff)
-	if current_hg_color == COLORS.Y:
-		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xfff660ff)
+	pass
 
 func _process(delta):
 	pass
@@ -45,6 +40,7 @@ func _input(event):
 
 func hg_pickup(col):
 	current_hg_color = col
+	$Rotating/Flashlight/PointLight2D.energy = 1.45
 	if current_hg_color == COLORS.R:
 		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
 	if current_hg_color == COLORS.B:
