@@ -23,6 +23,7 @@ position = Vector2(1367, 388)
 
 [node name="Player" parent="." instance=ExtResource("4_10fds")]
 position = Vector2(181, 322)
+current_hg_color = 2
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.277528, 0.277528, 0.277528, 1)

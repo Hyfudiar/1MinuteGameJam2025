@@ -4,12 +4,20 @@ const SPEED = 300.0
 
 enum COLORS {R, B, Y}
 
-var current_hg_color;
+@export var current_hg_color : COLORS;
 
 @onready var rotating = $Rotating
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
+func _ready():
+	if current_hg_color == COLORS.R:
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
+	if current_hg_color == COLORS.B:
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0x54a3ffff)
+	if current_hg_color == COLORS.Y:
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xfff660ff)
 
 func _process(delta):
 	pass
@@ -38,4 +46,8 @@ func _input(event):
 func hg_pickup(col):
 	current_hg_color = col
 	if current_hg_color == COLORS.R:
-		$Rotating/Flashlight/PointLight2D.color = ff6772
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
+	if current_hg_color == COLORS.B:
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0x54a3ffff)
+	if current_hg_color == COLORS.Y:
+		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xfff660ff)
