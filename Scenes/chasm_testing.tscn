@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cd5een3tc5l8b"]
+[gd_scene load_steps=6 format=3 uid="uid://cd5een3tc5l8b"]
 
 [ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_ngr2d"]
 [ext_resource type="Script" path="res://chasm_room.gd" id="2_ipqp1"]
-[ext_resource type="Texture2D" uid="uid://p36p6o6w54h5" path="res://Assets/Textures/ROOMS_BG/H_BG.010.png" id="3_tlvow"]
 [ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="4_rfucg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mdhox"]
@@ -16,24 +15,19 @@ script = ExtResource("2_ipqp1")
 unlock_color = 0
 chasm_ident = ""
 
-[node name="HBg_010" type="Sprite2D" parent="." index="2"]
-position = Vector2(392.25, 288.5)
-scale = Vector2(0.751465, 0.766927)
-texture = ExtResource("3_tlvow")
-
-[node name="Icon" type="Sprite2D" parent="." index="4"]
+[node name="Icon" type="Sprite2D" parent="." index="3"]
 modulate = Color(1, 1, 1, 0)
 position = Vector2(381, 305)
 scale = Vector2(1.77344, 1.69531)
 texture = ExtResource("4_rfucg")
 
-[node name="InternalArea" type="Area2D" parent="." index="5"]
+[node name="InternalArea" type="Area2D" parent="." index="4"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InternalArea" index="0"]
 position = Vector2(385, 301)
 shape = SubResource("RectangleShape2D_mdhox")
 
-[node name="Chasm" type="RigidBody2D" parent="." index="6"]
+[node name="Chasm" type="RigidBody2D" parent="." index="5"]
 position = Vector2(386, 288)
 gravity_scale = 0.0
 lock_rotation = true
