@@ -4,10 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c08001v73hvaw" path="res://Assets/Textures/ROOMS_BG/E_BG.005.png" id="2_1atre"]
 [ext_resource type="PackedScene" uid="uid://vumva14ljw76" path="res://Scenes/invisiwall.tscn" id="3_alhg2"]
 
-[node name="Stock_Room" instance=ExtResource("1_apekw")]
+[node name="WN_Elbow" instance=ExtResource("1_apekw")]
 
 [node name="Sprite2D" parent="." index="3"]
-position = Vector2(512, 384)
 texture = ExtResource("2_1atre")
 
 [node name="invisiwall" parent="." index="4" instance=ExtResource("3_alhg2")]

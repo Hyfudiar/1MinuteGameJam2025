@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd31p8ia170un"]
+
+[ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_d3cbr"]
+[ext_resource type="Texture2D" uid="uid://daa2wsavly7nh" path="res://Assets/Textures/ROOMS_BG/E_BG.007.png" id="2_5214l"]
+
+[node name="NE_Elbow" instance=ExtResource("1_d3cbr")]
+
+[node name="Sprite2D" parent="." index="3"]
+texture = ExtResource("2_5214l")
+
+[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(862, 425, 863, 325, 877, 286, 529, 288, 600, 230, 954, 234)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
+polygon = PackedVector2Array(429, 288, 359, 291, 339, 326, 306, 336, 306, 371, 338, 429, 354, 459, 393, 469, 396, 480, 427, 513, 444, 538, 498, 534, 469, 595, 496, 612, 883, 610, 863, 503, 931, 559, 932, 643, 708, 661, 377, 609, 231, 402, 278, 287, 341, 230)

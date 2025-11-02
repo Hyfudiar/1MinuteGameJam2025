@@ -1,16 +1,39 @@
-[gd_scene load_steps=3 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=7 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
+[ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
 [ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="2_nqcvk"]
+[ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/ES_Elbow.tscn" id="4_fxiyi"]
+[ext_resource type="PackedScene" uid="uid://bd31p8ia170un" path="res://Scenes/FinishedRooms/NE_Elbow.tscn" id="5_ngq7a"]
+[ext_resource type="PackedScene" uid="uid://bxet3vpnnkmmy" path="res://Scenes/FinishedRooms/WN_Elbow.tscn" id="6_6luw8"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1284, 683)
+scale = Vector2(2.9225, 2.802)
+texture = ExtResource("2_ljnmj")
+metadata/_edit_lock_ = true
+
 [node name="Player" parent="." instance=ExtResource("2_nqcvk")]
+position = Vector2(623, 473)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="ES_Elbow" parent="." instance=ExtResource("4_fxiyi")]
+position = Vector2(0, 0)
+room_ident = "S21"
+
+[node name="NE_Elbow" parent="." instance=ExtResource("5_ngq7a")]
+position = Vector2(0, 768)
+room_ident = "S22"
+metadata/_edit_lock_ = true
+
+[node name="WN_Elbow" parent="." instance=ExtResource("6_6luw8")]
+position = Vector2(1024, 768)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
