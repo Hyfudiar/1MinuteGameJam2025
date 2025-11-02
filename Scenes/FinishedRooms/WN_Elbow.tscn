@@ -21,5 +21,9 @@ freeze = true
 polygon = PackedVector2Array(111, 540, -1, 433, 51, 667, 283, 702, 463, 672, 634, 603, 825, 460, 821, 241, 669, 157, 564, 19, 593, 285, 625, 278, 668, 302, 656, 322, 665, 363, 640, 430, 552, 435, 529, 478, 501, 478, 484, 527, 457, 536, 400, 544, 392, 571, 237, 575, 208, 604, 126, 610, 99, 589)
 
 [node name="Ref_001" type="Sprite2D" parent="." index="6"]
+visible = false
 position = Vector2(510, 383)
 texture = ExtResource("3_xfsqx")
+
+[node name="Sprite2D2" parent="." index="7"]
+visible = false

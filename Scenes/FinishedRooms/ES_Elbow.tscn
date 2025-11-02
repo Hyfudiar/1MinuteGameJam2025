@@ -15,7 +15,10 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
-polygon = PackedVector2Array(902, 358, 899, 295, 654, 294, 648, 328, 587, 338, 563, 371, 542, 401, 517, 423, 456, 469, 411, 478, 412, 505, 418, 530, 426, 547, 443, 547, 427, 602, 464, 610, 483, 769, 313, 494, 453, 369, 615, 269, 800, 225, 1025, 335)
+polygon = PackedVector2Array(902, 358, 899, 295, 654, 294, 648, 328, 587, 338, 563, 371, 542, 401, 517, 423, 456, 469, 411, 478, 412, 505, 418, 530, 426, 547, 443, 547, 427, 602, 464, 610, 457, 770, 313, 494, 453, 369, 615, 269, 800, 225, 1029, 330)
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(896, 445, 901, 510, 906, 611, 886, 612, 591, 614, 566, 766, 936, 665, 1026, 465)
+polygon = PackedVector2Array(896, 445, 901, 510, 906, 611, 886, 612, 591, 614, 564, 770, 936, 665, 1027, 440)
+
+[node name="Sprite2D2" parent="." index="6"]
+visible = false
