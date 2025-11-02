@@ -14,12 +14,12 @@ func _ready():
 func _process(delta):
 	pass
 
-
 func _on_internal_area_body_entered(body):
 	if body.is_in_group("Player"):
 		if body.current_hg_color == unlock_color:
 			Globals.chasms[chasm_ident] = true
-			$Chasm.queue_free()
+			if has_node("Chasm"):
+				$Chasm.queue_free()
 			var tween = get_tree().create_tween()
 			tween.tween_property($Icon, "modulate", Color.WHITE, 1.0)
 			
