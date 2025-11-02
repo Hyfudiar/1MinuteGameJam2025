@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_h8xrq"]
 [ext_resource type="Texture2D" uid="uid://cp2g0jck0lw2r" path="res://Assets/Textures/ROOMS_BG/T_BG.004.png" id="2_2kt0r"]
 
-[node name="ENS_t" instance=ExtResource("1_h8xrq")]
+[node name="WNS_t" instance=ExtResource("1_h8xrq")]
 
 [node name="Sprite2D" parent="." index="3"]
 texture = ExtResource("2_2kt0r")

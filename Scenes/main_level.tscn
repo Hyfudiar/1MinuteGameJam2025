@@ -1,11 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=17 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
 [ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="2_nqcvk"]
-[ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/ES_Elbow.tscn" id="4_fxiyi"]
-[ext_resource type="PackedScene" uid="uid://bd31p8ia170un" path="res://Scenes/FinishedRooms/NE_Elbow.tscn" id="5_ngq7a"]
-[ext_resource type="PackedScene" uid="uid://bxet3vpnnkmmy" path="res://Scenes/FinishedRooms/WN_Elbow.tscn" id="6_6luw8"]
+[ext_resource type="PackedScene" uid="uid://b1gqgrgidymji" path="res://Scenes/FinishedRooms/zb.tscn" id="4_hjxqu"]
+[ext_resource type="PackedScene" uid="uid://l4oia0pttefl" path="res://Scenes/FinishedRooms/zq.tscn" id="5_42wpr"]
+[ext_resource type="PackedScene" uid="uid://0tv4o3y0ghwx" path="res://Scenes/FinishedRooms/zp.tscn" id="6_ewfln"]
+[ext_resource type="PackedScene" uid="uid://cu4nxgbs4hr54" path="res://Scenes/FinishedRooms/zk.tscn" id="7_hgr6m"]
+[ext_resource type="PackedScene" uid="uid://8go33u8mlhhu" path="res://Scenes/FinishedRooms/zc.tscn" id="8_bn4h5"]
+[ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/zl.tscn" id="9_s3tgo"]
+[ext_resource type="PackedScene" uid="uid://ctqg8qppbx0gl" path="res://Scenes/FinishedRooms/zr.tscn" id="10_01stl"]
+[ext_resource type="PackedScene" uid="uid://tv64shpg4j1p" path="res://Scenes/FinishedRooms/zo.tscn" id="11_yvak1"]
+[ext_resource type="PackedScene" uid="uid://bg7hnvt0s4hnh" path="res://Scenes/FinishedRooms/zt.tscn" id="12_60lsl"]
+[ext_resource type="PackedScene" uid="uid://cqpythkcfph4c" path="res://Scenes/FinishedRooms/zn.tscn" id="13_d50kt"]
+[ext_resource type="PackedScene" uid="uid://bxet3vpnnkmmy" path="res://Scenes/FinishedRooms/zm.tscn" id="14_t3yop"]
+[ext_resource type="PackedScene" uid="uid://bd31p8ia170un" path="res://Scenes/FinishedRooms/zj.tscn" id="15_0cqm8"]
+[ext_resource type="PackedScene" uid="uid://cc734k34e8w8v" path="res://Scenes/FinishedRooms/zu.tscn" id="16_tg8em"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
@@ -23,17 +33,163 @@ position = Vector2(623, 473)
 wait_time = 60.0
 one_shot = true
 
-[node name="ES_Elbow" parent="." instance=ExtResource("4_fxiyi")]
-position = Vector2(0, 0)
+[node name="Row21" type="Node2D" parent="."]
+
+[node name="H_Room" parent="Row21" instance=ExtResource("4_hjxqu")]
+position = Vector2(1024, 0)
+room_ident = "H21"
+
+[node name="H_Room2" parent="Row21" instance=ExtResource("4_hjxqu")]
+position = Vector2(2048, 0)
+room_ident = "I21"
+
+[node name="WSE_t" parent="Row21" instance=ExtResource("5_42wpr")]
+position = Vector2(3072, 0)
+room_ident = "J21"
+
+[node name="WNE_T" parent="Row21" instance=ExtResource("6_ewfln")]
+position = Vector2(4096, 0)
+room_ident = "K21"
+
+[node name="WNE_T2" parent="Row21" instance=ExtResource("6_ewfln")]
+position = Vector2(6144, 0)
+room_ident = "M21"
+
+[node name="WS_Elbow" parent="Row21" instance=ExtResource("7_hgr6m")]
+position = Vector2(7168, 0)
+room_ident = "N21"
+
+[node name="V_Room" parent="Row21" instance=ExtResource("8_bn4h5")]
+position = Vector2(8192, 0)
+room_ident = "O21"
+
+[node name="ES_Elbow" parent="Row21" instance=ExtResource("9_s3tgo")]
+position = Vector2(9216, 0)
+room_ident = "P21"
+
+[node name="WS_Elbow2" parent="Row21" instance=ExtResource("7_hgr6m")]
+position = Vector2(10240, 0)
+room_ident = "Q21"
+
+[node name="V_Room2" parent="Row21" instance=ExtResource("8_bn4h5")]
+position = Vector2(11264, 0)
+room_ident = "R21"
+
+[node name="N_deadend" parent="Row21" instance=ExtResource("10_01stl")]
+position = Vector2(12288, 0)
 room_ident = "S21"
 
-[node name="NE_Elbow" parent="." instance=ExtResource("5_ngq7a")]
-position = Vector2(0, 768)
-room_ident = "S22"
-metadata/_edit_lock_ = true
+[node name="NES_T" parent="Row21" instance=ExtResource("11_yvak1")]
+position = Vector2(13312, 0)
+room_ident = "T21"
 
-[node name="WN_Elbow" parent="." instance=ExtResource("6_6luw8")]
-position = Vector2(1024, 768)
+[node name="H_Room3" parent="Row21" instance=ExtResource("4_hjxqu")]
+position = Vector2(14336, 0)
+room_ident = "U21"
+
+[node name="WS_Elbow3" parent="Row21" instance=ExtResource("7_hgr6m")]
+position = Vector2(15360, 0)
+room_ident = "V21"
+
+[node name="Row20" type="Node2D" parent="."]
+
+[node name="E_Deadend" parent="Row20" instance=ExtResource("12_60lsl")]
+position = Vector2(3072, -768)
+room_ident = "J20"
+
+[node name="WNS_t" parent="Row20" instance=ExtResource("13_d50kt")]
+position = Vector2(4096, -768)
+room_ident = "K20"
+
+[node name="N_deadend" parent="Row20" instance=ExtResource("10_01stl")]
+position = Vector2(5120, -768)
+room_ident = "L20"
+
+[node name="ES_Elbow" parent="Row20" instance=ExtResource("9_s3tgo")]
+position = Vector2(6144, -768)
+room_ident = "M20"
+
+[node name="WNE_T" parent="Row20" instance=ExtResource("6_ewfln")]
+position = Vector2(7168, -768)
+room_ident = "N20"
+
+[node name="WSE_t" parent="Row20" instance=ExtResource("5_42wpr")]
+position = Vector2(8192, -768)
+room_ident = "O20"
+
+[node name="WNE_T2" parent="Row20" instance=ExtResource("6_ewfln")]
+position = Vector2(9216, -768)
+room_ident = "P20"
+
+[node name="WN_Elbow" parent="Row20" instance=ExtResource("14_t3yop")]
+position = Vector2(10240, -768)
+room_ident = "Q20"
+
+[node name="V_Room" parent="Row20" instance=ExtResource("8_bn4h5")]
+position = Vector2(12288, -768)
+room_ident = "S20"
+
+[node name="V_Room2" parent="Row20" instance=ExtResource("8_bn4h5")]
+position = Vector2(13312, -768)
+room_ident = "T20"
+
+[node name="NE_Elbow" parent="Row20" instance=ExtResource("15_0cqm8")]
+position = Vector2(14336, -768)
+room_ident = "U20"
+
+[node name="Row19" type="Node2D" parent="."]
+
+[node name="ES_Elbow" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(4096, -1536)
+room_ident = "K19"
+
+[node name="WSE_t" parent="Row19" instance=ExtResource("5_42wpr")]
+position = Vector2(5120, -1536)
+room_ident = "L19"
+
+[node name="H_Room" parent="Row19" instance=ExtResource("4_hjxqu")]
+position = Vector2(6144, -1536)
+room_ident = "M19"
+
+[node name="WNS_t" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(7168, -1536)
+room_ident = "N19"
+
+[node name="NE_Elbow" parent="Row19" instance=ExtResource("15_0cqm8")]
+position = Vector2(8192, -1536)
+room_ident = "O19"
+
+[node name="WNS_t2" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(9216, -1536)
+room_ident = "P19"
+
+[node name="V_Room" parent="Row19" instance=ExtResource("8_bn4h5")]
+position = Vector2(10240, -1536)
+room_ident = "Q19"
+
+[node name="ES_Elbow2" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(11264, -1536)
+room_ident = "R19"
+
+[node name="WSE_t2" parent="Row19" instance=ExtResource("5_42wpr")]
+position = Vector2(12288, -1536)
+room_ident = "S19"
+
+[node name="WNS_t3" parent="Row19" instance=ExtResource("13_d50kt")]
+position = Vector2(13312, -1536)
+room_ident = "T19"
+
+[node name="ES_Elbow3" parent="Row19" instance=ExtResource("9_s3tgo")]
+position = Vector2(14336, -1536)
+room_ident = "U19"
+
+[node name="WNE_T" parent="Row19" instance=ExtResource("6_ewfln")]
+position = Vector2(15360, -1536)
+room_ident = "V19"
+
+[node name="W_deadend" parent="Row19" instance=ExtResource("16_tg8em")]
+position = Vector2(16384, -1536)
+room_ident = "W19"
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
