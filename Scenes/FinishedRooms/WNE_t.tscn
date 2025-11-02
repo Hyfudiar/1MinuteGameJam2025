@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://0tv4o3y0ghwx"]
+
+[ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_qlf0c"]
+[ext_resource type="Texture2D" uid="uid://b04j3vagw8xsa" path="res://Assets/Textures/ROOMS_BG/T_BG.001.png" id="2_6o8uf"]
+
+[node name="WNE_T" instance=ExtResource("1_qlf0c")]
+
+[node name="Sprite2D" parent="." index="3"]
+texture = ExtResource("2_6o8uf")
+
+[node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(11, 344, 127, 434, 147, 284, 459, 286, 463, 9)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
+polygon = PackedVector2Array(555, 5, 564, 282, 893, 286, 895, 358, 1022, 337)
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="." index="6"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D3" index="0"]
+polygon = PackedVector2Array(-3, 444, 111, 528, 118, 610, 930, 607, 917, 437, 1016, 433, 977, 714, 49, 706)
+
+[node name="Sprite2D2" parent="." index="7"]
+visible = false
