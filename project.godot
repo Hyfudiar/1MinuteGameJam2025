@@ -21,8 +21,8 @@ Globals="*res://Assets/Scripts/globals.gd"
 
 [display]
 
-window/size/viewport_width=775
-window/size/viewport_height=600
+window/size/viewport_width=1024
+window/size/viewport_height=768
 
 [input]
 

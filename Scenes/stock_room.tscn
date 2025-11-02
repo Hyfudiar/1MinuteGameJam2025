@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://da3adiol0ym0t" path="res://Scenes/torch.tscn" id="4_ktgbg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vrjuv"]
-size = Vector2(762, 579)
+size = Vector2(986, 733)
 
 [node name="Stock_Room" type="Node2D"]
 position = Vector2(-5, 9)
@@ -13,14 +13,17 @@ script = ExtResource("1_0b7p2")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(396, 288.5)
+position = Vector2(512, 384)
 shape = SubResource("RectangleShape2D_vrjuv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(390, 289)
+position = Vector2(512, 384)
 
 [node name="Torch" parent="." instance=ExtResource("4_ktgbg")]
 position = Vector2(612, 158)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(512, 384)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="light_on" from="Torch" to="." method="_on_torch_light_on"]

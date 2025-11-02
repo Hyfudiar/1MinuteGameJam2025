@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bftwd8cmpg75l"]
+
+[ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_w4tae"]
+[ext_resource type="Texture2D" uid="uid://d06md7csrw52t" path="res://Assets/Textures/ROOMS_BG/E_BG.006.png" id="2_1duv6"]
+
+[node name="Stock_Room" instance=ExtResource("1_w4tae")]
+
+[node name="Sprite2D" parent="." index="3"]
+texture = ExtResource("2_1duv6")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." index="4"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D" index="0"]
+polygon = PackedVector2Array(902, 358, 899, 295, 654, 294, 648, 328, 587, 338, 563, 371, 542, 401, 517, 423, 456, 469, 411, 478, 412, 505, 418, 530, 426, 547, 443, 547, 427, 602, 464, 610, 390, 653, 313, 494, 453, 369, 615, 269, 800, 225, 952, 289)
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true

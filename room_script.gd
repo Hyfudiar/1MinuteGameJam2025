@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var room_ident: String
-@export var torch_enabled: bool = true
+@export var torch_enabled: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
