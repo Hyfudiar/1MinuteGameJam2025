@@ -1,11 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://df1qtuc26kfaq"]
 
 [ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_cvwys"]
-[ext_resource type="Texture2D" uid="uid://cvucklprkbxj8" path="res://Assets/Textures/t4.png" id="2_0k2pd"]
+[ext_resource type="Texture2D" uid="uid://b8mlcixjkh6qa" path="res://Scenes/moshed-11-02-1-10-1.png" id="2_d5gv4"]
 
 [node name="Stock_Room" instance=ExtResource("1_cvwys")]
 room_ident = "Q17"
 
 [node name="T4" type="Sprite2D" parent="." index="3"]
-position = Vector2(397, 296)
-texture = ExtResource("2_0k2pd")
+position = Vector2(396, 296)
+scale = Vector2(0.757812, 0.757812)
+texture = ExtResource("2_d5gv4")
