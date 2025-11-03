@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4fgsqno7u63g"]
+[gd_scene load_steps=7 format=3 uid="uid://4fgsqno7u63g"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_kn50c"]
 [ext_resource type="Texture2D" uid="uid://xtfl1tyga7wg" path="res://Assets/Textures/Sprites/char_l.png" id="2_dj8w5"]
@@ -10,6 +10,8 @@ polygon = PackedVector2Array(16, -15, 37, -30, 62, -38, 85, -37, 66, -28, 48, -2
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oeywt"]
 radius = 8.0
 height = 50.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_waya6"]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_kn50c")
@@ -39,3 +41,6 @@ shape = SubResource("CapsuleShape2D_oeywt")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
+
+[node name="Footsteps" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_waya6")

@@ -29,4 +29,8 @@ texture_scale = 0.8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_46wng")
 
+[node name="Light" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Burning" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

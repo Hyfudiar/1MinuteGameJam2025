@@ -14,6 +14,10 @@ var hg_active = false
 
 signal start_hg
 
+var walking_frame_count = 0
+
+var footstep_delay = 30
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -22,13 +26,19 @@ func _ready():
 
 func _process(delta):
 	if hg_active:
-		print("hg is active")
+		#print("hg is active")
 		hg_brightness -= (1.61/(90.0 * (1/delta)))
-		print("subtracted from brightness")
+		#print("subtracted from brightness")
 		clamp(hg_brightness, 0, 1.61)
-		print("clamped brightness")
+		#print("clamped brightness")
 		$Rotating/Flashlight/PointLight2D.energy = hg_brightness
-		print("set new brightness")
+		#print("set new brightness")
+	var direction = Input.get_vector("left", "right", "up", "down")
+	if direction:
+		walking_frame_count += 1
+		if walking_frame_count >= footstep_delay:
+			$Footsteps.play()
+		
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.

@@ -6,6 +6,8 @@ enum COLORS {R, B, Y}
 
 @export var chasm_ident : String
 
+signal bridge_enable(id)
+
 func _ready():
 	if Globals.chasms[chasm_ident] == true:
 		print("chasm state loaded")
@@ -22,6 +24,7 @@ func _on_internal_area_body_entered(body):
 			print("Chasm unlocked")
 			if has_node("Chasm"):
 				$Chasm.queue_free()
-			var tween = get_tree().create_tween()
-			tween.tween_property($Icon, "modulate", Color.WHITE, 1.0)
+			bridge_enable.emit(chasm_ident)
+			#var tween = get_tree().create_tween()
+			#tween.tween_property($Icon, "modulate", Color.WHITE, 1.0)
 			
