@@ -21,3 +21,14 @@ func _on_player_start_hg():
 	print("received signal")
 	$Timer.start()
 
+
+
+func _on_floppy_finished():
+	$AUDIO/Floppy.play()
+
+
+
+
+
+func _on_asst_amb_finished():
+	$AUDIO/AsstAmb.play()

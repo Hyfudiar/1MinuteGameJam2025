@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=53 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -24,11 +24,92 @@
 [ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
 [ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
 [ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="24_hqef8"]
+[ext_resource type="AudioStream" uid="uid://ct6req0warr6x" path="res://Assets/Audio/random1/etc_28.ogg" id="25_st8g8"]
 [ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="25_xieat"]
+[ext_resource type="AudioStream" uid="uid://bchtoe7v8ujuo" path="res://Assets/Audio/random1/etc_29.ogg" id="26_lxqc6"]
+[ext_resource type="AudioStream" uid="uid://j7hb164wb76h" path="res://Assets/Audio/random2/floppy_18.ogg" id="27_5k5q8"]
+[ext_resource type="AudioStream" uid="uid://dp43g3xwav6rq" path="res://Assets/Audio/random2/blank_floppy_23.ogg" id="27_oofik"]
+[ext_resource type="AudioStream" uid="uid://cqvh1tv03ma67" path="res://Assets/Audio/random2/floppy_19.ogg" id="28_7qphp"]
+[ext_resource type="AudioStream" uid="uid://dvx2e6j5dg6e7" path="res://Assets/Audio/random2/blank_floppy_24.ogg" id="28_y1obx"]
+[ext_resource type="AudioStream" uid="uid://bicy64gvclo6l" path="res://Assets/Audio/random2/blank_floppy_25.ogg" id="29_fgsjj"]
+[ext_resource type="AudioStream" uid="uid://co16oyoyuv8cu" path="res://Assets/Audio/random2/blank_floppy_26.ogg" id="30_biior"]
+[ext_resource type="AudioStream" uid="uid://cunfd10k6ply0" path="res://Assets/Audio/random2/blank_floppy_27.ogg" id="31_rpfbm"]
+[ext_resource type="AudioStream" uid="uid://c3bx0xiifavrs" path="res://Assets/Audio/random1/etc_30.ogg" id="32_ub0f5"]
+[ext_resource type="AudioStream" uid="uid://bfatoacu4xvu1" path="res://Assets/Audio/random2/floppy_01.ogg" id="33_aufka"]
+[ext_resource type="AudioStream" uid="uid://bewleah686p47" path="res://Assets/Audio/random1/etc_31.ogg" id="33_rs6sh"]
+[ext_resource type="AudioStream" uid="uid://c5rucojrtg36g" path="res://Assets/Audio/random1/etc_32.ogg" id="34_33oc3"]
+[ext_resource type="AudioStream" uid="uid://dwkatflrelgw5" path="res://Assets/Audio/random2/floppy_15.ogg" id="34_avueb"]
+[ext_resource type="AudioStream" uid="uid://c0gfkqdfvtoys" path="res://Assets/Audio/random2/floppy_16.ogg" id="35_1glp3"]
+[ext_resource type="AudioStream" uid="uid://dg1xep75srimm" path="res://Assets/Audio/random1/etc_33.ogg" id="35_iexq5"]
+[ext_resource type="AudioStream" uid="uid://cjn1ol07kpnu6" path="res://Assets/Audio/random1/etc_34.ogg" id="36_7nisr"]
+[ext_resource type="AudioStream" uid="uid://cn2p47fpojwb6" path="res://Assets/Audio/random2/floppy_17.ogg" id="36_48uv1"]
+[ext_resource type="AudioStream" uid="uid://bvqoouav0yte5" path="res://Assets/Audio/random1/etc_35.ogg" id="37_4f6vo"]
+[ext_resource type="AudioStream" uid="uid://dvy5yw6qr5vu1" path="res://Assets/Audio/Drone2_20.ogg" id="37_bmdss"]
+[ext_resource type="AudioStream" uid="uid://jef782rxd3ah" path="res://Assets/Audio/random1/Drone_14.ogg" id="38_62p6i"]
+[ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="38_x4vnv"]
+[ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="39_jy5g8"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
-streams_count = 1
+streams_count = 12
+stream_0/stream = ExtResource("39_jy5g8")
 stream_0/weight = 1.0
+stream_1/stream = ExtResource("27_oofik")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("28_y1obx")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("29_fgsjj")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("30_biior")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("31_rpfbm")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("33_aufka")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("34_avueb")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("35_1glp3")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("36_48uv1")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("27_5k5q8")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("28_7qphp")
+stream_11/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_pu67m"]
+streams_count = 16
+stream_0/stream = ExtResource("38_62p6i")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("25_st8g8")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("26_lxqc6")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("32_ub0f5")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("33_rs6sh")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("34_33oc3")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("35_iexq5")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("36_7nisr")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("37_4f6vo")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("38_x4vnv")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("39_jy5g8")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("27_oofik")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("28_y1obx")
+stream_12/weight = 1.0
+stream_13/stream = ExtResource("29_fgsjj")
+stream_13/weight = 1.0
+stream_14/stream = ExtResource("30_biior")
+stream_14/weight = 1.0
+stream_15/stream = ExtResource("31_rpfbm")
+stream_15/weight = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lo1ek"]
 shader = ExtResource("25_xieat")
@@ -38,18 +119,18 @@ shader_parameter/brightness = 1.4
 shader_parameter/scanlines_opacity = 0.193
 shader_parameter/scanlines_width = 0.0
 shader_parameter/grille_opacity = 0.0
-shader_parameter/roll = false
-shader_parameter/roll_speed = 8.0
-shader_parameter/roll_size = 15.0
-shader_parameter/roll_variation = 1.8
-shader_parameter/distort_intensity = 0.05
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.7
+shader_parameter/roll_size = 12.568
+shader_parameter/roll_variation = 3.595
+shader_parameter/distort_intensity = 0.025
 shader_parameter/aberration = 0.012
-shader_parameter/noise_opacity = 0.075
+shader_parameter/noise_opacity = 0.13
 shader_parameter/noise_speed = 2.0
 shader_parameter/static_noise_intensity = 0.097
 shader_parameter/pixelate = true
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 0.15
+shader_parameter/warp_amount = 0.26
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
@@ -877,8 +958,18 @@ blend_mode = 1
 
 [node name="AUDIO" type="Node2D" parent="."]
 
-[node name="AmbienceStream1" type="AudioStreamPlayer2D" parent="AUDIO"]
+[node name="Floppy" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_f5tgv")
+autoplay = true
+bus = &"Ambience"
+
+[node name="Drone" type="AudioStreamPlayer" parent="AUDIO"]
+stream = ExtResource("37_bmdss")
+volume_db = 7.983
+autoplay = true
+
+[node name="AsstAmb" type="AudioStreamPlayer" parent="AUDIO"]
+stream = SubResource("AudioStreamRandomizer_pu67m")
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -894,3 +985,5 @@ texture = SubResource("ViewportTexture_0u3kl")
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="finished" from="AUDIO/Floppy" to="." method="_on_floppy_finished"]
+[connection signal="finished" from="AUDIO/AsstAmb" to="." method="_on_asst_amb_finished"]
