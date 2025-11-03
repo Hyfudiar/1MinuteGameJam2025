@@ -5,7 +5,7 @@
 
 [node name="WNE_T" instance=ExtResource("1_qlf0c")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_6o8uf")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]

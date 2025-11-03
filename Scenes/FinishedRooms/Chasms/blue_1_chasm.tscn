@@ -8,5 +8,5 @@ unlock_color = 1
 chasm_ident = "O22"
 room_ident = "O22"
 
-[node name="Icon" parent="." index="3"]
+[node name="Icon" parent="." index="6"]
 texture = ExtResource("2_535il")

@@ -20,6 +20,7 @@ func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
 		light_on.emit()
 		turn_on()
+		print("light on signal emitted")
 
 func turn_on():
 	if not on:

@@ -36,12 +36,6 @@ metadata/_edit_lock_ = true
 
 [node name="Node" type="Node" parent="Torch"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(509, 405.5)
-scale = Vector2(1.96875, 1.74219)
-texture = ExtResource("3_0hmrs")
-
 [node name="InternalArea" type="Area2D" parent="."]
 metadata/_edit_lock_ = true
 
@@ -64,6 +58,12 @@ shape = SubResource("RectangleShape2D_riv8q")
 position = Vector2(512, 384)
 texture = ExtResource("2_0qscd")
 metadata/_edit_lock_ = true
+
+[node name="Icon" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(509, 405.5)
+scale = Vector2(1.96875, 1.74219)
+texture = ExtResource("3_0hmrs")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 gravity_scale = 0.0

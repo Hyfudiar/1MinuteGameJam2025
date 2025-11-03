@@ -135,7 +135,7 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_0u3kl"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_qaf8t"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
@@ -150,7 +150,7 @@ metadata/_edit_lock_ = true
 position = Vector2(595, 428)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 90.0
 one_shot = true
 
 [node name="Row10" type="Node2D" parent="."]
@@ -981,7 +981,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("ViewportTexture_0u3kl")
+texture = SubResource("CanvasTexture_qaf8t")
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

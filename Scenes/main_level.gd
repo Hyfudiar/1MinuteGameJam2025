@@ -2,14 +2,18 @@ extends Node2D
 
 enum COLORS {R, B, Y}
 
+var time_to_brighten = 45.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	print(Globals.room_lights)
+	print(Globals.chasms)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if $Timer.time_left < time_to_brighten:
+		$DirectionalLight2D.energy -= (1.25/(time_to_brighten * (1 / delta)))
 
 
 func _on_timer_timeout():

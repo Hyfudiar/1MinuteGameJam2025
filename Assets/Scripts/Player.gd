@@ -23,7 +23,7 @@ func _ready():
 func _process(delta):
 	if hg_active:
 		print("hg is active")
-		hg_brightness -= (1.61/(60.0 * (1/delta)))
+		hg_brightness -= (1.61/(90.0 * (1/delta)))
 		print("subtracted from brightness")
 		clamp(hg_brightness, 0, 1.61)
 		print("clamped brightness")
