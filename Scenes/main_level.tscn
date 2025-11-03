@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=29 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -24,10 +24,37 @@
 [ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
 [ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
 [ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="24_hqef8"]
+[ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="25_xieat"]
 
-[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nl22g"]
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
 streams_count = 1
 stream_0/weight = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lo1ek"]
+shader = ExtResource("25_xieat")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.193
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/aberration = 0.012
+shader_parameter/noise_opacity = 0.075
+shader_parameter/noise_speed = 2.0
+shader_parameter/static_noise_intensity = 0.097
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.15
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0u3kl"]
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
@@ -850,8 +877,20 @@ blend_mode = 1
 
 [node name="AUDIO" type="Node2D" parent="."]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AUDIO"]
-stream = SubResource("AudioStreamRandomizer_nl22g")
+[node name="AmbienceStream1" type="AudioStreamPlayer2D" parent="AUDIO"]
+stream = SubResource("AudioStreamRandomizer_f5tgv")
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_lo1ek")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_0u3kl")
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

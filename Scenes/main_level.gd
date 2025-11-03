@@ -20,3 +20,4 @@ func _on_timer_timeout():
 func _on_player_start_hg():
 	print("received signal")
 	$Timer.start()
+
