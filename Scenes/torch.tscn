@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://da3adiol0ym0t"]
 
 [ext_resource type="Script" path="res://Scenes/torch.gd" id="1_3yq5b"]
-[ext_resource type="Texture2D" uid="uid://dso2pavloivuq" path="res://Assets/Textures/icon.svg" id="1_bethd"]
 [ext_resource type="Texture2D" uid="uid://dlxekrm3acxtw" path="res://Assets/Textures/2d_lights_and_shadows_neutral_point_light.webp" id="2_0ux12"]
+[ext_resource type="Texture2D" uid="uid://bo8y70shten80" path="res://Assets/Textures/Sprites/torch.png" id="2_df7db"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_46wng"]
 radius = 113.371
@@ -12,17 +12,17 @@ script = ExtResource("1_3yq5b")
 metadata/_edit_vertical_guides_ = [286.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.08, 0.44)
-texture = ExtResource("1_bethd")
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_df7db")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(0, -23)
+position = Vector2(-1, -26)
 color = Color(0.850244, 0.145599, 9.62615e-08, 1)
 energy = 0.0
 shadow_enabled = true
 shadow_filter = 1
 texture = ExtResource("2_0ux12")
-texture_scale = 0.5
+texture_scale = 0.8
 
 [node name="Area2D" type="Area2D" parent="."]
 

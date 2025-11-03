@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://bg7hnvt0s4hnh"]
 
 [ext_resource type="PackedScene" uid="uid://dlc31iuuggen4" path="res://Scenes/stock_room.tscn" id="1_vp78m"]
-[ext_resource type="Texture2D" path="res://Assets/Textures/ROOMS_BG/DE.003.png" id="2_n5wrn"]
+[ext_resource type="Texture2D" uid="uid://cnwq8q0nhgq3t" path="res://Assets/Textures/ROOMS_BG/DE.003.png" id="2_n5wrn"]
 
 [node name="E_Deadend" instance=ExtResource("1_vp78m")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_n5wrn")
 
 [node name="RigidBody2D" parent="." index="4"]
@@ -13,3 +13,6 @@ position = Vector2(214, 406)
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
 polygon = PackedVector2Array(811, 33, 579, -4, 578, 103, 573, 125, 483, 134, 192, 137, 183, 118, 186, 87, 156, 67, 164, 39, 193, 29, 314, -88, 361, -93, 380, -123, 577, -125, 571, -75, 606, -85, 812, -72, 588, -231, 346, -231, 97, -112, -76, 88, 298, 262, 683, 242, 789, 83)
+
+[node name="Sprite2D2" parent="." index="5"]
+visible = false

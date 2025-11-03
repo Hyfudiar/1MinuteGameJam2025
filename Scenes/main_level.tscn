@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=26 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -23,18 +23,23 @@
 [ext_resource type="PackedScene" uid="uid://bvwff3vwpe73o" path="res://Scenes/FinishedRooms/Chasms/blue_2_chasm.tscn" id="21_6h55p"]
 [ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
 [ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
+[ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="24_hqef8"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nl22g"]
+streams_count = 1
+stream_0/weight = 1.0
 
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1284, 683)
-scale = Vector2(2.9225, 2.802)
+position = Vector2(9666, 284)
+scale = Vector2(20, 19.179)
 texture = ExtResource("2_ljnmj")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_nqcvk")]
-position = Vector2(623, 473)
+position = Vector2(595, 428)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 60.0
@@ -395,6 +400,7 @@ room_ident = "I21"
 [node name="WSE_t" parent="Row21" instance=ExtResource("5_42wpr")]
 position = Vector2(3072, 0)
 room_ident = "J21"
+torch_enabled = true
 
 [node name="WNE_T" parent="Row21" instance=ExtResource("6_ewfln")]
 position = Vector2(4096, 0)
@@ -439,6 +445,10 @@ room_ident = "U21"
 [node name="WS_Elbow3" parent="Row21" instance=ExtResource("7_hgr6m")]
 position = Vector2(15360, 0)
 room_ident = "V21"
+
+[node name="E_Deadend" parent="Row21" instance=ExtResource("12_60lsl")]
+position = Vector2(0, 0)
+room_ident = "G21"
 
 [node name="Row22" type="Node2D" parent="."]
 
@@ -821,6 +831,27 @@ position = Vector2(14336, 4608)
 
 [node name="Yellow1_Chasm" parent="CHASMS" instance=ExtResource("23_daywc")]
 position = Vector2(10240, -2304)
+
+[node name="Hourglass" parent="." instance=ExtResource("24_hqef8")]
+position = Vector2(529, 342)
+item_color = 0
+
+[node name="Hourglass2" parent="." instance=ExtResource("24_hqef8")]
+position = Vector2(425, 453)
+item_color = 1
+
+[node name="Hourglass3" parent="." instance=ExtResource("24_hqef8")]
+position = Vector2(476, 401)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.252028, 0.252028, 0.252028, 1)
+energy = 3.9
+blend_mode = 1
+
+[node name="AUDIO" type="Node2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AUDIO"]
+stream = SubResource("AudioStreamRandomizer_nl22g")
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

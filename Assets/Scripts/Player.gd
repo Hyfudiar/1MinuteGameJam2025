@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 400.0
 
 enum COLORS {R, B, Y}
 
@@ -46,10 +46,12 @@ func _input(event):
 		rotating.rotation_degrees = 270
 	elif event.is_action_pressed("right"):
 		rotating.rotation_degrees = 0
+		$Sprite2D.flip_h = true
 	elif event.is_action_pressed("down"):
 		rotating.rotation_degrees = 90
 	elif event.is_action_pressed("left"):
 		rotating.rotation_degrees = 180
+		$Sprite2D.flip_h = false
 
 func hg_pickup(col):
 	current_hg_color = col
