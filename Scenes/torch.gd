@@ -25,8 +25,9 @@ func _on_area_2d_body_entered(body):
 func turn_on():
 	if not on:
 		$Light.play()
+		$Burning.play()
 		var tween = get_tree().create_tween()
 		tween.tween_property($PointLight2D, "energy", 2, 2)
+		tween.set_parallel()
+		tween.tween_property($Burning, "volume_db", 6, 2)
 		on = true
-		await $Light.finished
-		$Burning.play()
