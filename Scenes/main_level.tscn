@@ -978,6 +978,14 @@ bus = &"Ambience"
 [node name="Crunches" type="AudioStreamPlayer" parent="AUDIO"]
 bus = &"PanFX"
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="hourglass_animation" parent="CanvasLayer2" instance=ExtResource("49_cmt8c")]
+visible = false
+visibility_layer = 2
+position = Vector2(1.00001, 3)
+scale = Vector2(0.45, 0.45)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
@@ -989,15 +997,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_qaf8t")
 
-[node name="hourglass_animation" parent="CanvasLayer/TextureRect" instance=ExtResource("49_cmt8c")]
-visibility_layer = 2
-position = Vector2(1.00001, 3)
-scale = Vector2(0.45, 0.45)
-
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="HourglassRed" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_red_body_entered"]
-[connection signal="body_entered" from="HourglassBlue" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_blue_body_entered"]
-[connection signal="body_entered" from="HourglassYellow" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
+[connection signal="body_entered" from="HourglassRed" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_red_body_entered"]
+[connection signal="body_entered" from="HourglassBlue" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_blue_body_entered"]
+[connection signal="body_entered" from="HourglassYellow" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
 [connection signal="finished" from="AUDIO/Floppy" to="." method="_on_floppy_finished"]
 [connection signal="finished" from="AUDIO/AsstAmb" to="." method="_on_asst_amb_finished"]

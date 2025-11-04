@@ -2,7 +2,7 @@ extends Node2D
 
 enum COLORS {R, B, Y}
 
-var time_to_brighten = 45.0
+var time_to_brighten = 30.0
 
 @onready var panner = AudioServer.get_bus_effect(3, 0)
 
@@ -15,7 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $Timer.time_left < time_to_brighten:
-		$DirectionalLight2D.energy -= (1.25/(time_to_brighten * (1 / delta)))
+		$DirectionalLight2D.energy -= (0.45/(time_to_brighten * (1 / delta)))
 
 
 func _on_timer_timeout():

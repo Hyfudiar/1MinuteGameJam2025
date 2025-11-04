@@ -3746,6 +3746,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uy56k")
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="background" type="VideoStreamPlayer" parent="CanvasLayer2"]
+offset_right = 2048.0
+offset_bottom = 1536.0
+scale = Vector2(0.5, 0.5)
+stream = ExtResource("934_ftfc2")
+autoplay = true
+loop = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -3809,6 +3820,7 @@ flat = true
 
 [node name="crawlinglines1" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
 centered = false
 script = ExtResource("934_s06pn")
 
@@ -3816,6 +3828,7 @@ script = ExtResource("934_s06pn")
 position = Vector2(1288, 232)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
 centered = false
 script = ExtResource("934_s06pn")
 
@@ -3823,6 +3836,7 @@ script = ExtResource("934_s06pn")
 position = Vector2(1200, -368)
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
 centered = false
 script = ExtResource("934_s06pn")
 
@@ -3830,6 +3844,7 @@ script = ExtResource("934_s06pn")
 position = Vector2(520, 984)
 rotation = 3.14159
 sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
 centered = false
 script = ExtResource("934_s06pn")
 
@@ -3837,18 +3852,9 @@ script = ExtResource("934_s06pn")
 position = Vector2(-128, 544)
 rotation = 4.71239
 sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
 centered = false
 script = ExtResource("934_s06pn")
-
-[node name="background" type="VideoStreamPlayer" parent="."]
-z_index = -1
-layout_mode = 0
-offset_right = 2048.0
-offset_bottom = 1536.0
-scale = Vector2(0.5, 0.5)
-stream = ExtResource("934_ftfc2")
-autoplay = true
-loop = true
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]

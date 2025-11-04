@@ -1,8 +1,7 @@
-[gd_scene load_steps=2919 format=3 uid="uid://dbyvvwypw8qm"]
+[gd_scene load_steps=2918 format=3 uid="uid://dbyvvwypw8qm"]
 
 [ext_resource type="Script" path="res://Scenes/hourglass_animation.gd" id="1_4hlq1"]
 [ext_resource type="Texture2D" uid="uid://bbaey604d2us0" path="res://Assets/Sprites/SandDrain2/frame_1.png" id="1_kvb54"]
-[ext_resource type="Texture2D" uid="uid://q3mvukj2q60l" path="res://Assets/Textures/ROOMS_BG/C.001.png" id="2_84smr"]
 [ext_resource type="Texture2D" uid="uid://d2367spaygdk1" path="res://Assets/Sprites/SandDrain2/frame_2.png" id="2_ung6o"]
 [ext_resource type="Texture2D" uid="uid://bkh8q8rsanhow" path="res://Assets/Sprites/SandDrain2/frame_3.png" id="3_eafms"]
 [ext_resource type="Texture2D" uid="uid://7r6kyuvkld6i" path="res://Assets/Sprites/SandDrain2/frame_4.png" id="4_p58xw"]
@@ -11672,41 +11671,25 @@ animations = [{
 }]
 
 [node name="hourglass_animation" type="Node2D"]
+modulate = Color(0.877717, 0.913077, 0.524839, 1)
+position = Vector2(-55, -26)
 script = ExtResource("1_4hlq1")
 
-[node name="Coloring" type="Sprite2D" parent="."]
+[node name="hourglass_body" type="Sprite2D" parent="."]
 position = Vector2(200, 272)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1154.67, 868)
-scale = Vector2(2.23958, 2.23958)
-texture = ExtResource("2_84smr")
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 48.0
-offset_top = 24.0
-offset_right = 360.0
-offset_bottom = 760.0
-metadata/_edit_use_anchors_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Control"]
-position = Vector2(152, 248)
 texture = ExtResource("2880_rilig")
 
-[node name="SandAnimations" type="Node2D" parent="Control"]
-position = Vector2(152, 248)
+[node name="SandAnimations" type="Node2D" parent="."]
+position = Vector2(200, 272)
 
-[node name="DrainingSand" type="AnimatedSprite2D" parent="Control/SandAnimations"]
+[node name="DrainingSand" type="AnimatedSprite2D" parent="SandAnimations"]
 position = Vector2(0, 56)
 sprite_frames = SubResource("SpriteFrames_u044s")
 animation = &"SandDraining"
 frame_progress = 0.939513
 script = ExtResource("182_rs8ks")
 
-[node name="SlowSand" type="AnimatedSprite2D" parent="Control/SandAnimations"]
+[node name="SlowSand" type="AnimatedSprite2D" parent="SandAnimations"]
 position = Vector2(5, 70)
 sprite_frames = SubResource("SpriteFrames_0ax4h")
 animation = &"SandSlow"
@@ -11714,5 +11697,5 @@ frame_progress = 0.965052
 script = ExtResource("2915_xxt84")
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="animation_finished" from="Control/SandAnimations/DrainingSand" to="Control/SandAnimations/DrainingSand" method="_on_animation_finished"]
-[connection signal="animation_finished" from="Control/SandAnimations/SlowSand" to="Control/SandAnimations/SlowSand" method="_on_animation_finished"]
+[connection signal="animation_finished" from="SandAnimations/DrainingSand" to="SandAnimations/DrainingSand" method="_on_animation_finished"]
+[connection signal="animation_finished" from="SandAnimations/SlowSand" to="SandAnimations/SlowSand" method="_on_animation_finished"]
