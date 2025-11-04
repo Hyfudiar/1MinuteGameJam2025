@@ -990,8 +990,9 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_qaf8t")
 
 [node name="hourglass_animation" parent="CanvasLayer/TextureRect" instance=ExtResource("49_cmt8c")]
-position = Vector2(103, 609)
-scale = Vector2(0.3, 0.3)
+visibility_layer = 2
+position = Vector2(1.00001, 3)
+scale = Vector2(0.45, 0.45)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
