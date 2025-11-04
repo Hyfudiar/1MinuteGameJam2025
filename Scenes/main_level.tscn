@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=54 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -48,6 +48,7 @@
 [ext_resource type="AudioStream" uid="uid://jef782rxd3ah" path="res://Assets/Audio/random1/Drone_14.ogg" id="38_62p6i"]
 [ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="38_x4vnv"]
 [ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="39_jy5g8"]
+[ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://Scenes/hourglass_animation.tscn" id="49_cmt8c"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
 streams_count = 12
@@ -940,15 +941,15 @@ position = Vector2(14336, 4608)
 [node name="Yellow1_Chasm" parent="CHASMS" instance=ExtResource("23_daywc")]
 position = Vector2(10240, -2304)
 
-[node name="Hourglass" parent="." instance=ExtResource("24_hqef8")]
+[node name="HourglassRed" parent="." instance=ExtResource("24_hqef8")]
 position = Vector2(529, 342)
 item_color = 0
 
-[node name="Hourglass2" parent="." instance=ExtResource("24_hqef8")]
-position = Vector2(425, 453)
+[node name="HourglassBlue" parent="." instance=ExtResource("24_hqef8")]
+position = Vector2(425.52, 453)
 item_color = 1
 
-[node name="Hourglass3" parent="." instance=ExtResource("24_hqef8")]
+[node name="HourglassYellow" parent="." instance=ExtResource("24_hqef8")]
 position = Vector2(476, 401)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
@@ -988,7 +989,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_qaf8t")
 
+[node name="hourglass_animation" parent="CanvasLayer/TextureRect" instance=ExtResource("49_cmt8c")]
+position = Vector2(103, 609)
+scale = Vector2(0.3, 0.3)
+
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="HourglassRed" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_red_body_entered"]
+[connection signal="body_entered" from="HourglassBlue" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_blue_body_entered"]
+[connection signal="body_entered" from="HourglassYellow" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
 [connection signal="finished" from="AUDIO/Floppy" to="." method="_on_floppy_finished"]
 [connection signal="finished" from="AUDIO/AsstAmb" to="." method="_on_asst_amb_finished"]

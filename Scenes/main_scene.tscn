@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://8m12jx6ijq56"]
+[gd_scene load_steps=3 format=3 uid="uid://8m12jx6ijq56"]
 
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_uy56k"]
+[ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_haaxr"]
 
 [node name="Main scene" type="Control"]
 layout_mode = 3
@@ -39,13 +40,15 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -314.0
-offset_top = -32.0
-offset_bottom = 60.0
+offset_left = -672.0
+offset_top = -104.0
+offset_right = -358.0
+offset_bottom = -12.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
+theme = ExtResource("2_haaxr")
 text = "Start game"
 
 [node name="Quit" type="Button" parent="CanvasLayer"]
@@ -54,12 +57,15 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -314.0
-offset_top = -92.0
+offset_left = -672.0
+offset_top = -312.0
+offset_right = -358.0
+offset_bottom = -220.0
 grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 4
+theme = ExtResource("2_haaxr")
 text = "Quit game"
 
 [connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_button_pressed"]

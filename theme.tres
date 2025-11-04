@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b2yesi5ex1c8q"]
+
+[ext_resource type="FontFile" uid="uid://b7145agvhxfqb" path="res://Assets/Fonts/FSEX302.ttf" id="1_h6xl2"]
+
+[resource]
+default_font = ExtResource("1_h6xl2")
