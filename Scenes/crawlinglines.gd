@@ -10,12 +10,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	#if switch_directions == false:
-	#	play("default")
-	#else:
-	#	play_backwards("default")
-
-
 
 func _on_animation_finished():
 	if switch_directions == false:
