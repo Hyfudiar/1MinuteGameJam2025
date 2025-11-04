@@ -148,7 +148,6 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_nqcvk")]
 position = Vector2(595, 428)
-current_hg_color = null
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 90.0
@@ -968,10 +967,15 @@ bus = &"Ambience"
 stream = ExtResource("37_bmdss")
 volume_db = 7.983
 autoplay = true
+bus = &"Ambience"
 
 [node name="AsstAmb" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_pu67m")
 autoplay = true
+bus = &"Ambience"
+
+[node name="Crunches" type="AudioStreamPlayer" parent="AUDIO"]
+bus = &"PanFX"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

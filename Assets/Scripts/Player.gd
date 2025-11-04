@@ -16,7 +16,7 @@ signal start_hg
 
 var walking_frame_count = 0
 
-var footstep_delay = 30
+var footstep_delay = 25
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -38,6 +38,7 @@ func _process(delta):
 		walking_frame_count += 1
 		if walking_frame_count >= footstep_delay:
 			$Footsteps.play()
+			walking_frame_count = 0
 		
 
 func _physics_process(delta):

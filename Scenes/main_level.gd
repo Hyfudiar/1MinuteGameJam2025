@@ -4,6 +4,8 @@ enum COLORS {R, B, Y}
 
 var time_to_brighten = 45.0
 
+@onready var panner = AudioServer.get_bus_effect(3, 0)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print(Globals.room_lights)
