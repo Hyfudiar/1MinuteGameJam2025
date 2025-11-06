@@ -1,9 +1,10 @@
-[gd_scene load_steps=937 format=3 uid="uid://8m12jx6ijq56"]
+[gd_scene load_steps=938 format=3 uid="uid://8m12jx6ijq56"]
 
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_uy56k"]
 [ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_haaxr"]
 [ext_resource type="Texture2D" uid="uid://j6kufg6tdjbo" path="res://Assets/Sprites/title_frames/frame_1.png" id="3_iaohw"]
 [ext_resource type="Texture2D" uid="uid://cyvhvgl80wtn2" path="res://Assets/Sprites/title_frames/frame_2.png" id="4_3k2wt"]
+[ext_resource type="Texture2D" uid="uid://ciy2h1g54qqtf" path="res://Assets/Sprites/Slider/slider_center_rotated.png" id="4_3xg6f"]
 [ext_resource type="Texture2D" uid="uid://dcymc0k0l11i8" path="res://Assets/Sprites/title_frames/frame_3.png" id="5_7gl0y"]
 [ext_resource type="Texture2D" uid="uid://p2sia20a5q1e" path="res://Assets/Sprites/title_frames/frame_4.png" id="6_fjj4l"]
 [ext_resource type="Texture2D" uid="uid://cpfnfg2uud4uv" path="res://Assets/Sprites/title_frames/frame_5.png" id="7_2knex"]
@@ -3747,15 +3748,119 @@ grow_vertical = 2
 script = ExtResource("1_uy56k")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-layer = -1
+layer = 0
 
-[node name="background" type="VideoStreamPlayer" parent="CanvasLayer2"]
-offset_right = 2048.0
-offset_bottom = 1536.0
+[node name="Control" type="Control" parent="CanvasLayer2"]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -384.0
+offset_right = 512.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="VideoStreamPlayer" parent="CanvasLayer2/Control"]
+z_index = -3
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -384.0
+offset_right = 1536.0
+offset_bottom = 1152.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.5, 0.5)
 stream = ExtResource("934_ftfc2")
 autoplay = true
 loop = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2/Control/background"]
+z_index = 1
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = -86.0
+offset_right = 520.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.592425, 0.524064)
+texture = ExtResource("4_3xg6f")
+expand_mode = 1
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer2/Control/background/TextureRect"]
+z_index = -1
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(18.7059, 8.60392)
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="CanvasLayer2/Control/background"]
+z_index = -1
+z_as_relative = false
+scale = Vector2(2, 2)
+
+[node name="crawlinglines1" type="AnimatedSprite2D" parent="CanvasLayer2/Control/background/Node2D"]
+position = Vector2(16, 24)
+sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
+centered = false
+script = ExtResource("934_s06pn")
+
+[node name="crawlinglines5" type="AnimatedSprite2D" parent="CanvasLayer2/Control/background/Node2D"]
+position = Vector2(1264, -536)
+rotation = 1.5708
+scale = Vector2(2.08, 2.08)
+sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
+centered = false
+script = ExtResource("934_s06pn")
+
+[node name="crawlinglines2" type="AnimatedSprite2D" parent="CanvasLayer2/Control/background/Node2D"]
+position = Vector2(848, -40)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
+centered = false
+script = ExtResource("934_s06pn")
+
+[node name="crawlinglines3" type="AnimatedSprite2D" parent="CanvasLayer2/Control/background/Node2D"]
+position = Vector2(1672, 1272)
+rotation = 3.14159
+scale = Vector2(2.72556, 2.72556)
+sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
+centered = false
+flip_h = true
+script = ExtResource("934_s06pn")
+
+[node name="crawlinglines4" type="AnimatedSprite2D" parent="CanvasLayer2/Control/background/Node2D"]
+position = Vector2(-160, 1376)
+rotation = -1.5708
+scale = Vector2(2.02548, 2.02548)
+sprite_frames = SubResource("SpriteFrames_54hn8")
+autoplay = "default"
+centered = false
+flip_h = true
+script = ExtResource("934_s06pn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -3779,27 +3884,39 @@ goes down here
 and
 a bit further"
 
-[node name="Start" type="Button" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -670.0
-offset_top = -112.0
-offset_right = -356.0
-offset_bottom = -20.0
-grow_horizontal = 0
+offset_left = -512.0
+offset_top = -384.0
+offset_right = 512.0
+offset_bottom = 384.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme = ExtResource("2_haaxr")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
 theme_override_font_sizes/font_size = 70
 text = "START
 "
 flat = true
 
-[node name="Quit" type="Button" parent="CanvasLayer"]
+[node name="Quit" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -3814,52 +3931,24 @@ grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme = ExtResource("2_haaxr")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 11
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 flat = true
 
-[node name="crawlinglines1" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_54hn8")
-autoplay = "default"
-centered = false
-script = ExtResource("934_s06pn")
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Quit"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -16.0
+offset_right = 136.0
+offset_bottom = 24.0
+scale = Vector2(3.20921, 3.24346)
 
-[node name="crawlinglines5" type="AnimatedSprite2D" parent="."]
-position = Vector2(1288, 232)
-rotation = 1.5708
-sprite_frames = SubResource("SpriteFrames_54hn8")
-autoplay = "default"
-centered = false
-script = ExtResource("934_s06pn")
-
-[node name="crawlinglines2" type="AnimatedSprite2D" parent="."]
-position = Vector2(1200, -368)
-rotation = 1.5708
-sprite_frames = SubResource("SpriteFrames_54hn8")
-autoplay = "default"
-centered = false
-script = ExtResource("934_s06pn")
-
-[node name="crawlinglines3" type="AnimatedSprite2D" parent="."]
-position = Vector2(520, 984)
-rotation = 3.14159
-sprite_frames = SubResource("SpriteFrames_54hn8")
-autoplay = "default"
-centered = false
-script = ExtResource("934_s06pn")
-
-[node name="crawlinglines4" type="AnimatedSprite2D" parent="."]
-position = Vector2(-128, 544)
-rotation = 4.71239
-sprite_frames = SubResource("SpriteFrames_54hn8")
-autoplay = "default"
-centered = false
-script = ExtResource("934_s06pn")
-
-[connection signal="pressed" from="CanvasLayer/Start" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Quit" to="." method="_on_quit_pressed"]
-[connection signal="animation_finished" from="crawlinglines1" to="crawlinglines1" method="_on_animation_finished"]
-[connection signal="animation_finished" from="crawlinglines5" to="crawlinglines5" method="_on_animation_finished"]
-[connection signal="animation_finished" from="crawlinglines2" to="crawlinglines2" method="_on_animation_finished"]
-[connection signal="animation_finished" from="crawlinglines3" to="crawlinglines3" method="_on_animation_finished"]
-[connection signal="animation_finished" from="crawlinglines4" to="crawlinglines4" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines1" to="CanvasLayer2/Control/background/Node2D/crawlinglines1" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines5" to="CanvasLayer2/Control/background/Node2D/crawlinglines5" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines2" to="CanvasLayer2/Control/background/Node2D/crawlinglines2" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines3" to="CanvasLayer2/Control/background/Node2D/crawlinglines3" method="_on_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines4" to="CanvasLayer2/Control/background/Node2D/crawlinglines4" method="_on_animation_finished"]
+[connection signal="pressed" from="CanvasLayer/Control/Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Quit" to="." method="_on_quit_pressed"]

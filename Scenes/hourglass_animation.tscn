@@ -1,4 +1,4 @@
-[gd_scene load_steps=2918 format=3 uid="uid://dbyvvwypw8qm"]
+[gd_scene load_steps=2919 format=3 uid="uid://dbyvvwypw8qm"]
 
 [ext_resource type="Script" path="res://Scenes/hourglass_animation.gd" id="1_4hlq1"]
 [ext_resource type="Texture2D" uid="uid://bbaey604d2us0" path="res://Assets/Sprites/SandDrain2/frame_1.png" id="1_kvb54"]
@@ -2915,6 +2915,8 @@
 [ext_resource type="Texture2D" uid="uid://dl8l5xdmsve6n" path="res://Assets/Sprites/SandFall1/frame2732.png" id="2879_bjo8c"]
 [ext_resource type="Texture2D" uid="uid://cjqbaa3imwjyy" path="res://Assets/Sprites/h_mono.png" id="2880_rilig"]
 [ext_resource type="Script" path="res://Scenes/SlowSand.gd" id="2915_xxt84"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ttoxa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u044s"]
 animations = [{
@@ -11665,37 +11667,75 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2879_bjo8c")
 }],
-"loop": true,
+"loop": false,
 "name": &"SandSlow",
 "speed": 30.0
 }]
 
 [node name="hourglass_animation" type="Node2D"]
-modulate = Color(0.877717, 0.913077, 0.524839, 1)
-position = Vector2(-55, -26)
+position = Vector2(-56, -24)
 script = ExtResource("1_4hlq1")
 
-[node name="hourglass_body" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(103, 258)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="hourglass_body" type="Sprite2D" parent="Node2D"]
+material = SubResource("CanvasItemMaterial_ttoxa")
 position = Vector2(200, 272)
 texture = ExtResource("2880_rilig")
 
-[node name="SandAnimations" type="Node2D" parent="."]
+[node name="SandAnimations" type="Node2D" parent="Node2D"]
 position = Vector2(200, 272)
 
-[node name="DrainingSand" type="AnimatedSprite2D" parent="SandAnimations"]
+[node name="DrainingSand" type="AnimatedSprite2D" parent="Node2D/SandAnimations"]
+visible = false
 position = Vector2(0, 56)
 sprite_frames = SubResource("SpriteFrames_u044s")
 animation = &"SandDraining"
 frame_progress = 0.939513
 script = ExtResource("182_rs8ks")
 
-[node name="SlowSand" type="AnimatedSprite2D" parent="SandAnimations"]
+[node name="SlowSand" type="AnimatedSprite2D" parent="Node2D/SandAnimations"]
 position = Vector2(5, 70)
 sprite_frames = SubResource("SpriteFrames_0ax4h")
 animation = &"SandSlow"
 frame_progress = 0.965052
 script = ExtResource("2915_xxt84")
 
+[node name="SlowSand2" type="AnimatedSprite2D" parent="Node2D/SandAnimations"]
+position = Vector2(8, 64)
+scale = Vector2(0.811593, 0.903556)
+sprite_frames = SubResource("SpriteFrames_0ax4h")
+animation = &"SandSlow"
+frame_progress = 0.965052
+script = ExtResource("2915_xxt84")
+
+[node name="SlowSand3" type="AnimatedSprite2D" parent="Node2D/SandAnimations"]
+position = Vector2(8, 64)
+scale = Vector2(0.611593, 1.02356)
+sprite_frames = SubResource("SpriteFrames_0ax4h")
+animation = &"SandSlow"
+frame_progress = 0.965052
+flip_h = true
+script = ExtResource("2915_xxt84")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D/SandAnimations"]
+position = Vector2(-1, 9.99999)
+scale = Vector2(26.7689, 0.483749)
+amount = 50
+lifetime = 7.76
+speed_scale = 0.68
+randomness = 0.4
+gravity = Vector2(2.08165e-12, 666)
+angular_velocity_min = -720.0
+angular_velocity_max = -720.0
+scale_amount_min = 5.0
+scale_amount_max = 6.0
+
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="animation_finished" from="SandAnimations/DrainingSand" to="SandAnimations/DrainingSand" method="_on_animation_finished"]
-[connection signal="animation_finished" from="SandAnimations/SlowSand" to="SandAnimations/SlowSand" method="_on_animation_finished"]
+[connection signal="animation_finished" from="Node2D/SandAnimations/DrainingSand" to="Node2D/SandAnimations/DrainingSand" method="_on_animation_finished"]
+[connection signal="animation_finished" from="Node2D/SandAnimations/SlowSand" to="Node2D/SandAnimations/SlowSand" method="_on_animation_finished"]
+[connection signal="animation_finished" from="Node2D/SandAnimations/SlowSand2" to="Node2D/SandAnimations/SlowSand2" method="_on_animation_finished"]
+[connection signal="animation_finished" from="Node2D/SandAnimations/SlowSand3" to="Node2D/SandAnimations/SlowSand3" method="_on_animation_finished"]

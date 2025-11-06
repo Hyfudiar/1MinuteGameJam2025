@@ -23,6 +23,8 @@ Globals="*res://Assets/Scripts/globals.gd"
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
+window/stretch/aspect="expand"
+window/stretch/scale=1.25
 
 [input]
 

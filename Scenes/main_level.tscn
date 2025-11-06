@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=55 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
 [ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
 [ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="24_hqef8"]
+[ext_resource type="Script" path="res://Scenes/AUDIO.gd" id="25_h1nte"]
 [ext_resource type="AudioStream" uid="uid://ct6req0warr6x" path="res://Assets/Audio/random1/etc_28.ogg" id="25_st8g8"]
 [ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="25_xieat"]
 [ext_resource type="AudioStream" uid="uid://bchtoe7v8ujuo" path="res://Assets/Audio/random1/etc_29.ogg" id="26_lxqc6"]
@@ -48,7 +49,7 @@
 [ext_resource type="AudioStream" uid="uid://jef782rxd3ah" path="res://Assets/Audio/random1/Drone_14.ogg" id="38_62p6i"]
 [ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="38_x4vnv"]
 [ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="39_jy5g8"]
-[ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://Scenes/hourglass_animation.tscn" id="49_cmt8c"]
+[ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://Scenes/hourglass_animation.tscn" id="50_rsb2a"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
 streams_count = 12
@@ -958,6 +959,7 @@ energy = 3.9
 blend_mode = 1
 
 [node name="AUDIO" type="Node2D" parent="."]
+script = ExtResource("25_h1nte")
 
 [node name="Floppy" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_f5tgv")
@@ -978,13 +980,9 @@ bus = &"Ambience"
 [node name="Crunches" type="AudioStreamPlayer" parent="AUDIO"]
 bus = &"PanFX"
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="hourglass_animation" parent="CanvasLayer2" instance=ExtResource("49_cmt8c")]
-visible = false
-visibility_layer = 2
-position = Vector2(1.00001, 3)
-scale = Vector2(0.45, 0.45)
+[node name="Container" type="Container" parent="AUDIO"]
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -997,10 +995,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_qaf8t")
 
+[node name="hourglass_animation" parent="CanvasLayer/TextureRect" instance=ExtResource("50_rsb2a")]
+z_index = -1
+position = Vector2(2, 18)
+scale = Vector2(0.33, 0.33)
+
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="HourglassRed" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_red_body_entered"]
-[connection signal="body_entered" from="HourglassBlue" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_blue_body_entered"]
-[connection signal="body_entered" from="HourglassYellow" to="CanvasLayer2/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
+[connection signal="body_entered" from="HourglassRed" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_red_body_entered"]
+[connection signal="body_entered" from="HourglassBlue" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_blue_body_entered"]
+[connection signal="body_entered" from="HourglassYellow" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
 [connection signal="finished" from="AUDIO/Floppy" to="." method="_on_floppy_finished"]
 [connection signal="finished" from="AUDIO/AsstAmb" to="." method="_on_asst_amb_finished"]
