@@ -998,7 +998,7 @@ texture = SubResource("CanvasTexture_qaf8t")
 [node name="hourglass_animation" parent="CanvasLayer/TextureRect" instance=ExtResource("50_rsb2a")]
 z_index = -1
 position = Vector2(2, 18)
-scale = Vector2(0.33, 0.33)
+scale = Vector2(0.325604, 0.325604)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
