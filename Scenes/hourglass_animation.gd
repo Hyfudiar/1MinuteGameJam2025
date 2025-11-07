@@ -1,6 +1,6 @@
 extends Node2D
 
-#enum colorSelect {hourglass_red, hourglass_blue, hourglass_yellow}
+#enum colorSelect {setRed setBlue, setYellow}
 #@export var colorChoose: colorSelect
 
 var hourglass_ui_color: Color

@@ -5,11 +5,14 @@
 
 [node name="NES_T" instance=ExtResource("1_sf68k")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(517, 386)
+
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_wgn0n")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(464, 14, 345, 282, 141, 283, 117, 606, 485, 607, 461, 775, 35, 617, 86, 153)
+polygon = PackedVector2Array(460, 0, 447, 26, 368, 197, 357, 290, 162, 292, 124, 596, 510, 596, 460, 769, 413, 768, 35, 617, 86, 153, 424, 1)
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
 gravity_scale = 0.0
@@ -17,7 +20,7 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
-polygon = PackedVector2Array(554, 16, 475, 277, 906, 280, 904, 351, 1014, 337)
+polygon = PackedVector2Array(564, -2, 550, 63, 454, 289, 902, 292, 899, 363, 979, 339, 1029, 333, 1027, 292, 591, -3)
 
 [node name="RigidBody2D3" type="RigidBody2D" parent="." index="6"]
 gravity_scale = 0.0
@@ -25,7 +28,7 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D3" index="0"]
-polygon = PackedVector2Array(566, 770, 641, 604, 949, 603, 919, 429, 1008, 437, 964, 744)
+polygon = PackedVector2Array(563, 770, 591, 722, 631, 598, 934, 597, 914, 430, 983, 435, 1026, 434, 1028, 519, 964, 744)
 
 [node name="Sprite2D2" parent="." index="7"]
 visible = false

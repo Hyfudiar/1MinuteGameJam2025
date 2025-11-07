@@ -9,7 +9,8 @@
 texture = ExtResource("2_uocua")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(463, 766, 436, 653, 288, 656, 343, 173, 456, 176, 462, -3, 103, 315, 218, 714)
+position = Vector2(0, 2)
+polygon = PackedVector2Array(462, 767, 443, 653, 288, 656, 343, 173, 462, 175, 462, -2, 452, -2, 103, 315, 218, 714, 425, 769)
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
 gravity_scale = 0.0
@@ -17,7 +18,5 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
-polygon = PackedVector2Array(562, 768, 540, 657, 690, 657, 635, 174, 538, 176, 560, -2, 770, 199, 860, 546, 777, 746)
-
-[node name="Sprite2D2" parent="." index="6"]
-visible = false
+position = Vector2(2, 1)
+polygon = PackedVector2Array(560, 768, 560, 724, 535, 655, 690, 657, 635, 174, 526, 177, 538, 97, 560, 22, 560, -1, 567, -1, 770, 199, 860, 546, 777, 746, 594, 767)

@@ -6,11 +6,11 @@
 
 [node name="WN_Elbow" instance=ExtResource("1_apekw")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_1atre")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(141, 324, 78, 329, 0, 332, 162, 86, 358, 65, 454, 4, 483, 282, 141, 285)
+polygon = PackedVector2Array(153, 332, 78, 329, 36, 334, -3, 333, -4, 251, 162, 86, 358, 65, 421, 0, 462, 0, 453, 122, 489, 303, 152, 300)
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
 gravity_scale = 0.0
@@ -18,7 +18,7 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
-polygon = PackedVector2Array(111, 540, -1, 433, 51, 667, 283, 702, 463, 672, 634, 603, 825, 460, 821, 241, 669, 157, 564, 19, 593, 285, 625, 278, 668, 302, 656, 322, 665, 363, 640, 430, 552, 435, 529, 478, 501, 478, 484, 527, 457, 536, 400, 544, 392, 571, 237, 575, 208, 604, 126, 610, 99, 589)
+polygon = PackedVector2Array(111, 540, 18, 435, -1, 433, -2, 479, 51, 667, 283, 702, 463, 672, 634, 603, 825, 460, 821, 241, 669, 157, 580, -2, 564, -1, 584, 300, 612, 296, 650, 301, 642, 326, 645, 370, 640, 430, 552, 435, 529, 478, 501, 478, 484, 527, 457, 536, 390, 538, 392, 571, 237, 575, 208, 604, 126, 610, 99, 589)
 
 [node name="Ref_001" type="Sprite2D" parent="." index="6"]
 visible = false

@@ -5,14 +5,14 @@
 
 [node name="N_deadend" instance=ExtResource("1_4strs")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_y7ttt")
 
 [node name="RigidBody2D" parent="." index="4"]
 position = Vector2(457, 3)
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(6, -7, -10, 298, -78, 293, -83, 323, -155, 328, -167, 357, -156, 388, -111, 392, -113, 421, -90, 427, -73, 457, -46, 457, -37, 487, -19, 491, -20, 515, 41, 515, 37, 558, 55, 582, 211, 581, 214, 550, 253, 584, 273, 410, 252, 343, 178, 303, 79, 297, 107, -3, 457, 513, 212, 605, -361, 575)
+polygon = PackedVector2Array(5, -7, -10, 302, -70, 302, -77, 329, -143, 335, -152, 356, -150, 387, -111, 392, -113, 421, -90, 427, -73, 457, -46, 457, -37, 487, -19, 491, -20, 515, 41, 515, 37, 558, 55, 582, 211, 581, 212, 542, 250, 523, 253, 475, 268, 411, 243, 352, 178, 303, 80, 303, 107, -5, 151, -6, 457, 513, 212, 605, -361, 575, -47, -6)
 
 [node name="Sprite2D2" parent="." index="5"]
 visible = false

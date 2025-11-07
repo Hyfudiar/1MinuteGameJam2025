@@ -5,8 +5,11 @@
 
 [node name="S_deadend" instance=ExtResource("1_ptpow")]
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_t8075")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
-polygon = PackedVector2Array(464, 774, 418, 554, 400, 525, 403, 503, 382, 459, 471, 411, 501, 351, 527, 330, 567, 327, 581, 290, 593, 306, 746, 296, 777, 328, 748, 415, 689, 444, 682, 514, 587, 554, 526, 553, 560, 773, 912, 287, 379, 252, 239, 567)
+polygon = PackedVector2Array(459, 774, 418, 554, 400, 525, 403, 503, 382, 459, 471, 411, 501, 351, 527, 330, 567, 327, 581, 290, 593, 306, 746, 296, 777, 328, 748, 415, 689, 444, 682, 514, 587, 554, 526, 553, 562, 774, 912, 287, 379, 252, 239, 567)
+
+[node name="Sprite2D2" parent="." index="5"]
+visible = false

@@ -8,12 +8,12 @@
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(495, 391)
 
-[node name="Sprite2D" parent="." index="3"]
+[node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("2_ivsqi")
 
 [node name="CollisionPolygon2D" parent="RigidBody2D" index="0"]
 position = Vector2(9, -8)
-polygon = PackedVector2Array(-13, 344, 353, 172, 781, 462, 551, 788, 586, 591, 635, 496, 602, 464, 547, 401, 487, 403, 461, 369, 413, 327, 331, 332, 302, 268, 126, 266, 128, 298)
+polygon = PackedVector2Array(-10, 342, -11, 277, 353, 172, 781, 462, 574, 777, 553, 777, 556, 708, 577, 590, 616, 487, 581, 471, 544, 411, 474, 410, 461, 369, 427, 369, 414, 346, 319, 346, 303, 280, 126, 278, 126, 307, 79, 311, 43, 318, 10, 342)
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="." index="5"]
 position = Vector2(50, 716)
@@ -22,7 +22,7 @@ lock_rotation = true
 freeze = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2" index="0"]
-polygon = PackedVector2Array(153, -64, 406, 59, 441, -159, 44, -158, 57, -231, 73, -280, 73, -343, -49, -280, 4, -54)
+polygon = PackedVector2Array(153, -64, 382, 53, 412, 53, 415, -50, 447, -161, 52, -162, 66, -214, 78, -254, 80, -354, -22, -281, -51, -281, -51, -244, 4, -54)
 
 [node name="Sprite2D2" parent="." index="6"]
 visible = false
