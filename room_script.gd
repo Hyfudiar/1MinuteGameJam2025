@@ -6,6 +6,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Torch.visible = torch_enabled
+	$Torch.torch_enabled = torch_enabled
 	if Globals.room_lights[room_ident] == true:
 		print("torch state loaded")
 		$Torch.turn_on()

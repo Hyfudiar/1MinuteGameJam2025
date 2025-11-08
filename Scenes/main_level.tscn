@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=68 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
@@ -24,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://cl8yg1nrb6oo6" path="res://Scenes/FinishedRooms/Chasms/yellow_2_chasm.tscn" id="22_of0xw"]
 [ext_resource type="PackedScene" uid="uid://dydg76g227dfy" path="res://Scenes/FinishedRooms/Chasms/yellow_1_chasm.tscn" id="23_daywc"]
 [ext_resource type="PackedScene" uid="uid://livrftisrui4" path="res://Scenes/hourglass.tscn" id="24_hqef8"]
-[ext_resource type="Script" path="res://Scenes/AUDIO.gd" id="25_h1nte"]
 [ext_resource type="AudioStream" uid="uid://ct6req0warr6x" path="res://Assets/Audio/random1/etc_28.ogg" id="25_st8g8"]
 [ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="25_xieat"]
 [ext_resource type="AudioStream" uid="uid://bchtoe7v8ujuo" path="res://Assets/Audio/random1/etc_29.ogg" id="26_lxqc6"]
@@ -49,7 +48,20 @@
 [ext_resource type="AudioStream" uid="uid://jef782rxd3ah" path="res://Assets/Audio/random1/Drone_14.ogg" id="38_62p6i"]
 [ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="38_x4vnv"]
 [ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="39_jy5g8"]
+[ext_resource type="AudioStream" uid="uid://c118pd10rpy5e" path="res://Assets/Audio/gameSFX/crunches_43.ogg" id="49_nauwg"]
+[ext_resource type="AudioStream" uid="uid://ceobxvk71vxl2" path="res://Assets/Audio/gameSFX/crunches_44.ogg" id="50_2y70m"]
 [ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://Scenes/hourglass_animation.tscn" id="50_rsb2a"]
+[ext_resource type="AudioStream" uid="uid://ca26gkp2fq4d7" path="res://Assets/Audio/gameSFX/crunches_45.ogg" id="51_j4cog"]
+[ext_resource type="AudioStream" uid="uid://x07fsew83ee3" path="res://Assets/Audio/gameSFX/crunches_silence_33.ogg" id="51_vripc"]
+[ext_resource type="AudioStream" uid="uid://bsm7fx7i15v7n" path="res://Assets/Audio/gameSFX/crunches_46.ogg" id="53_sxm1c"]
+[ext_resource type="AudioStream" uid="uid://dmsug05emekhc" path="res://Assets/Audio/gameSFX/crunches_47.ogg" id="54_ost4q"]
+[ext_resource type="AudioStream" uid="uid://ccq6byujgpmln" path="res://Assets/Audio/gameSFX/crunches_48.ogg" id="55_kxkpu"]
+[ext_resource type="AudioStream" uid="uid://lbbifovqxswu" path="res://Assets/Audio/gameSFX/crunches_49.ogg" id="56_hsxqb"]
+[ext_resource type="AudioStream" uid="uid://dejafrolpp3ao" path="res://Assets/Audio/gameSFX/crunches_50.ogg" id="57_l4c5d"]
+[ext_resource type="AudioStream" uid="uid://dlljsn4n3ogin" path="res://Assets/Audio/gameSFX/crunches_51.ogg" id="58_p7627"]
+[ext_resource type="AudioStream" uid="uid://c211yqt7shqk1" path="res://Assets/Audio/gameSFX/drone_and_sand_56_001.ogg" id="59_5igfs"]
+[ext_resource type="AudioStream" uid="uid://cv5xbau0djj7t" path="res://Assets/Audio/gameSFX/crunches_52.ogg" id="59_36eyc"]
+[ext_resource type="AudioStream" uid="uid://biyvbwqs476bk" path="res://Assets/Audio/gameSFX/drone_and_sand_56_002.ogg" id="60_nj4nd"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
 streams_count = 12
@@ -112,6 +124,33 @@ stream_14/stream = ExtResource("30_biior")
 stream_14/weight = 1.0
 stream_15/stream = ExtResource("31_rpfbm")
 stream_15/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_olfs6"]
+random_pitch = 2.34
+random_volume_offset_db = 10.1
+streams_count = 11
+stream_0/stream = ExtResource("49_nauwg")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("50_2y70m")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("51_j4cog")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("53_sxm1c")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("54_ost4q")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("55_kxkpu")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("56_hsxqb")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("57_l4c5d")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("58_p7627")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("59_36eyc")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("51_vripc")
+stream_10/weight = 7.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lo1ek"]
 shader = ExtResource("25_xieat")
@@ -954,12 +993,12 @@ item_color = 1
 position = Vector2(476, 401)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 color = Color(0.252028, 0.252028, 0.252028, 1)
 energy = 3.9
 blend_mode = 1
 
 [node name="AUDIO" type="Node2D" parent="."]
-script = ExtResource("25_h1nte")
 
 [node name="Floppy" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_f5tgv")
@@ -978,13 +1017,23 @@ autoplay = true
 bus = &"Ambience"
 
 [node name="Crunches" type="AudioStreamPlayer" parent="AUDIO"]
+stream = SubResource("AudioStreamRandomizer_olfs6")
+volume_db = -15.394
+autoplay = true
 bus = &"PanFX"
 
-[node name="Container" type="Container" parent="AUDIO"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sand" type="AudioStreamPlayer" parent="AUDIO"]
+stream = ExtResource("59_5igfs")
+volume_db = -7.352
+autoplay = true
+
+[node name="Sand_Drone" type="AudioStreamPlayer" parent="AUDIO"]
+stream = ExtResource("60_nj4nd")
+volume_db = -80.0
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_lo1ek")
@@ -1007,3 +1056,4 @@ scale = Vector2(0.325604, 0.325604)
 [connection signal="body_entered" from="HourglassYellow" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_yellow_body_entered"]
 [connection signal="finished" from="AUDIO/Floppy" to="." method="_on_floppy_finished"]
 [connection signal="finished" from="AUDIO/AsstAmb" to="." method="_on_asst_amb_finished"]
+[connection signal="finished" from="AUDIO/Crunches" to="." method="_on_crunches_finished"]

@@ -28,13 +28,14 @@ func _on_player_start_hg():
 	$Timer.start()
 
 
-
 func _on_floppy_finished():
 	$AUDIO/Floppy.play()
 
 
-
-
-
 func _on_asst_amb_finished():
 	$AUDIO/AsstAmb.play()
+
+
+func _on_crunches_finished():
+	panner.pan = randf_range(-1, 1)
+	$AUDIO/Crunches.play()
