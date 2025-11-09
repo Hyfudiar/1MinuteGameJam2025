@@ -166,21 +166,21 @@ shader = ExtResource("25_xieat")
 shader_parameter/overlay = false
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/brightness = 1.4
-shader_parameter/scanlines_opacity = 0.193
+shader_parameter/scanlines_opacity = 0.115
 shader_parameter/scanlines_width = 0.0
 shader_parameter/grille_opacity = 0.0
 shader_parameter/roll = true
 shader_parameter/roll_speed = 0.7
-shader_parameter/roll_size = 12.568
-shader_parameter/roll_variation = 3.595
-shader_parameter/distort_intensity = 0.025
+shader_parameter/roll_size = 10.763
+shader_parameter/roll_variation = 5.0
+shader_parameter/distort_intensity = 0.01
 shader_parameter/aberration = 0.012
-shader_parameter/noise_opacity = 0.13
+shader_parameter/noise_opacity = 0.134
 shader_parameter/noise_speed = 2.0
 shader_parameter/static_noise_intensity = 0.097
 shader_parameter/pixelate = true
 shader_parameter/discolor = true
-shader_parameter/warp_amount = 0.26
+shader_parameter/warp_amount = 0.342
 shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
@@ -192,9 +192,11 @@ script = ExtResource("1_qrekd")
 
 [node name="Floor" type="Sprite2D" parent="."]
 texture_repeat = 2
-position = Vector2(13, 5)
+position = Vector2(0, -8448)
 texture = ExtResource("2_gnj1o")
 centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 18432, 17664)
 
 [node name="Chasm_Cutouts" type="Node2D" parent="."]
 position = Vector2(1138, 257)
@@ -1212,7 +1214,6 @@ volume_db = -49.483
 bus = &"SandDrone"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_lo1ek")

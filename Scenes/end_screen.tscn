@@ -1,8 +1,35 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyivadi8lxjsn"]
+[gd_scene load_steps=7 format=3 uid="uid://cyivadi8lxjsn"]
 
 [ext_resource type="Script" path="res://Scenes/end_screen.gd" id="1_jgbjp"]
 [ext_resource type="VideoStream" path="res://Assets/Textures/end_screen_01.ogv" id="2_q5n8f"]
 [ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_u60ku"]
+[ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="4_wn2yc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3tecr"]
+shader = ExtResource("4_wn2yc")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.115
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.7
+shader_parameter/roll_size = 10.763
+shader_parameter/roll_variation = 5.0
+shader_parameter/distort_intensity = 0.01
+shader_parameter/aberration = 0.012
+shader_parameter/noise_opacity = 0.134
+shader_parameter/noise_speed = 2.0
+shader_parameter/static_noise_intensity = 0.097
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.342
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ijuh3"]
 
 [node name="End screen" type="Control"]
 layout_mode = 3
@@ -13,9 +40,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jgbjp")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
-[node name="restart" type="Button" parent="CanvasLayer"]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer2"]
+anchors_preset = -1
+anchor_left = -0.109375
+anchor_top = -0.0234375
+anchor_right = 0.828125
+anchor_bottom = 0.914062
+offset_top = -0.000183105
+offset_bottom = 0.000183105
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
+stream = ExtResource("2_q5n8f")
+autoplay = true
+loop = true
+metadata/_edit_use_anchors_ = true
+
+[node name="restart" type="Button" parent="CanvasLayer2"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -28,7 +71,7 @@ theme_override_font_sizes/font_size = 70
 text = "RETURN"
 flat = true
 
-[node name="quit" type="Button" parent="CanvasLayer"]
+[node name="quit" type="Button" parent="CanvasLayer2"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -45,20 +88,14 @@ theme_override_font_sizes/font_size = 40
 text = "QUIT"
 flat = true
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.109375
-anchor_top = -0.0234375
-anchor_right = 0.828125
-anchor_bottom = 0.914062
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+material = SubResource("ShaderMaterial_3tecr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.3, 1.3)
-stream = ExtResource("2_q5n8f")
-autoplay = true
-loop = true
-metadata/_edit_use_anchors_ = true
+texture = SubResource("CanvasTexture_ijuh3")
 
-[connection signal="pressed" from="CanvasLayer/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer2/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer2/quit" to="." method="_on_quit_pressed"]

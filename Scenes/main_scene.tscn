@@ -1,4 +1,4 @@
-[gd_scene load_steps=939 format=3 uid="uid://8m12jx6ijq56"]
+[gd_scene load_steps=942 format=3 uid="uid://8m12jx6ijq56"]
 
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_uy56k"]
 [ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_haaxr"]
@@ -937,6 +937,7 @@
 [ext_resource type="VideoStream" path="res://Assets/Textures/title_bg.ogv" id="934_ftfc2"]
 [ext_resource type="Script" path="res://Scenes/crawlinglines.gd" id="934_s06pn"]
 [ext_resource type="AudioStream" uid="uid://n6qx2qnlo21d" path="res://Assets/Audio/title/boundless chaos.mp3" id="937_17s2b"]
+[ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="938_460xp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_54hn8"]
 animations = [{
@@ -3739,6 +3740,32 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4vycc"]
+shader = ExtResource("938_460xp")
+shader_parameter/overlay = false
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/brightness = 1.4
+shader_parameter/scanlines_opacity = 0.115
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.7
+shader_parameter/roll_size = 10.763
+shader_parameter/roll_variation = 5.0
+shader_parameter/distort_intensity = 0.01
+shader_parameter/aberration = 0.012
+shader_parameter/noise_opacity = 0.134
+shader_parameter/noise_speed = 2.0
+shader_parameter/static_noise_intensity = 0.097
+shader_parameter/pixelate = true
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 0.342
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k2l7g"]
+
 [node name="Main scene" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -3863,29 +3890,9 @@ centered = false
 flip_h = true
 script = ExtResource("934_s06pn")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer3" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = -224.0
-offset_top = 80.0
-offset_right = 181.0
-offset_bottom = 441.0
-text = "space for text etc etc
-
-
-lorem ipsum
-
-
-
-
-goes down here
-
-
-
-and
-a bit further"
-
-[node name="Control" type="Control" parent="CanvasLayer"]
+[node name="Control" type="Control" parent="CanvasLayer3"]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -3899,7 +3906,7 @@ offset_bottom = 384.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="Button" parent="CanvasLayer/Control"]
+[node name="Start" type="Button" parent="CanvasLayer3/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -3916,7 +3923,7 @@ text = "START
 "
 flat = true
 
-[node name="Quit" type="Button" parent="CanvasLayer/Control"]
+[node name="Quit" type="Button" parent="CanvasLayer3/Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -3939,13 +3946,15 @@ theme_override_font_sizes/font_size = 41
 text = "QUIT"
 flat = true
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/Quit"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = -16.0
-offset_right = 136.0
-offset_bottom = 24.0
-scale = Vector2(3.20921, 3.24346)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer3"]
+material = SubResource("ShaderMaterial_4vycc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("CanvasTexture_k2l7g")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("937_17s2b")
@@ -3958,5 +3967,5 @@ attenuation = 0.466516
 [connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines2" to="CanvasLayer2/Control/background/Node2D/crawlinglines2" method="_on_animation_finished"]
 [connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines3" to="CanvasLayer2/Control/background/Node2D/crawlinglines3" method="_on_animation_finished"]
 [connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines4" to="CanvasLayer2/Control/background/Node2D/crawlinglines4" method="_on_animation_finished"]
-[connection signal="pressed" from="CanvasLayer/Control/Start" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CanvasLayer3/Control/Start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer3/Control/Quit" to="." method="_on_quit_pressed"]
