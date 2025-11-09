@@ -11,7 +11,7 @@ func _process(delta):
 
 func grid_fade():
 	var timeout = get_tree().create_tween()
-	timeout.tween_property($AnimatedSprite2D, "self_modulate:a", 1.0, 7.0)
+	timeout.tween_property($AnimatedSprite2D, "self_modulate:a", 0.3, 7.0)
 
 func _on_timer_timeout():
 	grid_fade()

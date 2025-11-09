@@ -43,7 +43,7 @@ func _process(delta):
 
 func timeout():
 	var timeout = get_tree().create_tween()
-	timeout.tween_property($Timeout/AnimatedSprite2D, "self_modulate:a", 1.0, 15.0)
+	timeout.tween_property($Timeout/AnimatedSprite2D, "self_modulate:a", 1.0, 12.0)
 
 
 func _physics_process(delta):

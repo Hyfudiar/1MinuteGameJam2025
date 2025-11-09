@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcx2lks8le24i"]
+[gd_scene load_steps=4 format=3 uid="uid://bcx2lks8le24i"]
 
 [ext_resource type="PackedScene" uid="uid://bjqxt8ej3nyaa" path="res://Scenes/FinishedRooms/Chasms/h_chasm.tscn" id="1_lsl3x"]
+[ext_resource type="Texture2D" uid="uid://depe6n2ymgiyf" path="res://Assets/Textures/ROOMS_BG/NEW CHASMS/C.002-2.png" id="2_lpsaw"]
 [ext_resource type="Texture2D" uid="uid://ddr5pmvrqjfkn" path="res://Assets/Textures/ROOMS_BG/b_r2.044.png" id="2_mpfo7"]
 
 [node name="Red1_Chasm" instance=ExtResource("1_lsl3x")]
 chasm_ident = "L21"
 room_ident = "L21"
 
-[node name="Icon" parent="." index="3"]
+[node name="Sprite2D" parent="." index="5"]
+texture = ExtResource("2_lpsaw")
+
+[node name="Icon" parent="." index="6"]
 texture = ExtResource("2_mpfo7")

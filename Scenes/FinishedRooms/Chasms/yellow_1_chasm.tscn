@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dydg76g227dfy"]
+[gd_scene load_steps=4 format=3 uid="uid://dydg76g227dfy"]
 
 [ext_resource type="PackedScene" uid="uid://ivhl423xrqe7" path="res://Scenes/FinishedRooms/Chasms/v_chasm.tscn" id="1_t17u8"]
 [ext_resource type="Texture2D" uid="uid://b8wwf4207hg7a" path="res://Assets/Textures/ROOMS_BG/b_y1.045.png" id="2_ju5sc"]
+[ext_resource type="Texture2D" uid="uid://b0h56xo43e1mv" path="res://Assets/Textures/ROOMS_BG/NEW CHASMS/C.001-2.png" id="2_qp1dw"]
 
 [node name="Yellow1_Chasm" instance=ExtResource("1_t17u8")]
 unlock_color = 2
 chasm_ident = "Q18"
 room_ident = "Q18"
 
-[node name="Icon" parent="." index="3"]
+[node name="Sprite2D" parent="." index="5"]
+texture = ExtResource("2_qp1dw")
+
+[node name="Icon" parent="." index="6"]
 texture = ExtResource("2_ju5sc")
