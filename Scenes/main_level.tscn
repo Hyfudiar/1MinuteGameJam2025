@@ -1,7 +1,7 @@
 [gd_scene load_steps=77 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
-[ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
+[ext_resource type="Texture2D" uid="uid://cix1denmwfmtg" path="res://Assets/Textures/ROOMS_BG/FLOOR/FLOOR.png" id="2_gnj1o"]
 [ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="2_nqcvk"]
 [ext_resource type="Texture2D" uid="uid://cavh63ykdqhy" path="res://Assets/Textures/ROOMS_BG/b_r1.043.png" id="3_1mpwg"]
 [ext_resource type="Texture2D" uid="uid://c8g1qbrnijf1h" path="res://Assets/Textures/ROOMS_BG/NEW CHASMS/C.002-1.png" id="3_fqe5r"]
@@ -190,12 +190,11 @@ shader_parameter/vignette_opacity = 0.5
 [node name="MainLevel" type="Node2D"]
 script = ExtResource("1_qrekd")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(9666, 284)
-scale = Vector2(20, 19.179)
-texture = ExtResource("2_ljnmj")
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
+[node name="Floor" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(13, 5)
+texture = ExtResource("2_gnj1o")
+centered = false
 
 [node name="Chasm_Cutouts" type="Node2D" parent="."]
 position = Vector2(1138, 257)
@@ -1213,6 +1212,7 @@ volume_db = -49.483
 bus = &"SandDrone"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 material = SubResource("ShaderMaterial_lo1ek")
