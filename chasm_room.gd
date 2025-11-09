@@ -12,7 +12,7 @@ func _ready():
 	if Globals.chasms[chasm_ident] == true:
 		print("chasm state loaded")
 		$Chasm.queue_free()
-		$Icon.modulate = Color.WHITE
+		bridge_enable.emit(chasm_ident)
 
 func _process(delta):
 	pass

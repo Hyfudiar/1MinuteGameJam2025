@@ -1,12 +1,18 @@
-[gd_scene load_steps=69 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=75 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bg8jx7s7oc6d0" path="res://Assets/Textures/blackbackground.png" id="2_ljnmj"]
 [ext_resource type="PackedScene" uid="uid://4fgsqno7u63g" path="res://Scenes/player_small.tscn" id="2_nqcvk"]
+[ext_resource type="Texture2D" uid="uid://cavh63ykdqhy" path="res://Assets/Textures/ROOMS_BG/b_r1.043.png" id="3_1mpwg"]
 [ext_resource type="PackedScene" uid="uid://b1gqgrgidymji" path="res://Scenes/FinishedRooms/zb.tscn" id="4_hjxqu"]
+[ext_resource type="Texture2D" uid="uid://cj5cypjtb3mlb" path="res://Assets/Textures/ROOMS_BG/b_b1.png" id="4_spg1y"]
+[ext_resource type="Texture2D" uid="uid://ddr5pmvrqjfkn" path="res://Assets/Textures/ROOMS_BG/b_r2.044.png" id="5_2co62"]
 [ext_resource type="PackedScene" uid="uid://l4oia0pttefl" path="res://Scenes/FinishedRooms/zq.tscn" id="5_42wpr"]
 [ext_resource type="PackedScene" uid="uid://0tv4o3y0ghwx" path="res://Scenes/FinishedRooms/zp.tscn" id="6_ewfln"]
+[ext_resource type="Texture2D" uid="uid://c48xoup4s51nf" path="res://Assets/Textures/ROOMS_BG/b_b2.042.png" id="6_nh5vo"]
 [ext_resource type="PackedScene" uid="uid://cu4nxgbs4hr54" path="res://Scenes/FinishedRooms/zk.tscn" id="7_hgr6m"]
+[ext_resource type="Texture2D" uid="uid://b8wwf4207hg7a" path="res://Assets/Textures/ROOMS_BG/b_y1.045.png" id="7_mlq7v"]
+[ext_resource type="Texture2D" uid="uid://brqm6m7c06qet" path="res://Assets/Textures/ROOMS_BG/b_y2.046.png" id="8_5g3wm"]
 [ext_resource type="PackedScene" uid="uid://8go33u8mlhhu" path="res://Scenes/FinishedRooms/zc.tscn" id="8_bn4h5"]
 [ext_resource type="PackedScene" uid="uid://caiwtcf4rydlv" path="res://Scenes/FinishedRooms/zs.tscn" id="9_g1p3w"]
 [ext_resource type="PackedScene" uid="uid://bftwd8cmpg75l" path="res://Scenes/FinishedRooms/zl.tscn" id="9_s3tgo"]
@@ -187,21 +193,28 @@ position = Vector2(9666, 284)
 scale = Vector2(20, 19.179)
 texture = ExtResource("2_ljnmj")
 metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("2_nqcvk")]
 position = Vector2(595, 428)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 90.0
 one_shot = true
 
 [node name="Row10" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow2" parent="Row10" instance=ExtResource("9_s3tgo")]
 position = Vector2(14336, -8448)
 room_ident = "U10"
 
 [node name="Row11" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow" parent="Row11" instance=ExtResource("9_s3tgo")]
 position = Vector2(13312, -7680)
@@ -212,6 +225,8 @@ position = Vector2(14336, -7680)
 room_ident = "U11"
 
 [node name="Row12" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="E_Deadend" parent="Row12" instance=ExtResource("12_60lsl")]
 position = Vector2(12288, -6912)
@@ -220,12 +235,15 @@ room_ident = "S12"
 [node name="WNE_T2" parent="Row12" instance=ExtResource("6_ewfln")]
 position = Vector2(13312, -6912)
 room_ident = "T12"
+torch_enabled = true
 
 [node name="WS_Elbow3" parent="Row12" instance=ExtResource("7_hgr6m")]
 position = Vector2(14336, -6912)
 room_ident = "U12"
 
 [node name="Row13" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow3" parent="Row13" instance=ExtResource("9_s3tgo")]
 position = Vector2(12288, -6144)
@@ -234,16 +252,20 @@ room_ident = "S13"
 [node name="WNE_T" parent="Row13" instance=ExtResource("6_ewfln")]
 position = Vector2(14336, -6144)
 room_ident = "U13"
+torch_enabled = true
 
 [node name="WSE_t" parent="Row13" instance=ExtResource("5_42wpr")]
 position = Vector2(15360, -6144)
 room_ident = "V13"
+torch_enabled = true
 
 [node name="WS_Elbow2" parent="Row13" instance=ExtResource("7_hgr6m")]
 position = Vector2(16384, -6144)
 room_ident = "W13"
 
 [node name="Row14" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="S_deadend" parent="Row14" instance=ExtResource("9_g1p3w")]
 position = Vector2(9216, -5376)
@@ -256,6 +278,7 @@ room_ident = "R14"
 [node name="WNS_t" parent="Row14" instance=ExtResource("13_d50kt")]
 position = Vector2(12288, -5376)
 room_ident = "S14"
+torch_enabled = true
 
 [node name="ES_Elbow2" parent="Row14" instance=ExtResource("9_s3tgo")]
 position = Vector2(14336, -5376)
@@ -274,6 +297,8 @@ position = Vector2(17408, -5376)
 room_ident = "X14"
 
 [node name="Row15" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow" parent="Row15" instance=ExtResource("9_s3tgo")]
 position = Vector2(8192, -4608)
@@ -282,14 +307,17 @@ room_ident = "O15"
 [node name="WNE_T" parent="Row15" instance=ExtResource("6_ewfln")]
 position = Vector2(9216, -4608)
 room_ident = "P15"
+torch_enabled = true
 
 [node name="WSE_t" parent="Row15" instance=ExtResource("5_42wpr")]
 position = Vector2(10240, -4608)
 room_ident = "Q15"
+torch_enabled = true
 
 [node name="WNS_t" parent="Row15" instance=ExtResource("13_d50kt")]
 position = Vector2(11264, -4608)
 room_ident = "R15"
+torch_enabled = true
 
 [node name="NE_Elbow" parent="Row15" instance=ExtResource("15_0cqm8")]
 position = Vector2(12288, -4608)
@@ -312,10 +340,13 @@ position = Vector2(17408, -4608)
 room_ident = "X15"
 
 [node name="Row16" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="WNE_T" parent="Row16" instance=ExtResource("6_ewfln")]
 position = Vector2(8192, -3840)
 room_ident = "O16"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row16" instance=ExtResource("7_hgr6m")]
 position = Vector2(9216, -3840)
@@ -332,6 +363,7 @@ room_ident = "R16"
 [node name="NES_T" parent="Row16" instance=ExtResource("11_yvak1")]
 position = Vector2(13312, -3840)
 room_ident = "T16"
+torch_enabled = true
 
 [node name="WS_Elbow2" parent="Row16" instance=ExtResource("7_hgr6m")]
 position = Vector2(12288, -3840)
@@ -350,6 +382,8 @@ position = Vector2(16384, -3840)
 room_ident = "W16"
 
 [node name="Row17" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow" parent="Row17" instance=ExtResource("9_s3tgo")]
 position = Vector2(6144, -3072)
@@ -366,10 +400,12 @@ room_ident = "O17"
 [node name="WNE_T" parent="Row17" instance=ExtResource("6_ewfln")]
 position = Vector2(9216, -3072)
 room_ident = "P17"
+torch_enabled = true
 
 [node name="WNS_t" parent="Row17" instance=ExtResource("13_d50kt")]
 position = Vector2(10240, -3072)
 room_ident = "Q17"
+torch_enabled = true
 
 [node name="ES_Elbow2" parent="Row17" instance=ExtResource("9_s3tgo")]
 position = Vector2(11264, -3072)
@@ -390,12 +426,15 @@ room_ident = "U17"
 [node name="WNE_T2" parent="Row17" instance=ExtResource("6_ewfln")]
 position = Vector2(15360, -3072)
 room_ident = "V17"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row17" instance=ExtResource("7_hgr6m")]
 position = Vector2(16384, -3072)
 room_ident = "W17"
 
 [node name="Row18" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="E_Deadend" parent="Row18" instance=ExtResource("12_60lsl")]
 position = Vector2(5120, -2304)
@@ -404,14 +443,17 @@ room_ident = "L18"
 [node name="WNE_T" parent="Row18" instance=ExtResource("6_ewfln")]
 position = Vector2(6144, -2304)
 room_ident = "M18"
+torch_enabled = true
 
 [node name="WSE_t" parent="Row18" instance=ExtResource("5_42wpr")]
 position = Vector2(7168, -2304)
 room_ident = "N18"
+torch_enabled = true
 
 [node name="WSE_t2" parent="Row18" instance=ExtResource("5_42wpr")]
 position = Vector2(8192, -2304)
 room_ident = "O18"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row18" instance=ExtResource("7_hgr6m")]
 position = Vector2(9216, -2304)
@@ -428,6 +470,7 @@ room_ident = "T18"
 [node name="WNE_T2" parent="Row18" instance=ExtResource("6_ewfln")]
 position = Vector2(14336, -2304)
 room_ident = "U18"
+torch_enabled = true
 
 [node name="WS_Elbow2" parent="Row18" instance=ExtResource("7_hgr6m")]
 position = Vector2(15360, -2304)
@@ -438,6 +481,8 @@ position = Vector2(16384, -2304)
 room_ident = "W18"
 
 [node name="Row19" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="ES_Elbow" parent="Row19" instance=ExtResource("9_s3tgo")]
 position = Vector2(4096, -1536)
@@ -446,6 +491,7 @@ room_ident = "K19"
 [node name="WSE_t" parent="Row19" instance=ExtResource("5_42wpr")]
 position = Vector2(5120, -1536)
 room_ident = "L19"
+torch_enabled = true
 
 [node name="H_Room" parent="Row19" instance=ExtResource("4_hjxqu")]
 position = Vector2(6144, -1536)
@@ -454,6 +500,7 @@ room_ident = "M19"
 [node name="WNS_t" parent="Row19" instance=ExtResource("13_d50kt")]
 position = Vector2(7168, -1536)
 room_ident = "N19"
+torch_enabled = true
 
 [node name="NE_Elbow" parent="Row19" instance=ExtResource("15_0cqm8")]
 position = Vector2(8192, -1536)
@@ -462,6 +509,7 @@ room_ident = "O19"
 [node name="WNS_t2" parent="Row19" instance=ExtResource("13_d50kt")]
 position = Vector2(9216, -1536)
 room_ident = "P19"
+torch_enabled = true
 
 [node name="V_Room" parent="Row19" instance=ExtResource("8_bn4h5")]
 position = Vector2(10240, -1536)
@@ -474,10 +522,12 @@ room_ident = "R19"
 [node name="WSE_t2" parent="Row19" instance=ExtResource("5_42wpr")]
 position = Vector2(12288, -1536)
 room_ident = "S19"
+torch_enabled = true
 
 [node name="WNS_t3" parent="Row19" instance=ExtResource("13_d50kt")]
 position = Vector2(13312, -1536)
 room_ident = "T19"
+torch_enabled = true
 
 [node name="ES_Elbow3" parent="Row19" instance=ExtResource("9_s3tgo")]
 position = Vector2(14336, -1536)
@@ -486,12 +536,15 @@ room_ident = "U19"
 [node name="WNE_T" parent="Row19" instance=ExtResource("6_ewfln")]
 position = Vector2(15360, -1536)
 room_ident = "V19"
+torch_enabled = true
 
 [node name="W_deadend" parent="Row19" instance=ExtResource("16_tg8em")]
 position = Vector2(16384, -1536)
 room_ident = "W19"
 
 [node name="Row20" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="E_Deadend" parent="Row20" instance=ExtResource("12_60lsl")]
 position = Vector2(3072, -768)
@@ -500,6 +553,7 @@ room_ident = "J20"
 [node name="WNS_t" parent="Row20" instance=ExtResource("13_d50kt")]
 position = Vector2(4096, -768)
 room_ident = "K20"
+torch_enabled = true
 
 [node name="N_deadend" parent="Row20" instance=ExtResource("10_01stl")]
 position = Vector2(5120, -768)
@@ -512,14 +566,17 @@ room_ident = "M20"
 [node name="WNE_T" parent="Row20" instance=ExtResource("6_ewfln")]
 position = Vector2(7168, -768)
 room_ident = "N20"
+torch_enabled = true
 
 [node name="WSE_t" parent="Row20" instance=ExtResource("5_42wpr")]
 position = Vector2(8192, -768)
 room_ident = "O20"
+torch_enabled = true
 
 [node name="WNE_T2" parent="Row20" instance=ExtResource("6_ewfln")]
 position = Vector2(9216, -768)
 room_ident = "P20"
+torch_enabled = true
 
 [node name="WN_Elbow" parent="Row20" instance=ExtResource("14_t3yop")]
 position = Vector2(10240, -768)
@@ -538,6 +595,8 @@ position = Vector2(14336, -768)
 room_ident = "U20"
 
 [node name="Row21" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="H_Room" parent="Row21" instance=ExtResource("4_hjxqu")]
 position = Vector2(1024, 0)
@@ -555,10 +614,12 @@ torch_enabled = true
 [node name="WNE_T" parent="Row21" instance=ExtResource("6_ewfln")]
 position = Vector2(4096, 0)
 room_ident = "K21"
+torch_enabled = true
 
 [node name="WNE_T2" parent="Row21" instance=ExtResource("6_ewfln")]
 position = Vector2(6144, 0)
 room_ident = "M21"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row21" instance=ExtResource("7_hgr6m")]
 position = Vector2(7168, 0)
@@ -587,6 +648,7 @@ room_ident = "S21"
 [node name="NES_T" parent="Row21" instance=ExtResource("11_yvak1")]
 position = Vector2(13312, 0)
 room_ident = "T21"
+torch_enabled = true
 
 [node name="H_Room3" parent="Row21" instance=ExtResource("4_hjxqu")]
 position = Vector2(14336, 0)
@@ -601,6 +663,8 @@ position = Vector2(0, 0)
 room_ident = "G21"
 
 [node name="Row22" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="N_deadend" parent="Row22" instance=ExtResource("10_01stl")]
 position = Vector2(3072, 768)
@@ -613,6 +677,7 @@ room_ident = "K22"
 [node name="WSE_t" parent="Row22" instance=ExtResource("5_42wpr")]
 position = Vector2(5120, 768)
 room_ident = "L22"
+torch_enabled = true
 
 [node name="H_Room" parent="Row22" instance=ExtResource("4_hjxqu")]
 position = Vector2(6144, 768)
@@ -621,6 +686,7 @@ room_ident = "M22"
 [node name="WNS_t" parent="Row22" instance=ExtResource("13_d50kt")]
 position = Vector2(7168, 768)
 room_ident = "N22"
+torch_enabled = true
 
 [node name="N_deadend2" parent="Row22" instance=ExtResource("10_01stl")]
 position = Vector2(9216, 768)
@@ -633,6 +699,7 @@ room_ident = "Q22"
 [node name="WNS_t2" parent="Row22" instance=ExtResource("13_d50kt")]
 position = Vector2(11264, 768)
 room_ident = "R22"
+torch_enabled = true
 
 [node name="ES_Elbow2" parent="Row22" instance=ExtResource("9_s3tgo")]
 position = Vector2(12288, 768)
@@ -641,6 +708,7 @@ room_ident = "S22"
 [node name="WNE_T" parent="Row22" instance=ExtResource("6_ewfln")]
 position = Vector2(13312, 768)
 room_ident = "T22"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row22" instance=ExtResource("7_hgr6m")]
 position = Vector2(14336, 768)
@@ -651,6 +719,8 @@ position = Vector2(15360, 768)
 room_ident = "V22"
 
 [node name="Row23" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="N_deadend" parent="Row23" instance=ExtResource("10_01stl")]
 position = Vector2(4096, 1536)
@@ -671,6 +741,7 @@ room_ident = "N23"
 [node name="WNE_T" parent="Row23" instance=ExtResource("6_ewfln")]
 position = Vector2(8192, 1536)
 room_ident = "O23"
+torch_enabled = true
 
 [node name="H_Room" parent="Row23" instance=ExtResource("4_hjxqu")]
 position = Vector2(9216, 1536)
@@ -679,14 +750,17 @@ room_ident = "P23"
 [node name="WSE_t" parent="Row23" instance=ExtResource("5_42wpr")]
 position = Vector2(10240, 1536)
 room_ident = "Q23"
+torch_enabled = true
 
 [node name="WNE_T2" parent="Row23" instance=ExtResource("6_ewfln")]
 position = Vector2(11264, 1536)
 room_ident = "R23"
+torch_enabled = true
 
 [node name="WNS_t" parent="Row23" instance=ExtResource("13_d50kt")]
 position = Vector2(12288, 1536)
 room_ident = "S23"
+torch_enabled = true
 
 [node name="S_deadend" parent="Row23" instance=ExtResource("9_g1p3w")]
 position = Vector2(13312, 1536)
@@ -709,10 +783,13 @@ position = Vector2(17408, 1536)
 room_ident = "X23"
 
 [node name="Row24" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NES_T" parent="Row24" instance=ExtResource("11_yvak1")]
 position = Vector2(6144, 2304)
 room_ident = "M24"
+torch_enabled = true
 
 [node name="H_Room3" parent="Row24" instance=ExtResource("4_hjxqu")]
 position = Vector2(7168, 2304)
@@ -721,6 +798,7 @@ room_ident = "N24"
 [node name="WSE_t2" parent="Row24" instance=ExtResource("5_42wpr")]
 position = Vector2(8192, 2304)
 room_ident = "O24"
+torch_enabled = true
 
 [node name="W_deadend" parent="Row24" instance=ExtResource("16_tg8em")]
 position = Vector2(9216, 2304)
@@ -753,12 +831,15 @@ room_ident = "V24"
 [node name="WSE_t3" parent="Row24" instance=ExtResource("5_42wpr")]
 position = Vector2(16384, 2304)
 room_ident = "W24"
+torch_enabled = true
 
 [node name="WN_Elbow3" parent="Row24" instance=ExtResource("14_t3yop")]
 position = Vector2(17408, 2304)
 room_ident = "X24"
 
 [node name="Row25" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="N_deadend" parent="Row25" instance=ExtResource("10_01stl")]
 position = Vector2(6144, 3072)
@@ -779,6 +860,7 @@ room_ident = "P25"
 [node name="WNE_T" parent="Row25" instance=ExtResource("6_ewfln")]
 position = Vector2(10240, 3072)
 room_ident = "Q25"
+torch_enabled = true
 
 [node name="WS_Elbow" parent="Row25" instance=ExtResource("7_hgr6m")]
 position = Vector2(11264, 3072)
@@ -789,6 +871,8 @@ position = Vector2(16384, 3072)
 room_ident = "W25"
 
 [node name="Row26" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NE_Elbow" parent="Row26" instance=ExtResource("15_0cqm8")]
 position = Vector2(7168, 3840)
@@ -801,6 +885,7 @@ room_ident = "O26"
 [node name="WNE_T2" parent="Row26" instance=ExtResource("6_ewfln")]
 position = Vector2(9216, 3840)
 room_ident = "P26"
+torch_enabled = true
 
 [node name="WS_Elbow2" parent="Row26" instance=ExtResource("7_hgr6m")]
 position = Vector2(10240, 3840)
@@ -809,6 +894,7 @@ room_ident = "Q26"
 [node name="NES_T" parent="Row26" instance=ExtResource("11_yvak1")]
 position = Vector2(11264, 3840)
 room_ident = "R26"
+torch_enabled = true
 
 [node name="H_Room2" parent="Row26" instance=ExtResource("4_hjxqu")]
 position = Vector2(12288, 3840)
@@ -817,6 +903,7 @@ room_ident = "S26"
 [node name="WSE_t" parent="Row26" instance=ExtResource("5_42wpr")]
 position = Vector2(13312, 3840)
 room_ident = "T26"
+torch_enabled = true
 
 [node name="H_Room3" parent="Row26" instance=ExtResource("4_hjxqu")]
 position = Vector2(14336, 3840)
@@ -835,6 +922,8 @@ position = Vector2(17408, 3840)
 room_ident = "X26"
 
 [node name="Row27" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="E_Deadend" parent="Row27" instance=ExtResource("12_60lsl")]
 position = Vector2(8192, 4608)
@@ -847,6 +936,7 @@ room_ident = "P27"
 [node name="WNE_T" parent="Row27" instance=ExtResource("6_ewfln")]
 position = Vector2(10240, 4608)
 room_ident = "Q27"
+torch_enabled = true
 
 [node name="WN_Elbow" parent="Row27" instance=ExtResource("14_t3yop")]
 position = Vector2(11264, 4608)
@@ -859,10 +949,12 @@ room_ident = "S27"
 [node name="WNE_T2" parent="Row27" instance=ExtResource("6_ewfln")]
 position = Vector2(13312, 4608)
 room_ident = "T27"
+torch_enabled = true
 
 [node name="WSE_t" parent="Row27" instance=ExtResource("5_42wpr")]
 position = Vector2(15360, 4608)
 room_ident = "V27"
+torch_enabled = true
 
 [node name="W_deadend" parent="Row27" instance=ExtResource("16_tg8em")]
 position = Vector2(16384, 4608)
@@ -873,6 +965,8 @@ position = Vector2(17408, 4608)
 room_ident = "X27"
 
 [node name="Row28" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="E_Deadend" parent="Row28" instance=ExtResource("12_60lsl")]
 position = Vector2(9216, 5376)
@@ -881,6 +975,7 @@ room_ident = "P28"
 [node name="WSE_t" parent="Row28" instance=ExtResource("5_42wpr")]
 position = Vector2(10240, 5376)
 room_ident = "Q28"
+torch_enabled = true
 
 [node name="H_Room" parent="Row28" instance=ExtResource("4_hjxqu")]
 position = Vector2(11264, 5376)
@@ -889,6 +984,7 @@ room_ident = "R28"
 [node name="WNE_T" parent="Row28" instance=ExtResource("6_ewfln")]
 position = Vector2(12288, 5376)
 room_ident = "S28"
+torch_enabled = true
 
 [node name="W_deadend" parent="Row28" instance=ExtResource("16_tg8em")]
 position = Vector2(13312, 5376)
@@ -901,6 +997,7 @@ room_ident = "U28"
 [node name="WNE_T2" parent="Row28" instance=ExtResource("6_ewfln")]
 position = Vector2(15360, 5376)
 room_ident = "V28"
+torch_enabled = true
 
 [node name="H_Room2" parent="Row28" instance=ExtResource("4_hjxqu")]
 position = Vector2(16384, 5376)
@@ -911,6 +1008,8 @@ position = Vector2(17408, 5376)
 room_ident = "X28"
 
 [node name="Row29" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NE_Elbow" parent="Row29" instance=ExtResource("15_0cqm8")]
 position = Vector2(10240, 6144)
@@ -923,6 +1022,7 @@ room_ident = "R29"
 [node name="WSE_t" parent="Row29" instance=ExtResource("5_42wpr")]
 position = Vector2(12288, 6144)
 room_ident = "S29"
+torch_enabled = true
 
 [node name="H_Room2" parent="Row29" instance=ExtResource("4_hjxqu")]
 position = Vector2(13312, 6144)
@@ -931,8 +1031,11 @@ room_ident = "T29"
 [node name="WNS_t" parent="Row29" instance=ExtResource("13_d50kt")]
 position = Vector2(14336, 6144)
 room_ident = "U29"
+torch_enabled = true
 
 [node name="Row30" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NE_Elbow2" parent="Row30" instance=ExtResource("15_0cqm8")]
 position = Vector2(12288, 6912)
@@ -941,12 +1044,15 @@ room_ident = "S30"
 [node name="WSE_t" parent="Row30" instance=ExtResource("5_42wpr")]
 position = Vector2(13312, 6912)
 room_ident = "T30"
+torch_enabled = true
 
 [node name="WN_Elbow" parent="Row30" instance=ExtResource("14_t3yop")]
 position = Vector2(14336, 6912)
 room_ident = "U30"
 
 [node name="Row31" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NE_Elbow" parent="Row31" instance=ExtResource("15_0cqm8")]
 position = Vector2(13312, 7680)
@@ -957,12 +1063,16 @@ position = Vector2(14336, 7680)
 room_ident = "U31"
 
 [node name="Row32" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="NE_Elbow2" parent="Row32" instance=ExtResource("15_0cqm8")]
 position = Vector2(14336, 8448)
 room_ident = "U32"
 
 [node name="CHASMS" type="Node2D" parent="."]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Red1_Chasm" parent="CHASMS" instance=ExtResource("18_rsqko")]
 position = Vector2(5120, 0)
@@ -985,18 +1095,54 @@ position = Vector2(10240, -2304)
 [node name="HourglassRed" parent="." instance=ExtResource("24_hqef8")]
 position = Vector2(529, 342)
 item_color = 0
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="HourglassBlue" parent="." instance=ExtResource("24_hqef8")]
 position = Vector2(425.52, 453)
 item_color = 1
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="HourglassYellow" parent="." instance=ExtResource("24_hqef8")]
 position = Vector2(476, 401)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 color = Color(0.252028, 0.252028, 0.252028, 1)
 energy = 3.9
 blend_mode = 1
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Bridges" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="R1_L21" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("3_1mpwg")
+
+[node name="B1_O22" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("4_spg1y")
+
+[node name="R2_R20" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("5_2co62")
+
+[node name="B2_T13" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("6_nh5vo")
+
+[node name="Y1_U27" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("7_mlq7v")
+
+[node name="Y2_Q18" type="Sprite2D" parent="Bridges"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("8_5g3wm")
 
 [node name="AUDIO" type="Node2D" parent="."]
 
@@ -1052,6 +1198,12 @@ scale = Vector2(0.325604, 0.325604)
 
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="bridge_enable" from="CHASMS/Red1_Chasm" to="." method="_on_chasm_bridge_enable"]
+[connection signal="bridge_enable" from="CHASMS/Blue1_Chasm" to="." method="_on_chasm_bridge_enable"]
+[connection signal="bridge_enable" from="CHASMS/Red2_chasm" to="." method="_on_chasm_bridge_enable"]
+[connection signal="bridge_enable" from="CHASMS/Blue2_Chasm" to="." method="_on_chasm_bridge_enable"]
+[connection signal="bridge_enable" from="CHASMS/Yellow2_Chasm" to="." method="_on_chasm_bridge_enable"]
+[connection signal="bridge_enable" from="CHASMS/Yellow1_Chasm" to="." method="_on_chasm_bridge_enable"]
 [connection signal="body_entered" from="HourglassRed" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_red_body_entered"]
 [connection signal="body_entered" from="HourglassBlue" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_blue_body_entered"]
 [connection signal="body_entered" from="HourglassYellow" to="CanvasLayer/TextureRect/hourglass_animation" method="_on_hourglass_yellow_body_entered"]

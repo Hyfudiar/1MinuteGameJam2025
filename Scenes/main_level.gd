@@ -39,8 +39,6 @@ func _on_player_start_hg():
 	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property($AUDIO/Sand_Drone, "volume_db", -6, 90)
 
-
-
 func _on_floppy_finished():
 	$AUDIO/Floppy.play()
 
@@ -52,3 +50,19 @@ func _on_asst_amb_finished():
 func _on_crunches_finished():
 	panner.pan = randf_range(-1, 1)
 	$AUDIO/Crunches.play()
+
+
+func _on_chasm_bridge_enable(id):
+	var tween = get_tree().create_tween()
+	if id == "L21":
+		tween.tween_property($Bridges/R1_L21, "modulate", Color.WHITE, 1)
+	elif id == "O22":
+		tween.tween_property($Bridges/B1_O22, "modulate", Color.WHITE, 1)
+	elif id == "R20":
+		tween.tween_property($Bridges/R2_R20, "modulate", Color.WHITE, 1)
+	elif id == "T13":
+		tween.tween_property($Bridges/B2_T13, "modulate", Color.WHITE, 1)
+	elif id == "U27":
+		tween.tween_property($Bridges/Y1_U27, "modulate", Color.WHITE, 1)
+	elif id == "Q18":
+		tween.tween_property($Bridges/Y2_Q18, "modulate", Color.WHITE, 1)
