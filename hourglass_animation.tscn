@@ -1,6 +1,6 @@
-[gd_scene load_steps=2919 format=3 uid="uid://dbyvvwypw8qm"]
+[gd_scene load_steps=2918 format=3 uid="uid://dbyvvwypw8qm"]
 
-[ext_resource type="Script" path="res://Scenes/hourglass_animation.gd" id="1_4hlq1"]
+[ext_resource type="Script" path="res://Scenes/hourglass_animation_old.gd" id="1_4hlq1"]
 [ext_resource type="Texture2D" uid="uid://bbaey604d2us0" path="res://Assets/Sprites/SandDrain2/frame_1.png" id="1_kvb54"]
 [ext_resource type="Texture2D" uid="uid://d2367spaygdk1" path="res://Assets/Sprites/SandDrain2/frame_2.png" id="2_ung6o"]
 [ext_resource type="Texture2D" uid="uid://bkh8q8rsanhow" path="res://Assets/Sprites/SandDrain2/frame_3.png" id="3_eafms"]
@@ -2915,8 +2915,6 @@
 [ext_resource type="Texture2D" uid="uid://dl8l5xdmsve6n" path="res://Assets/Sprites/SandFall1/frame2732.png" id="2879_bjo8c"]
 [ext_resource type="Texture2D" uid="uid://cjqbaa3imwjyy" path="res://Assets/Sprites/h_mono.png" id="2880_rilig"]
 [ext_resource type="Script" path="res://Scenes/SlowSand.gd" id="2915_xxt84"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ttoxa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u044s"]
 animations = [{
@@ -11682,9 +11680,71 @@ position = Vector2(103, 258)
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="hourglass_body" type="Sprite2D" parent="Node2D"]
-material = SubResource("CanvasItemMaterial_ttoxa")
 position = Vector2(200, 272)
 texture = ExtResource("2880_rilig")
+
+[node name="Timer30" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="Timer31" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 31.0
+one_shot = true
+autostart = true
+
+[node name="Timer60" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="Timer61" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 61.0
+one_shot = true
+autostart = true
+
+[node name="Timer62" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 62.0
+one_shot = true
+autostart = true
+
+[node name="Timer63" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 63.0
+one_shot = true
+autostart = true
+
+[node name="Timer80" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 80.0
+one_shot = true
+autostart = true
+
+[node name="Timer81" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 81.0
+one_shot = true
+autostart = true
+
+[node name="Timer82" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 82.0
+one_shot = true
+autostart = true
+
+[node name="Timer83" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 83.0
+one_shot = true
+autostart = true
+
+[node name="Timer84" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 84.0
+one_shot = true
+autostart = true
+
+[node name="Timer85" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 85.0
+one_shot = true
+autostart = true
+
+[node name="Timer89" type="Timer" parent="Node2D/hourglass_body"]
+wait_time = 89.0
 
 [node name="SandAnimations" type="Node2D" parent="Node2D"]
 position = Vector2(200, 272)
@@ -11735,6 +11795,19 @@ scale_amount_min = 5.0
 scale_amount_max = 6.0
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer30" to="." method="_on_timer_30_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer31" to="." method="_on_timer_31_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer60" to="." method="_on_timer_60_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer61" to="." method="_on_timer_61_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer62" to="." method="_on_timer_62_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer63" to="." method="_on_timer_63_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer80" to="." method="_on_timer_80_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer81" to="." method="_on_timer_81_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer82" to="." method="_on_timer_82_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer83" to="." method="_on_timer_83_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer84" to="." method="_on_timer_84_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer85" to="." method="_on_timer_85_timeout"]
+[connection signal="timeout" from="Node2D/hourglass_body/Timer89" to="." method="_on_timer_89_timeout"]
 [connection signal="animation_finished" from="Node2D/SandAnimations/DrainingSand" to="Node2D/SandAnimations/DrainingSand" method="_on_animation_finished"]
 [connection signal="animation_finished" from="Node2D/SandAnimations/SlowSand" to="Node2D/SandAnimations/SlowSand" method="_on_animation_finished"]
 [connection signal="animation_finished" from="Node2D/SandAnimations/SlowSand2" to="Node2D/SandAnimations/SlowSand2" method="_on_animation_finished"]

@@ -56,7 +56,7 @@
 [ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="39_jy5g8"]
 [ext_resource type="AudioStream" uid="uid://c118pd10rpy5e" path="res://Assets/Audio/gameSFX/crunches_43.ogg" id="49_nauwg"]
 [ext_resource type="AudioStream" uid="uid://ceobxvk71vxl2" path="res://Assets/Audio/gameSFX/crunches_44.ogg" id="50_2y70m"]
-[ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://Scenes/hourglass_animation.tscn" id="50_rsb2a"]
+[ext_resource type="PackedScene" uid="uid://dbyvvwypw8qm" path="res://hourglass_animation.tscn" id="50_rsb2a"]
 [ext_resource type="AudioStream" uid="uid://ca26gkp2fq4d7" path="res://Assets/Audio/gameSFX/crunches_45.ogg" id="51_j4cog"]
 [ext_resource type="AudioStream" uid="uid://x07fsew83ee3" path="res://Assets/Audio/gameSFX/crunches_silence_33.ogg" id="51_vripc"]
 [ext_resource type="AudioStream" uid="uid://bsm7fx7i15v7n" path="res://Assets/Audio/gameSFX/crunches_46.ogg" id="53_sxm1c"]
@@ -1110,7 +1110,6 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 color = Color(0.252028, 0.252028, 0.252028, 1)
 energy = 3.9
 blend_mode = 1
@@ -1122,26 +1121,32 @@ metadata/_edit_lock_ = true
 
 [node name="R1_L21" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(11772, -389)
 texture = ExtResource("3_1mpwg")
 
 [node name="B1_O22" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(8704, 1151)
 texture = ExtResource("4_spg1y")
 
 [node name="R2_R20" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(5630, 373)
 texture = ExtResource("5_2co62")
 
 [node name="B2_T13" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(13827, -5763)
 texture = ExtResource("6_nh5vo")
 
 [node name="Y1_U27" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(10750, -1923)
 texture = ExtResource("7_mlq7v")
 
 [node name="Y2_Q18" type="Sprite2D" parent="Bridges"]
 modulate = Color(1, 1, 1, 0)
+position = Vector2(14850, 4984)
 texture = ExtResource("8_5g3wm")
 
 [node name="AUDIO" type="Node2D" parent="."]
