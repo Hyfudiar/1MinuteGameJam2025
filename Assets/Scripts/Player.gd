@@ -41,6 +41,11 @@ func _process(delta):
 			walking_frame_count = 0
 		
 
+func timeout():
+	var timeout = get_tree().create_tween()
+	timeout.tween_property($Timeout/AnimatedSprite2D, "self_modulate:a", 1.0, 15.0)
+
+
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_vector("left", "right", "up", "down")
@@ -77,3 +82,6 @@ func hg_pickup(col):
 		$Rotating/Flashlight/PointLight2D.color = Color.hex(0x54a3ffff)
 	if current_hg_color == COLORS.Y:
 		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xfff660ff)
+
+func _on_timer_timeout():
+	timeout()
