@@ -1,4 +1,4 @@
-[gd_scene load_steps=147 format=3 uid="uid://4fgsqno7u63g"]
+[gd_scene load_steps=148 format=3 uid="uid://4fgsqno7u63g"]
 
 [ext_resource type="Script" path="res://Assets/Scripts/Player.gd" id="1_kn50c"]
 [ext_resource type="Texture2D" uid="uid://xtfl1tyga7wg" path="res://Assets/Textures/Sprites/char_l.png" id="2_dj8w5"]
@@ -142,6 +142,7 @@
 [ext_resource type="Texture2D" uid="uid://rrkw2hj8aq2f" path="res://Assets/Sprites/encircling tendrils/frame118.png" id="120_m62qm"]
 [ext_resource type="Texture2D" uid="uid://bv8ylgg4v1n84" path="res://Assets/Sprites/encircling tendrils/frame119.png" id="121_nfdvv"]
 [ext_resource type="Texture2D" uid="uid://bffuatdwnaywq" path="res://Assets/Sprites/encircling tendrils/frame120.png" id="122_47hsf"]
+[ext_resource type="AudioStream" uid="uid://dd5jeiobeb2pg" path="res://Assets/Audio/gameSFX/hg_pickup_55.ogg" id="143_6b8d4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lcxcn"]
 animations = [{
@@ -520,7 +521,7 @@ height = 50.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_waya6"]
 random_pitch = 1.18
-random_volume_offset_db = 6.14
+random_volume_offset_db = 7.94
 streams_count = 19
 stream_0/stream = ExtResource("4_dmdjf")
 stream_0/weight = 1.0
@@ -606,11 +607,15 @@ visible = false
 
 [node name="Footsteps" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamRandomizer_waya6")
-volume_db = 1.092
+volume_db = -10.553
+bus = &"ReverbSFX"
 
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 current = true
 
 [node name="HourglassPickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("143_6b8d4")
+volume_db = -12.951
+bus = &"ReverbSFX"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

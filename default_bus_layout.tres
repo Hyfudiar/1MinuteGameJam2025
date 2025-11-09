@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=4 format=3 uid="uid://b4a72twjbdxq2"]
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://b4a72twjbdxq2"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_07xt0"]
 resource_name = "Reverb"
@@ -14,12 +14,16 @@ damping = 0.8
 [sub_resource type="AudioEffectPanner" id="AudioEffectPanner_00lxm"]
 resource_name = "Panner"
 
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_urrj2"]
+resource_name = "HighPassFilter"
+cutoff_hz = 4200.0
+
 [resource]
 bus/1/name = &"Ambience"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -8.39524
+bus/1/volume_db = -22.5766
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectReverb_07xt0")
 bus/1/effect/0/enabled = true
@@ -27,15 +31,29 @@ bus/2/name = &"ReverbSFX"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = 6.02
+bus/2/volume_db = -0.130497
 bus/2/send = &"Master"
 bus/2/effect/0/effect = SubResource("AudioEffectReverb_u4xi0")
 bus/2/effect/0/enabled = true
 bus/3/name = &"PanFX"
-bus/3/solo = true
+bus/3/solo = false
 bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = &"Master"
 bus/3/effect/0/effect = SubResource("AudioEffectPanner_00lxm")
 bus/3/effect/0/enabled = true
+bus/4/name = &"SandDrone"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -1.51925
+bus/4/send = &"Master"
+bus/5/name = &"Sand"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = -1.91476
+bus/5/send = &"Master"
+bus/5/effect/0/effect = SubResource("AudioEffectHighPassFilter_urrj2")
+bus/5/effect/0/enabled = true

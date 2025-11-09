@@ -71,6 +71,7 @@ func _input(event):
 
 func hg_pickup(col):
 	current_hg_color = col
+	$HourglassPickup.play()
 	$Rotating/Flashlight/PointLight2D.enabled = true
 	start_hg.emit()
 	hg_active = true

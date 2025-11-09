@@ -1024,13 +1024,13 @@ bus = &"PanFX"
 
 [node name="Sand" type="AudioStreamPlayer" parent="AUDIO"]
 stream = ExtResource("59_5igfs")
-volume_db = -7.352
-autoplay = true
+volume_db = -9.0
+bus = &"Sand"
 
 [node name="Sand_Drone" type="AudioStreamPlayer" parent="AUDIO"]
 stream = ExtResource("60_nj4nd")
-volume_db = -80.0
-autoplay = true
+volume_db = -49.483
+bus = &"SandDrone"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
