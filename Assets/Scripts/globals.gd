@@ -154,6 +154,7 @@ var room_lights = {
 	"U30": false,
 	"U31": false,
 	"U32": false,
+	"V10": false,
 	"V13": false,
 	"V14": false,
 	"V16": false,
