@@ -1,0 +1,112 @@
+[gd_scene load_steps=27 format=3 uid="uid://bj1tbbt1571hm"]
+
+[ext_resource type="Script" path="res://global_audio.gd" id="1_xxn0q"]
+[ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="2_ugoly"]
+[ext_resource type="AudioStream" uid="uid://dp43g3xwav6rq" path="res://Assets/Audio/random2/blank_floppy_23.ogg" id="3_lhf2q"]
+[ext_resource type="AudioStream" uid="uid://j7hb164wb76h" path="res://Assets/Audio/random2/floppy_18.ogg" id="4_u1f6p"]
+[ext_resource type="AudioStream" uid="uid://cqvh1tv03ma67" path="res://Assets/Audio/random2/floppy_19.ogg" id="5_tjxnm"]
+[ext_resource type="AudioStream" uid="uid://dvx2e6j5dg6e7" path="res://Assets/Audio/random2/blank_floppy_24.ogg" id="6_tk6ak"]
+[ext_resource type="AudioStream" uid="uid://bicy64gvclo6l" path="res://Assets/Audio/random2/blank_floppy_25.ogg" id="7_gqn8y"]
+[ext_resource type="AudioStream" uid="uid://co16oyoyuv8cu" path="res://Assets/Audio/random2/blank_floppy_26.ogg" id="8_e2q8b"]
+[ext_resource type="AudioStream" uid="uid://cunfd10k6ply0" path="res://Assets/Audio/random2/blank_floppy_27.ogg" id="9_x1rre"]
+[ext_resource type="AudioStream" uid="uid://bfatoacu4xvu1" path="res://Assets/Audio/random2/floppy_01.ogg" id="10_an1lh"]
+[ext_resource type="AudioStream" uid="uid://dwkatflrelgw5" path="res://Assets/Audio/random2/floppy_15.ogg" id="11_lgvq6"]
+[ext_resource type="AudioStream" uid="uid://c0gfkqdfvtoys" path="res://Assets/Audio/random2/floppy_16.ogg" id="12_bofrs"]
+[ext_resource type="AudioStream" uid="uid://cn2p47fpojwb6" path="res://Assets/Audio/random2/floppy_17.ogg" id="13_rpgc5"]
+[ext_resource type="AudioStream" uid="uid://dvy5yw6qr5vu1" path="res://Assets/Audio/Drone2_20.ogg" id="14_6c17q"]
+[ext_resource type="AudioStream" uid="uid://jef782rxd3ah" path="res://Assets/Audio/random1/Drone_14.ogg" id="15_h0e3j"]
+[ext_resource type="AudioStream" uid="uid://ct6req0warr6x" path="res://Assets/Audio/random1/etc_28.ogg" id="16_omo0x"]
+[ext_resource type="AudioStream" uid="uid://bchtoe7v8ujuo" path="res://Assets/Audio/random1/etc_29.ogg" id="17_af5dj"]
+[ext_resource type="AudioStream" uid="uid://c3bx0xiifavrs" path="res://Assets/Audio/random1/etc_30.ogg" id="18_7537p"]
+[ext_resource type="AudioStream" uid="uid://bewleah686p47" path="res://Assets/Audio/random1/etc_31.ogg" id="19_xqsx1"]
+[ext_resource type="AudioStream" uid="uid://c5rucojrtg36g" path="res://Assets/Audio/random1/etc_32.ogg" id="20_oil60"]
+[ext_resource type="AudioStream" uid="uid://dg1xep75srimm" path="res://Assets/Audio/random1/etc_33.ogg" id="21_vvata"]
+[ext_resource type="AudioStream" uid="uid://cjn1ol07kpnu6" path="res://Assets/Audio/random1/etc_34.ogg" id="22_5ew3k"]
+[ext_resource type="AudioStream" uid="uid://bvqoouav0yte5" path="res://Assets/Audio/random1/etc_35.ogg" id="23_sxm16"]
+[ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="24_warmi"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bkuu0"]
+streams_count = 12
+stream_0/stream = ExtResource("2_ugoly")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("3_lhf2q")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("6_tk6ak")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("7_gqn8y")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("8_e2q8b")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("9_x1rre")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("10_an1lh")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("11_lgvq6")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("12_bofrs")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("13_rpgc5")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("4_u1f6p")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("5_tjxnm")
+stream_11/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sn0gd"]
+streams_count = 16
+stream_0/stream = ExtResource("15_h0e3j")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("16_omo0x")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("17_af5dj")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("18_7537p")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("19_xqsx1")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("20_oil60")
+stream_5/weight = 1.0
+stream_6/stream = ExtResource("21_vvata")
+stream_6/weight = 1.0
+stream_7/stream = ExtResource("22_5ew3k")
+stream_7/weight = 1.0
+stream_8/stream = ExtResource("23_sxm16")
+stream_8/weight = 1.0
+stream_9/stream = ExtResource("24_warmi")
+stream_9/weight = 1.0
+stream_10/stream = ExtResource("2_ugoly")
+stream_10/weight = 1.0
+stream_11/stream = ExtResource("3_lhf2q")
+stream_11/weight = 1.0
+stream_12/stream = ExtResource("6_tk6ak")
+stream_12/weight = 1.0
+stream_13/stream = ExtResource("7_gqn8y")
+stream_13/weight = 1.0
+stream_14/stream = ExtResource("8_e2q8b")
+stream_14/weight = 1.0
+stream_15/stream = ExtResource("9_x1rre")
+stream_15/weight = 1.0
+
+[node name="global_audio" type="Node"]
+script = ExtResource("1_xxn0q")
+
+[node name="Floppy" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_bkuu0")
+volume_db = -5.102
+autoplay = true
+bus = &"Ambience"
+
+[node name="Drone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_6c17q")
+volume_db = 4.843
+autoplay = true
+bus = &"Ambience"
+
+[node name="AsstAmb" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_sn0gd")
+volume_db = 3.532
+autoplay = true
+bus = &"Ambience"
+
+[connection signal="finished" from="Floppy" to="." method="_on_floppy_finished"]
+[connection signal="finished" from="AsstAmb" to="." method="_on_asst_amb_finished"]

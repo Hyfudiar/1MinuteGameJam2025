@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://0idw0wjs26ls"]
+[gd_scene load_steps=81 format=3 uid="uid://0idw0wjs26ls"]
 
 [ext_resource type="Script" path="res://Scenes/main_level.gd" id="1_qrekd"]
 [ext_resource type="Texture2D" uid="uid://bv3631kqombxv" path="res://Assets/Textures/ROOMS_BG/exit_portal.png" id="2_c42w0"]
@@ -72,6 +72,15 @@
 [ext_resource type="AudioStream" uid="uid://c211yqt7shqk1" path="res://Assets/Audio/gameSFX/drone_and_sand_56_001.ogg" id="59_5igfs"]
 [ext_resource type="AudioStream" uid="uid://cv5xbau0djj7t" path="res://Assets/Audio/gameSFX/crunches_52.ogg" id="59_36eyc"]
 [ext_resource type="AudioStream" uid="uid://biyvbwqs476bk" path="res://Assets/Audio/gameSFX/drone_and_sand_56_002.ogg" id="60_nj4nd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_toaic"]
+size = Vector2(80, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0an6b"]
+size = Vector2(78, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jnl1"]
+size = Vector2(80, 90)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_f5tgv"]
 streams_count = 12
@@ -198,15 +207,33 @@ z_index = 1
 position = Vector2(15912, -7986)
 texture = ExtResource("2_c42w0")
 
+[node name="end_portal" type="Area2D" parent="End_Portals/Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End_Portals/Sprite2D/end_portal"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_toaic")
+
 [node name="Sprite2D2" type="Sprite2D" parent="End_Portals"]
 z_index = 1
 position = Vector2(15911, -303)
 texture = ExtResource("2_c42w0")
 
+[node name="Area2D" type="Area2D" parent="End_Portals/Sprite2D2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End_Portals/Sprite2D2/Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_0an6b")
+
 [node name="Sprite2D3" type="Sprite2D" parent="End_Portals"]
 z_index = 1
 position = Vector2(15911, 8913)
 texture = ExtResource("2_c42w0")
+
+[node name="Area2D" type="Area2D" parent="End_Portals/Sprite2D3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End_Portals/Sprite2D3/Area2D"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_7jnl1")
 
 [node name="Floor" type="Sprite2D" parent="."]
 texture_repeat = 2
@@ -1216,23 +1243,20 @@ metadata/_edit_lock_ = true
 
 [node name="Floppy" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_f5tgv")
-autoplay = true
 bus = &"Ambience"
 
 [node name="Drone" type="AudioStreamPlayer" parent="AUDIO"]
 stream = ExtResource("37_bmdss")
 volume_db = 7.983
-autoplay = true
 bus = &"Ambience"
 
 [node name="AsstAmb" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_pu67m")
-autoplay = true
 bus = &"Ambience"
 
 [node name="Crunches" type="AudioStreamPlayer" parent="AUDIO"]
 stream = SubResource("AudioStreamRandomizer_olfs6")
-volume_db = -15.394
+volume_db = -17.803
 autoplay = true
 bus = &"PanFX"
 
@@ -1262,6 +1286,9 @@ z_index = -1
 position = Vector2(2, 18)
 scale = Vector2(0.325604, 0.325604)
 
+[connection signal="body_entered" from="End_Portals/Sprite2D/end_portal" to="." method="_on_end_portal_body_entered"]
+[connection signal="body_entered" from="End_Portals/Sprite2D2/Area2D" to="." method="_on_end_portal_body_entered"]
+[connection signal="body_entered" from="End_Portals/Sprite2D3/Area2D" to="." method="_on_end_portal_body_entered"]
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="bridge_enable" from="CHASMS/Red1_Chasm" to="." method="_on_chasm_bridge_enable"]

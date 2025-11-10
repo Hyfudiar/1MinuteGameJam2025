@@ -1,14 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyivadi8lxjsn"]
+[gd_scene load_steps=8 format=3 uid="uid://bemdwyc77jxe4"]
 
-[ext_resource type="Script" path="res://Scenes/end_screen.gd" id="1_jgbjp"]
-[ext_resource type="VideoStream" path="res://Assets/Textures/end_screen_01.ogv" id="2_q5n8f"]
-[ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_u60ku"]
-[ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="4_wn2yc"]
-[ext_resource type="AudioStream" uid="uid://6wjmabeo4uvx" path="res://Assets/Audio/gameSFX/PositiveTrimmed_64.ogg" id="5_ii61x"]
-[ext_resource type="AudioStream" uid="uid://b35b85mqxgwi5" path="res://Assets/Audio/gameSFX/NegativeTrimmed_63.ogg" id="6_lxlwv"]
+[ext_resource type="Script" path="res://Scenes/end_screen.gd" id="1_fb4e0"]
+[ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_ups14"]
+[ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="3_40nap"]
+[ext_resource type="AudioStream" uid="uid://6wjmabeo4uvx" path="res://Assets/Audio/gameSFX/PositiveTrimmed_64.ogg" id="4_rk1rt"]
+[ext_resource type="AudioStream" uid="uid://b35b85mqxgwi5" path="res://Assets/Audio/gameSFX/NegativeTrimmed_63.ogg" id="5_6dyex"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3tecr"]
-shader = ExtResource("4_wn2yc")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a2qe"]
+shader = ExtResource("3_40nap")
 shader_parameter/overlay = false
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/brightness = 1.4
@@ -31,34 +30,18 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.4
 shader_parameter/vignette_opacity = 0.5
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_ijuh3"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_7dd3e"]
 
-[node name="End screen" type="Control"]
+[node name="completion_screen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_jgbjp")
+script = ExtResource("1_fb4e0")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer2"]
-anchors_preset = -1
-anchor_left = -0.109375
-anchor_top = -0.0234375
-anchor_right = 0.828125
-anchor_bottom = 0.914062
-offset_top = -0.000183105
-offset_bottom = 0.000183105
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.3, 1.3)
-stream = ExtResource("2_q5n8f")
-autoplay = true
-loop = true
-metadata/_edit_use_anchors_ = true
 
 [node name="restart" type="Button" parent="CanvasLayer2"]
 anchors_preset = 5
@@ -68,7 +51,7 @@ offset_left = -362.0
 offset_right = 360.0
 offset_bottom = 304.0
 grow_horizontal = 2
-theme = ExtResource("2_u60ku")
+theme = ExtResource("2_ups14")
 theme_override_font_sizes/font_size = 70
 text = "RETURN"
 flat = true
@@ -86,31 +69,28 @@ offset_right = 206.0
 offset_bottom = -192.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("2_u60ku")
+theme = ExtResource("2_ups14")
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
 flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
-material = SubResource("ShaderMaterial_3tecr")
+material = SubResource("ShaderMaterial_2a2qe")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_ijuh3")
+texture = SubResource("CanvasTexture_7dd3e")
 metadata/_edit_use_anchors_ = true
 
 [node name="Positive" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_ii61x")
+stream = ExtResource("4_rk1rt")
 volume_db = -11.774
 bus = &"ReverbSFX"
 
 [node name="Negative" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_lxlwv")
+stream = ExtResource("5_6dyex")
 volume_db = -14.204
 bus = &"ReverbSFX"
-
-[connection signal="pressed" from="CanvasLayer2/restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="CanvasLayer2/quit" to="." method="_on_quit_pressed"]

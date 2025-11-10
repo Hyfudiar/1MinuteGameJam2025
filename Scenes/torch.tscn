@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/torch.gd" id="1_3yq5b"]
 [ext_resource type="Texture2D" uid="uid://dlxekrm3acxtw" path="res://Assets/Textures/2d_lights_and_shadows_neutral_point_light.webp" id="2_0ux12"]
 [ext_resource type="Texture2D" uid="uid://bo8y70shten80" path="res://Assets/Textures/Sprites/torch.png" id="2_df7db"]
-[ext_resource type="AudioStream" uid="uid://dqtu8pp3v66wb" path="res://Assets/Audio/gameSFX/torch_light_42.ogg" id="4_7ekrb"]
+[ext_resource type="AudioStream" uid="uid://kkijmyqyi24q" path="res://Assets/Audio/gameSFX/torch_tweaked_65.ogg" id="4_llh31"]
 [ext_resource type="AudioStream" uid="uid://ce4tphol44d2r" path="res://Assets/Audio/gameSFX/torch_loop_54.ogg" id="5_umi6c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_46wng"]
@@ -32,8 +32,8 @@ texture_scale = 0.8
 shape = SubResource("CircleShape2D_46wng")
 
 [node name="Light" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_7ekrb")
-volume_db = 6.706
+stream = ExtResource("4_llh31")
+volume_db = -2.008
 max_distance = 725.0
 attenuation = 0.466517
 bus = &"ReverbSFX"

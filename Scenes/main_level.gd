@@ -66,3 +66,8 @@ func _on_chasm_bridge_enable(id):
 		tween.tween_property($Bridges/Y2_Q18, "modulate", Color.WHITE, 1)
 	elif id == "Q18":
 		tween.tween_property($Bridges/Y1_U27, "modulate", Color.WHITE, 1)
+
+
+func _on_end_portal_body_entered(body):
+	if body.is_in_group("Player"):
+		get_tree().change_scene_to_file("res://Scenes/completion_screen.tscn")

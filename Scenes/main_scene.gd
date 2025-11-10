@@ -13,6 +13,7 @@ func _process(delta):
 func _on_button_pressed():
 	$Positive.play()
 	await $Positive.finished
+	GlobalAudio.main_scene_loaded()
 	get_tree().change_scene_to_file("res://Scenes/main_level.tscn")
 
 func _on_quit_pressed():
