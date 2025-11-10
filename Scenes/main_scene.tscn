@@ -1,4 +1,4 @@
-[gd_scene load_steps=942 format=3 uid="uid://8m12jx6ijq56"]
+[gd_scene load_steps=944 format=3 uid="uid://8m12jx6ijq56"]
 
 [ext_resource type="Script" path="res://Scenes/main_scene.gd" id="1_uy56k"]
 [ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_haaxr"]
@@ -938,6 +938,8 @@
 [ext_resource type="Script" path="res://Scenes/crawlinglines.gd" id="934_s06pn"]
 [ext_resource type="AudioStream" uid="uid://n6qx2qnlo21d" path="res://Assets/Audio/title/boundless chaos.mp3" id="937_17s2b"]
 [ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="938_460xp"]
+[ext_resource type="AudioStream" uid="uid://6wjmabeo4uvx" path="res://Assets/Audio/gameSFX/PositiveTrimmed_64.ogg" id="939_oype6"]
+[ext_resource type="AudioStream" uid="uid://b35b85mqxgwi5" path="res://Assets/Audio/gameSFX/NegativeTrimmed_63.ogg" id="940_d8l37"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_54hn8"]
 animations = [{
@@ -3961,6 +3963,16 @@ stream = ExtResource("937_17s2b")
 volume_db = -1.486
 autoplay = true
 attenuation = 0.466516
+
+[node name="Positive" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("939_oype6")
+volume_db = -11.774
+bus = &"ReverbSFX"
+
+[node name="Negative" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("940_d8l37")
+volume_db = -14.204
+bus = &"ReverbSFX"
 
 [connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines1" to="CanvasLayer2/Control/background/Node2D/crawlinglines1" method="_on_animation_finished"]
 [connection signal="animation_finished" from="CanvasLayer2/Control/background/Node2D/crawlinglines5" to="CanvasLayer2/Control/background/Node2D/crawlinglines5" method="_on_animation_finished"]

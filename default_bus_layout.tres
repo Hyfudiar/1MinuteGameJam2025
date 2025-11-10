@@ -10,6 +10,7 @@ wet = 0.3
 resource_name = "Reverb"
 room_size = 0.35
 damping = 0.8
+wet = 0.28
 
 [sub_resource type="AudioEffectPanner" id="AudioEffectPanner_00lxm"]
 resource_name = "Panner"

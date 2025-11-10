@@ -30,5 +30,5 @@ func turn_on():
 		var tween = get_tree().create_tween()
 		tween.tween_property($PointLight2D, "energy", 2, 2)
 		tween.set_parallel()
-		tween.tween_property($Burning, "volume_db", -4, 2)
+		tween.tween_property($Burning, "volume_db", -6, 2)
 		on = true

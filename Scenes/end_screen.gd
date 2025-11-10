@@ -12,8 +12,12 @@ func _process(delta):
 
 
 func _on_restart_pressed():
+	$Positive.play()
+	await $Positive.finished
 	get_tree().change_scene_to_file("res://Scenes/main_level.tscn")
 
 
 func _on_quit_pressed():
+	$Negative.play()
+	await $Negative.finished
 	get_tree().quit()

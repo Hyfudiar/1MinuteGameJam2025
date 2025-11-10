@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyivadi8lxjsn"]
+[gd_scene load_steps=9 format=3 uid="uid://cyivadi8lxjsn"]
 
 [ext_resource type="Script" path="res://Scenes/end_screen.gd" id="1_jgbjp"]
 [ext_resource type="VideoStream" path="res://Assets/Textures/end_screen_01.ogv" id="2_q5n8f"]
 [ext_resource type="Theme" uid="uid://b2yesi5ex1c8q" path="res://theme.tres" id="2_u60ku"]
 [ext_resource type="Shader" path="res://Scenes/crt.gdshader" id="4_wn2yc"]
+[ext_resource type="AudioStream" uid="uid://6wjmabeo4uvx" path="res://Assets/Audio/gameSFX/PositiveTrimmed_64.ogg" id="5_ii61x"]
+[ext_resource type="AudioStream" uid="uid://b35b85mqxgwi5" path="res://Assets/Audio/gameSFX/NegativeTrimmed_63.ogg" id="6_lxlwv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3tecr"]
 shader = ExtResource("4_wn2yc")
@@ -96,6 +98,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_ijuh3")
+
+[node name="Positive" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ii61x")
+volume_db = -11.774
+bus = &"ReverbSFX"
+
+[node name="Negative" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lxlwv")
+volume_db = -14.204
+bus = &"ReverbSFX"
 
 [connection signal="pressed" from="CanvasLayer2/restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="CanvasLayer2/quit" to="." method="_on_quit_pressed"]
