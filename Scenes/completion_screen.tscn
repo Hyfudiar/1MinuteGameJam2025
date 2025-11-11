@@ -82,6 +82,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = SubResource("CanvasTexture_7dd3e")
 metadata/_edit_use_anchors_ = true
 
@@ -94,3 +95,6 @@ bus = &"ReverbSFX"
 stream = ExtResource("5_6dyex")
 volume_db = -14.204
 bus = &"ReverbSFX"
+
+[connection signal="pressed" from="CanvasLayer2/restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CanvasLayer2/quit" to="." method="_on_quit_pressed"]

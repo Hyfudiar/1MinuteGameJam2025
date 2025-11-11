@@ -37,7 +37,7 @@ func _on_player_start_hg():
 	tween.tween_property($AUDIO/Sand, "volume_db", -30, 90)
 	tween.set_parallel()
 	tween.set_ease(Tween.EASE_OUT)
-	tween.tween_property($AUDIO/Sand_Drone, "volume_db", -6, 90)
+	tween.tween_property($AUDIO/Sand_Drone, "volume_db", -3, 90)
 
 func _on_floppy_finished():
 	$AUDIO/Floppy.play()

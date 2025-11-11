@@ -1262,7 +1262,7 @@ bus = &"PanFX"
 
 [node name="Sand" type="AudioStreamPlayer" parent="AUDIO"]
 stream = ExtResource("59_5igfs")
-volume_db = -9.0
+volume_db = -6.0
 bus = &"Sand"
 
 [node name="Sand_Drone" type="AudioStreamPlayer" parent="AUDIO"]
