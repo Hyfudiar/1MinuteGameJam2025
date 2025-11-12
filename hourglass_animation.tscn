@@ -11686,65 +11686,54 @@ texture = ExtResource("2880_rilig")
 [node name="Timer30" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 30.0
 one_shot = true
-autostart = true
 
 [node name="Timer31" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 31.0
 one_shot = true
-autostart = true
 
 [node name="Timer60" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 60.0
 one_shot = true
-autostart = true
 
 [node name="Timer61" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 61.0
 one_shot = true
-autostart = true
 
 [node name="Timer62" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 62.0
 one_shot = true
-autostart = true
 
 [node name="Timer63" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 63.0
 one_shot = true
-autostart = true
 
 [node name="Timer80" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 80.0
 one_shot = true
-autostart = true
 
 [node name="Timer81" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 81.0
 one_shot = true
-autostart = true
 
 [node name="Timer82" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 82.0
 one_shot = true
-autostart = true
 
 [node name="Timer83" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 83.0
 one_shot = true
-autostart = true
 
 [node name="Timer84" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 84.0
 one_shot = true
-autostart = true
 
 [node name="Timer85" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 85.0
 one_shot = true
-autostart = true
 
 [node name="Timer89" type="Timer" parent="Node2D/hourglass_body"]
 wait_time = 89.0
+one_shot = true
 
 [node name="SandAnimations" type="Node2D" parent="Node2D"]
 position = Vector2(200, 272)

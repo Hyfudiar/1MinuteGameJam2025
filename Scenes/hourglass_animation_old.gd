@@ -13,6 +13,21 @@ func _ready():
 	#set_visible(false)
 	pass
 
+func start_timers():
+	$Node2D/hourglass_body/Timer30.start()
+	$Node2D/hourglass_body/Timer31.start()
+	$Node2D/hourglass_body/Timer60.start()
+	$Node2D/hourglass_body/Timer61.start()
+	$Node2D/hourglass_body/Timer62.start()
+	$Node2D/hourglass_body/Timer63.start()
+	$Node2D/hourglass_body/Timer80.start()
+	$Node2D/hourglass_body/Timer81.start()
+	$Node2D/hourglass_body/Timer82.start()
+	$Node2D/hourglass_body/Timer83.start()
+	$Node2D/hourglass_body/Timer84.start()
+	$Node2D/hourglass_body/Timer85.start()
+	$Node2D/hourglass_body/Timer90.start()
+
 func hourglass_fadeout():
 	var fadeout = get_tree().create_tween()
 	fadeout.tween_property($Node2D/hourglass_body, "self_modulate:a", 0.0, 0.3)

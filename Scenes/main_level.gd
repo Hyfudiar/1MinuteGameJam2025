@@ -10,6 +10,7 @@ var timer_running = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$CanvasLayer/TextureRect/hourglass_animation.start_timers()
 	#print(Globals.room_lights)
 	#print(Globals.chasms)
 	pass
