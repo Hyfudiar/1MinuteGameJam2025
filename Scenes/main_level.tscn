@@ -206,10 +206,23 @@ script = ExtResource("1_qrekd")
 z_index = 1
 position = Vector2(15912, -7986)
 texture = ExtResource("2_c42w0")
+metadata/_edit_group_ = true
 
 [node name="end_portal" type="Area2D" parent="End_Portals/Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="End_Portals/Sprite2D/end_portal"]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_toaic")
+
+[node name="Sprite2D4" type="Sprite2D" parent="End_Portals"]
+z_index = 1
+position = Vector2(700, 475)
+texture = ExtResource("2_c42w0")
+metadata/_edit_group_ = true
+
+[node name="end_portal" type="Area2D" parent="End_Portals/Sprite2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End_Portals/Sprite2D4/end_portal"]
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_toaic")
 
@@ -1287,6 +1300,7 @@ position = Vector2(2, 18)
 scale = Vector2(0.325604, 0.325604)
 
 [connection signal="body_entered" from="End_Portals/Sprite2D/end_portal" to="." method="_on_end_portal_body_entered"]
+[connection signal="body_entered" from="End_Portals/Sprite2D4/end_portal" to="." method="_on_end_portal_body_entered"]
 [connection signal="body_entered" from="End_Portals/Sprite2D2/Area2D" to="." method="_on_end_portal_body_entered"]
 [connection signal="body_entered" from="End_Portals/Sprite2D3/Area2D" to="." method="_on_end_portal_body_entered"]
 [connection signal="start_hg" from="Player" to="." method="_on_player_start_hg"]

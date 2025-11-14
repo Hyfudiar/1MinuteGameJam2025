@@ -74,4 +74,4 @@ func _on_end_portal_body_entered(body):
 		body.freeze()
 		GlobalAudio.completion()
 		await GlobalAudio.completion_finished
-		get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/completion_screen.tscn")

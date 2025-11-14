@@ -24,7 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://cjn1ol07kpnu6" path="res://Assets/Audio/random1/etc_34.ogg" id="22_5ew3k"]
 [ext_resource type="AudioStream" uid="uid://bvqoouav0yte5" path="res://Assets/Audio/random1/etc_35.ogg" id="23_sxm16"]
 [ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="24_warmi"]
-[ext_resource type="AudioStream" uid="uid://dlol83e517cjt" path="res://Assets/Audio/gameSFX/TimeoutV3_71.ogg" id="25_n4ecf"]
+[ext_resource type="AudioStream" uid="uid://bybtar71e7piv" path="res://Assets/Audio/gameSFX/TimeoutV3_71_tweak1.ogg" id="25_hxel7"]
 [ext_resource type="AudioStream" uid="uid://cihrbfmydcu2r" path="res://Assets/Audio/gameSFX/Complete_66.ogg" id="26_43vt0"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bkuu0"]
@@ -111,7 +111,7 @@ autoplay = true
 bus = &"Ambience"
 
 [node name="Timeout" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("25_n4ecf")
+stream = ExtResource("25_hxel7")
 volume_db = -3.532
 
 [node name="Completion" type="AudioStreamPlayer" parent="."]
