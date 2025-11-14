@@ -70,7 +70,7 @@ offset_bottom = 304.0
 grow_horizontal = 2
 theme = ExtResource("2_u60ku")
 theme_override_font_sizes/font_size = 70
-text = "RETURN"
+text = "RESTART ANEW"
 flat = true
 metadata/_edit_use_anchors_ = true
 

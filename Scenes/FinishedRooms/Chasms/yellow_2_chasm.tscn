@@ -14,3 +14,7 @@ texture = ExtResource("2_u02iq")
 
 [node name="Icon" parent="." index="3"]
 texture = ExtResource("2_jqoxe")
+
+[node name="Chasm" parent="." index="5"]
+position = Vector2(511, 392)
+metadata/_edit_group_ = true

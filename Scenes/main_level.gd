@@ -38,7 +38,7 @@ func _on_player_start_hg():
 	tween.tween_property($AUDIO/Sand, "volume_db", -30, 90)
 	tween.set_parallel()
 	tween.set_ease(Tween.EASE_OUT)
-	tween.tween_property($AUDIO/Sand_Drone, "volume_db", -3, 90)
+	tween.tween_property($AUDIO/Sand_Drone, "volume_db", -5, 90)
 
 func _on_floppy_finished():
 	$AUDIO/Floppy.play()
@@ -57,11 +57,11 @@ func _on_chasm_bridge_enable(id):
 	var tween = get_tree().create_tween()
 	if id == "L21":
 		tween.tween_property($Bridges/R2_R20, "modulate", Color.WHITE, 1)
-	elif id == "O22":
+	elif id == "T13":
 		tween.tween_property($Bridges/B2_T13, "modulate", Color.WHITE, 1)
 	elif id == "R20":
 		tween.tween_property($Bridges/R1_L21, "modulate", Color.WHITE, 1)
-	elif id == "T13":
+	elif id == "O22":
 		tween.tween_property($Bridges/B1_O22, "modulate", Color.WHITE, 1)
 	elif id == "U27":
 		tween.tween_property($Bridges/Y2_Q18, "modulate", Color.WHITE, 1)
@@ -71,4 +71,7 @@ func _on_chasm_bridge_enable(id):
 
 func _on_end_portal_body_entered(body):
 	if body.is_in_group("Player"):
-		get_tree().change_scene_to_file("res://Scenes/completion_screen.tscn")
+		body.freeze()
+		GlobalAudio.completion()
+		await GlobalAudio.completion_finished
+		get_tree().change_scene_to_file("res://Scenes/end_screen.tscn")

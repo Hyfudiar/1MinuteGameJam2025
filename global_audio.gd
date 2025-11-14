@@ -1,5 +1,6 @@
 extends Node
 
+signal completion_finished
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,3 +23,16 @@ func _on_floppy_finished():
 
 func _on_asst_amb_finished():
 	$AsstAmb.play()
+
+func timeout_timer_start():
+	$Timer.start()
+
+func completion():
+	if $Timeout.playing:
+		$Timeout.stop()
+	$Completion.play()
+	await $Completion.finished
+	completion_finished.emit()
+
+func _on_timer_timeout():
+	$Timeout.play()

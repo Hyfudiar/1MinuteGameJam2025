@@ -1270,10 +1270,6 @@ stream = ExtResource("60_nj4nd")
 volume_db = -56.94
 bus = &"SandDrone"
 
-[node name="Timeout" type="AudioStreamPlayer" parent="AUDIO"]
-
-[node name="Completion" type="AudioStreamPlayer" parent="AUDIO"]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]

@@ -26,7 +26,7 @@ func start_timers():
 	$Node2D/hourglass_body/Timer83.start()
 	$Node2D/hourglass_body/Timer84.start()
 	$Node2D/hourglass_body/Timer85.start()
-	$Node2D/hourglass_body/Timer90.start()
+	$Node2D/hourglass_body/Timer89.start()
 
 func hourglass_fadeout():
 	var fadeout = get_tree().create_tween()

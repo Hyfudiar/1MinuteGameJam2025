@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bj1tbbt1571hm"]
+[gd_scene load_steps=29 format=3 uid="uid://bj1tbbt1571hm"]
 
 [ext_resource type="Script" path="res://global_audio.gd" id="1_xxn0q"]
 [ext_resource type="AudioStream" uid="uid://cv03isyal2dfy" path="res://Assets/Audio/random2/blank_floppy_22.ogg" id="2_ugoly"]
@@ -24,6 +24,8 @@
 [ext_resource type="AudioStream" uid="uid://cjn1ol07kpnu6" path="res://Assets/Audio/random1/etc_34.ogg" id="22_5ew3k"]
 [ext_resource type="AudioStream" uid="uid://bvqoouav0yte5" path="res://Assets/Audio/random1/etc_35.ogg" id="23_sxm16"]
 [ext_resource type="AudioStream" uid="uid://cqolwv1kajmfw" path="res://Assets/Audio/random1/etc_36.ogg" id="24_warmi"]
+[ext_resource type="AudioStream" uid="uid://dlol83e517cjt" path="res://Assets/Audio/gameSFX/TimeoutV3_71.ogg" id="25_n4ecf"]
+[ext_resource type="AudioStream" uid="uid://cihrbfmydcu2r" path="res://Assets/Audio/gameSFX/Complete_66.ogg" id="26_43vt0"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bkuu0"]
 streams_count = 12
@@ -108,5 +110,18 @@ volume_db = 3.532
 autoplay = true
 bus = &"Ambience"
 
+[node name="Timeout" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_n4ecf")
+volume_db = -3.532
+
+[node name="Completion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_43vt0")
+volume_db = 1.57
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
 [connection signal="finished" from="Floppy" to="." method="_on_floppy_finished"]
 [connection signal="finished" from="AsstAmb" to="." method="_on_asst_amb_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

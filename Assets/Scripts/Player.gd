@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 400.0
+var speed = 400.0
 
 enum COLORS {R, B, Y}
 
@@ -50,10 +50,10 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	var direction = Input.get_vector("left", "right", "up", "down")
 	if direction:
-		velocity = direction * SPEED
+		velocity = direction * speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.y = move_toward(velocity.y, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.y = move_toward(velocity.y, 0, speed)
 		
 	move_and_slide()
 
@@ -69,13 +69,18 @@ func _input(event):
 		rotating.rotation_degrees = 180
 		$Sprite2D.flip_h = false
 
+func freeze():
+	speed = 0
+
 func hg_pickup(col):
 	current_hg_color = col
 	$HourglassPickup.play()
 	$Rotating/Flashlight/PointLight2D.enabled = true
 	start_hg.emit()
 	hg_active = true
-	print("hg light setup done")
+	$Timer.start()
+	#print("hg light setup done")
+	GlobalAudio.timeout_timer_start()
 	#$Rotating/Flashlight/PointLight2D.energy = 1.45pass
 	if current_hg_color == COLORS.R:
 		$Rotating/Flashlight/PointLight2D.color = Color.hex(0xff6772ff)
